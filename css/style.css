@@ -1,0 +1,16 @@
+header img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.section img {
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+}
+
+#contact {
+    background: url('../images/contact-bg.jpg') no-repeat center center/cover;
+}
+
