@@ -3,160 +3,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Founder | Syfernetics</title>
+  <title>Founder | Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Meet Otis Duncan, founder of Syfernetics — dedicated to building systems that give people back control, visibility, and privacy over their digital lives.">
+  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/founders/index.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/founders/index.html">
+  <meta property="og:title" content="Founder | Syfernetics">
+  <meta property="og:description" content="Otis Duncan, founder of Syfernetics, on building systems that return control, visibility, and privacy to their rightful owners.">
+  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/founders/index.html">
+  <meta name="twitter:title" content="Founder | Syfernetics">
+  <meta name="twitter:description" content="Otis Duncan, founder of Syfernetics, on building systems that return control, visibility, and privacy to their rightful owners.">
+  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
+
+  <!-- Styles -->
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('../images/founderspage.jpg') center center / cover no-repeat fixed;
-      color: #e0f7fa;
+    :root{
+      --bg:#0b0f14;
+      --fg:#e6f0ff;
+      --muted:#9bb0c9;
+      --accent:#29d3a0;
+      --accent-d:#1ea37d;
+      --panel:#101722;
+      --border:#1b2432;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Nav */
+    header{
+      position:sticky; top:0; z-index:100;
+      background:rgba(11,15,20,.85); backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{font-weight:700; letter-spacing:.3px}
+    .menu{display:flex; gap:18px}
+    .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
+    .menu a:hover{background:var(--panel); color:var(--fg)}
+    .cta{background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600}
+    .cta:hover{background:var(--accent-d)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:48vh;
+      display:grid; place-items:center;
+      text-align:center;
+      overflow:hidden;
+      border-bottom:1px solid var(--border);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
+        url("../images/founderspage.jpg") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.05);
+      z-index:-1;
+    }
+    .hero h1{
+      font-size: clamp(26px, 4.5vw, 46px);
+      margin:0 0 10px 0;
+    }
+    .hero p{
+      color:var(--muted);
+      max-width:900px; margin:0 auto 0;
+      font-size: clamp(16px, 2vw, 20px);
     }
 
-    nav {
-      background-color: #000;
-      padding: 15px 30px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,255,224,0.2);
+    /* Founder content */
+    .section{padding:36px 0}
+    .lead{color:var(--muted); font-size:18px; max-width:1000px; margin:0 auto}
+    .narrative{
+      max-width:900px; margin:0 auto; display:flex; flex-direction:column; gap:18px;
+      font-size:16px; color:var(--muted);
     }
 
-    nav a {
-      color: #00ffe0;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      padding:28px 0 48px;
     }
-
-    nav a:hover {
-      color: #ffffff;
+    .footgrid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-
-    .container {
-      margin-top: 120px;
-      padding: 50px;
-      max-width: 900px;
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 20px #00ffe0;
-    }
-
-    h1 {
-      color: #00ffe0;
-      font-size: 2.8em;
-      text-align: center;
-      margin-bottom: 30px;
-      text-shadow: 0 0 15px #00ffcc;
-    }
-
-    h2 {
-      color: #7fff99;
-      font-size: 1.5em;
-      margin-top: 40px;
-      text-align: center;
-      text-shadow: 0 0 10px #00ffcc;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.7em;
-      color: #ccffcc;
-      margin-bottom: 18px;
-      text-align: justify;
-    }
-
-    footer {
-      background-color: #000;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        width: 90%;
-        padding: 30px;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.2em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
+    .footgrid a{color:var(--muted)}
+    .footgrid a:hover{color:var(--fg)}
   </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">Syfernetics</div>
+        <div class="menu">
+          <a href="../index.html">Home</a>
+          <a href="../about/about.html">About</a>
+          <a href="../solutions/index.html">Solutions</a>
+          <a href="../projects/index.html">Projects</a>
+          <a href="../founders/index.html">Founders</a>
+          <a href="../contact/contact.html" class="cta">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<nav>
-  <a href="../index.html">Home</a>
-  <a href="../about/index.html">About</a>
-  <a href="../solutions/index.html">Solutions</a>
-  <a href="../projects/index.html">Projects</a>
-  <a href="../founders/index.html">Founders</a>
-  <a href="../contact/index.html">Contact</a>
-</nav>
+  <section class="hero">
+    <div class="container">
+      <h1>Founder’s Statement</h1>
+      <p>Otis Duncan — building Syfernetics to give people back their digital sovereignty.</p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h1>Founder’s Statement</h1>
-    <h2>Otis Duncan — Founder of Syfernetics</h2>
+  <section class="section">
+    <div class="container narrative">
+      <p>I’ve always been fascinated with how things work. As a young boy, I’d take apart my toys just to see what made them tick. Sometimes I’d get them back together. Sometimes… not so much. But I never let that stop me.</p>
 
-    <p>I’ve always been fascinated with how things work.</p>
+      <p>That curiosity stayed with me — even when life threw some hard hits my way. I didn’t grow up with advantages. I didn’t have a degree or a perfect path laid out in front of me. What I had was drive, hands-on learning, and a relentless need to understand the systems around me.</p>
 
-    <p>As a young boy, I’d take apart my toys just to see what made them tick.  
-    Sometimes I’d get them back together.  
-    Sometimes… not so much.  
-    But I never let that stop me.</p>
+      <p>I found my way into the automotive world, excelling in mechanical diagnostics and repair. But even while working on cars, my passion for electronics and computers never left. When AI and automation started crossing into the automotive field — self-driving systems, sensor networks — I realized my hobbies and my profession weren’t separate anymore. They were merging.</p>
 
-    <p>That curiosity stayed with me — even when life threw some hard hits my way.  
-    I didn’t grow up with advantages.  
-    I didn’t have a degree or a perfect path laid out in front of me.  
-    What I had was drive, hands-on learning, and a relentless need to understand the systems around me.</p>
+      <p>And so was my vision. I began to see a problem that no one was addressing loud enough: people have lost control over their digital lives. Big Tech dictates the rules. Your data isn’t yours. Your systems work for someone else’s interests.</p>
 
-    <p>I found my way into the automotive world, excelling in mechanical diagnostics and repair.  
-    But even while working on cars, my passion for electronics and computers never left.  
-    When AI and automation started crossing into the automotive field — self-driving systems, sensor networks —  
-    I realized my hobbies and my profession weren’t separate anymore. They were merging.</p>
+      <p>That’s not acceptable. I didn’t sit back and hope someone else would fix it — I knew this was a fight I had to take on myself.</p>
 
-    <p>And so was my vision.</p>
+      <p>That’s why I founded <strong>Syfernetics</strong> — to build systems that give people back what’s rightfully theirs: visibility, control, privacy, and defense.</p>
 
-    <p>I began to see a problem that no one was addressing loud enough:  
-    People have lost control over their digital lives.  
-    Big Tech dictates the rules.  
-    Your data isn’t yours.  
-    Your systems work for someone else’s interests.</p>
-
-    <p>That’s not acceptable.</p>
-
-    <p>I didn’t sit back and hope someone else would fix it.  
-    I knew this was a fight I had to take on myself.</p>
-
-    <p>That’s why I founded <strong>Syfernetics</strong> —  
-    To build systems that give people back what’s rightfully theirs:  
-    Visibility. Control. Privacy. Defense.</p>
-
-    <p>Syfernetics isn’t just a company.  
-    It’s the product of a lifetime of persistence, curiosity, and never backing down from a challenge.</p>
-  </div>
+      <p>Syfernetics isn’t just a company. It’s the product of a lifetime of persistence, curiosity, and never backing down from a challenge.</p>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Syfernetics Labs. All rights reserved.
+    <div class="container footgrid">
+      <div>
+        <strong>Syfernetics</strong><br>
+        Macon, Georgia<br>
+        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
+      </div>
+      <div>
+        <strong>Links</strong><br>
+        <a href="../about/about.html">About</a><br>
+        <a href="../solutions/index.html">Solutions</a><br>
+        <a href="../projects/index.html">Projects</a>
+      </div>
+      <div>
+        <strong>Legal</strong><br>
+        <a href="../privacy.html">Privacy</a> (optional)<br>
+        <a href="../terms.html">Terms</a> (optional)
+      </div>
+    </div>
   </footer>
-
 </body>
 </html>

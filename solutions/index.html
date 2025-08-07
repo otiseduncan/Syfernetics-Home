@@ -3,193 +3,251 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Solutions | Syfernetics</title>
+  <title>Solutions | Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Syfernetics solutions: autonomous security frameworks, real‑time network visibility, zero‑trust environments, and operator‑grade Linux systems.">
+  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/solutions/index.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/solutions/index.html">
+  <meta property="og:title" content="Solutions | Syfernetics">
+  <meta property="og:description" content="Autonomous security frameworks, real‑time network visibility, zero‑trust environments, and operator‑grade Linux systems.">
+  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/solutions/index.html">
+  <meta name="twitter:title" content="Solutions | Syfernetics">
+  <meta name="twitter:description" content="Autonomous security frameworks, real‑time network visibility, zero‑trust environments, and operator‑grade Linux systems.">
+  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
+
+  <!-- Styles: identical system to index.html -->
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('../images/solutionspage.jpg') center center / cover no-repeat fixed;
-      color: #e0f7fa;
+    :root{
+      --bg:#0b0f14;
+      --fg:#e6f0ff;
+      --muted:#9bb0c9;
+      --accent:#29d3a0;
+      --accent-d:#1ea37d;
+      --panel:#101722;
+      --border:#1b2432;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Nav */
+    header{
+      position:sticky; top:0; z-index:100;
+      background:rgba(11,15,20,.85); backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{font-weight:700; letter-spacing:.3px}
+    .menu{display:flex; gap:18px}
+    .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
+    .menu a:hover{background:var(--panel); color:var(--fg)}
+    .cta{background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600}
+    .cta:hover{background:var(--accent-d)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:48vh;
+      display:grid; place-items:center;
+      text-align:center;
+      overflow:hidden;
+      border-bottom:1px solid var(--border);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
+        url("../images/solutionspage.jpg") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.05);
+      z-index:-1;
+    }
+    .hero h1{
+      font-size: clamp(26px, 4.5vw, 46px);
+      margin:0 0 10px 0;
+    }
+    .hero p{
+      color:var(--muted);
+      max-width:1000px; margin:0 auto 0;
+      font-size: clamp(16px, 2vw, 20px);
     }
 
-    nav {
-      background-color: #000;
-      padding: 15px 30px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,255,224,0.2);
+    /* Sections */
+    .section{padding:36px 0; border-bottom:1px solid var(--border)}
+    .lead{color:var(--muted); font-size:18px; max-width:1000px; margin:0 auto}
+
+    /* Cards / grids */
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     }
-
-    nav a {
-      color: #00ffe0;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
+    .card{
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px; background:#0e1621;
+      display:flex; flex-direction:column; gap:10px;
     }
+    .card h3{margin:0; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .list{margin:0; padding-left:18px; color:var(--muted); font-size:14px}
+    .list li{margin:6px 0}
 
-    nav a:hover {
-      color: #ffffff;
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      padding:28px 0 48px;
     }
-
-    .container {
-      margin-top: 120px;
-      padding: 50px;
-      max-width: 1000px;
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 20px #00ffe0;
+    .footgrid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-
-    h1 {
-      color: #00ffe0;
-      font-size: 2.8em;
-      text-align: center;
-      margin-bottom: 40px;
-      text-shadow: 0 0 15px #00ffcc;
-    }
-
-    h2 {
-      color: #7fff99;
-      font-size: 1.6em;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      text-shadow: 0 0 8px #00ffcc;
-    }
-
-    p {
-      font-size: 1.1em;
-      line-height: 1.7em;
-      color: #ccffcc;
-      margin-bottom: 20px;
-      text-align: justify;
-    }
-
-    ul {
-      margin-left: 20px;
-      padding-left: 20px;
-    }
-
-    ul li {
-      font-size: 1.1em;
-      margin-bottom: 10px;
-      color: #ccffcc;
-    }
-
-    footer {
-      background-color: #000;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
-      margin-top: 60px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        width: 90%;
-        padding: 30px;
-      }
-
-      h1 {
-        font-size: 2em;
-      }
-
-      h2 {
-        font-size: 1.3em;
-      }
-
-      p, ul li {
-        font-size: 1em;
-      }
-    }
+    .footgrid a{color:var(--muted)}
+    .footgrid a:hover{color:var(--fg)}
   </style>
 </head>
 <body>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">Syfernetics</div>
+        <div class="menu">
+          <a href="../index.html">Home</a>
+          <a href="../about/about.html">About</a>
+          <a href="../solutions/index.html">Solutions</a>
+          <a href="../projects/index.html">Projects</a>
+          <a href="../founders/founders.html">Founders</a>
+          <a href="../contact/contact.html" class="cta">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
 
-<nav>
-  <a href="../index.html">Home</a>
-  <a href="../about/index.html">About</a>
-  <a href="../solutions/index.html">Solutions</a>
-  <a href="../projects/index.html">Projects</a>
-  <a href="../founders/index.html">Founders</a>
-  <a href="../contact/index.html">Contact</a>
-</nav>
+  <section class="hero">
+    <div class="container">
+      <h1>Syfernetics Solutions</h1>
+      <p>Engineered for autonomy. Designed for control. Powered by you.</p>
+    </div>
+  </section>
 
-  <div class="container">
-    <h1>Syfernetics Solutions</h1>
+  <section class="section">
+    <div class="container">
+      <p class="lead">
+        We don’t just build tools—we build systems that help you regain control of your digital environment without compromise.
+        In a world where big platforms set the rules, our approach is local‑first, transparent, and defensible.
+      </p>
+    </div>
+  </section>
 
-    <h2>Engineered for Autonomy. Designed for Control. Powered by You.</h2>
-    <p>
-      At Syfernetics, we don’t just build tools.  
-      We build systems that empower individuals and businesses to regain control over their digital environments — without compromise.
-    </p>
-    <p>
-      In a world where Big Tech controls your data, your networks, and even your devices, we offer an alternative:  
-      <strong>Self-hosted. Self-defending. Self-reliant.</strong>
-    </p>
+  <section class="section">
+    <div class="container grid">
+      <div class="card">
+        <h3>Autonomous Security Frameworks</h3>
+        <p>Detect, respond, and defend without cloud reliance—tailored for homes and small businesses.</p>
+      </div>
+      <div class="card">
+        <h3>Real‑Time Network Visibility</h3>
+        <p>Custom dashboards surface device activity, bandwidth, and anomalies—live and forensic‑ready.</p>
+      </div>
+      <div class="card">
+        <h3>Full‑Stack Hardening</h3>
+        <p>VLAN segmentation, Pi‑hole DNS enforcement, VPN policies, and device isolation—secure‑by‑default.</p>
+      </div>
+      <div class="card">
+        <h3>Zero‑Trust by Design</h3>
+        <p>No device is assumed safe: everything is authenticated, logged, filtered, and controlled.</p>
+      </div>
+      <div class="card">
+        <h3>Operator‑Grade Linux</h3>
+        <p>Secure desktop/server builds with a Standard/Operator mode toggle for mission tasks.</p>
+      </div>
+    </div>
+  </section>
 
-    <h2>What We Deliver</h2>
-    <ul>
-      <li><strong>Autonomous Security Frameworks</strong><br>
-      From homes to small businesses, our frameworks detect, respond to, and defend against digital threats without relying on cloud services or third parties.</li>
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h3>Built by Engineers. Backed by Experience.</h3>
+          <p>Our architecture is informed by hands‑on diagnostics, automation, and secure systems integration.</p>
+        </div>
+        <div class="card">
+          <h3>You Own It. You Control It.</h3>
+          <ul class="list">
+            <li><strong>Local‑first</strong> — no cloud dependency</li>
+            <li><strong>Modular</strong> — grows with your needs</li>
+            <li><strong>Transparent</strong> — no hidden backdoors</li>
+            <li><strong>Defensible</strong> — intrusion‑resistant and auditable</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <li><strong>Real-Time Network Visibility</strong><br>
-      Custom dashboards like LexAI and the Nexonetics Recon Console give you forensic-level insight into every device, connection, and packet — in real time.</li>
-
-      <li><strong>Full-Stack Infrastructure Hardening</strong><br>
-      We design secure-by-default networks with VLAN segmentation, DNS filtering (Pi-hole), VPN tunneling, and device isolation — all on hardware you control.</li>
-
-      <li><strong>Zero-Trust Digital Environments</strong><br>
-      Our configurations follow zero-trust principles. No device is assumed safe. Everything is logged, filtered, and controlled.</li>
-
-      <li><strong>Operator-Grade Linux Systems</strong><br>
-      We build secure Linux-based systems that toggle between standard use and full operator mode. Whether you need a personal daily driver or a field-deployable security suite, we provide it.</li>
-    </ul>
-
-    <h2>Built by Engineers. Backed by Experience.</h2>
-    <p>
-      Syfernetics systems are born from the real-world expertise of founder Otis Duncan — a veteran technician who bridged the gap between mechanical diagnostics and digital defense.
-    </p>
-    <p>
-      His background in ADAS calibration, electronic control units, sensor fusion, and secure automation directly shapes the architecture behind every Syfernetics product.
-    </p>
-
-    <h2>You Own It. You Control It. We Help You Harden It.</h2>
-    <p>
-      Every solution we offer is:
-    </p>
-    <ul>
-      <li><strong>Local-first</strong> — no cloud dependency</li>
-      <li><strong>Modular</strong> — designed to grow with you</li>
-      <li><strong>Transparent</strong> — no hidden backdoors</li>
-      <li><strong>Defensible</strong> — resistant to intrusion, manipulation, and surveillance</li>
-    </ul>
-
-    <p>
-      Whether you’re building your own server, locking down your home network, or launching a security operations center — <strong>Syfernetics gives you the blueprint and the tools.</strong>
-    </p>
-
-    <h2>Ready for Deployment</h2>
-    <ul>
-      <li>Custom server builds (Ubuntu, Kali, or hybrid)</li>
-      <li>Home network security blueprints</li>
-      <li>Full device mapping & monitoring packages</li>
-      <li>Preconfigured Linux OS images</li>
-      <li>Remote and on-site consulting for high-risk digital environments</li>
-    </ul>
-  </div>
+  <section class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="card">
+          <h3>Ready for Deployment</h3>
+          <ul class="list">
+            <li>Custom server builds (Ubuntu / Kali / hybrid)</li>
+            <li>Home network security blueprints</li>
+            <li>Full device mapping & monitoring packages</li>
+            <li>Preconfigured Linux OS images</li>
+            <li>Remote & on‑site consulting</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Tech Stack</h3>
+          <ul class="list">
+            <li>Pi‑hole • OPNsense • WireGuard</li>
+            <li>Docker • Netdata • Darkstat</li>
+            <li>Kali/Ubuntu • Custom dashboards</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    &copy; 2025 Syfernetics Labs. All rights reserved.
+    <div class="container footgrid">
+      <div>
+        <strong>Syfernetics</strong><br>
+        Macon, Georgia<br>
+        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
+      </div>
+      <div>
+        <strong>Links</strong><br>
+        <a href="../about/about.html">About</a><br>
+        <a href="../solutions/index.html">Solutions</a><br>
+        <a href="../projects/index.html">Projects</a>
+      </div>
+      <div>
+        <strong>Legal</strong><br>
+        <a href="../privacy.html">Privacy</a> (optional)<br>
+        <a href="../terms.html">Terms</a> (optional)
+      </div>
+    </div>
   </footer>
-
 </body>
 </html>

@@ -3,150 +3,203 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projects | Syfernetics</title>
+  <title>Projects | Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
+
+  <!-- SEO Meta -->
+  <meta name="description" content="Selected Syfernetics projects: network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
+  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
+  <meta name="robots" content="index,follow">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
+  <meta property="og:title" content="Projects | Syfernetics">
+  <meta property="og:description" content="Network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
+  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
+  <meta name="twitter:title" content="Projects | Syfernetics">
+  <meta name="twitter:description" content="Network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
+  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
+
+  <!-- Styles -->
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('../images/projectspage.png') center center / cover no-repeat fixed;
-      color: #e0f7fa;
+    :root{
+      --bg:#0b0f14;
+      --fg:#e6f0ff;
+      --muted:#9bb0c9;
+      --accent:#29d3a0;
+      --accent-d:#1ea37d;
+      --panel:#101722;
+      --border:#1b2432;
+      --max:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      background:var(--bg);
+      color:var(--fg);
+      line-height:1.5;
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+    /* Nav */
+    header{
+      position:sticky; top:0; z-index:100;
+      background:rgba(11,15,20,.85); backdrop-filter: blur(6px);
+      border-bottom:1px solid var(--border);
+    }
+    nav{display:flex; align-items:center; justify-content:space-between; height:64px}
+    .brand{font-weight:700; letter-spacing:.3px}
+    .menu{display:flex; gap:18px}
+    .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
+    .menu a:hover{background:var(--panel); color:var(--fg)}
+    .cta{background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600}
+    .cta:hover{background:var(--accent-d)}
+
+    /* Hero */
+    .hero{
+      position:relative;
+      min-height:48vh;
+      display:grid; place-items:center;
+      text-align:center;
+      overflow:hidden;
+      border-bottom:1px solid var(--border);
+    }
+    .hero::before{
+      content:"";
+      position:absolute; inset:0;
+      background:
+        linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
+        url("../images/projectspage.png") center/cover no-repeat;
+      filter:saturate(1.05) contrast(1.05);
+      z-index:-1;
+    }
+    .hero h1{
+      font-size: clamp(26px, 4.5vw, 46px);
+      margin:0 0 10px 0;
+    }
+    .hero p{
+      color:var(--muted);
+      max-width:900px; margin:0 auto 0;
+      font-size: clamp(16px, 2vw, 20px);
     }
 
-    nav {
-      background-color: #000;
-      padding: 15px 30px;
-      text-align: center;
-      position: fixed;
-      width: 100%;
-      top: 0;
-      left: 0;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,255,224,0.2);
+    /* Projects */
+    .section{padding:36px 0}
+    .grid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+    .card{
+      border:1px solid var(--border);
+      border-radius:16px; padding:18px; background:#0e1621;
+      display:flex; flex-direction:column; gap:10px;
+    }
+    .card h3{margin:0; font-size:18px}
+    .card p{margin:0; color:var(--muted); font-size:14px}
+    .badge{
+      align-self:flex-start;
+      border:1px solid var(--border);
+      background:rgba(255,255,255,.03);
+      padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted);
     }
 
-    nav a {
-      color: #00ffe0;
-      margin: 0 18px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1em;
+    /* Footer */
+    footer{
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      padding:28px 0 48px;
     }
-
-    nav a:hover {
-      color: #ffffff;
+    .footgrid{
+      display:grid; gap:16px;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     }
-
-    .container {
-      margin-top: 120px;
-      padding: 50px;
-      max-width: 900px;
-      background-color: rgba(0, 0, 0, 0.75);
-      border-radius: 12px;
-      margin-left: auto;
-      margin-right: auto;
-      box-shadow: 0 0 20px #00ffe0;
-    }
-
-    h1 {
-      text-align: center;
-      color: #00ffe0;
-      font-size: 2.8em;
-      margin-bottom: 40px;
-      text-shadow: 0 0 15px #00ffcc;
-    }
-
-    .project {
-      border-bottom: 1px solid #00ffe0;
-      padding: 25px 0;
-    }
-
-    .project:last-child {
-      border-bottom: none;
-    }
-
-    h2 {
-      color: #66fcf1;
-      font-size: 1.6em;
-    }
-
-    p {
-      font-size: 1.1em;
-      color: #ccffcc;
-    }
-
-    footer {
-      background-color: #000;
-      text-align: center;
-      padding: 20px;
-      color: #888;
-      font-size: 0.9em;
-      margin-top: 50px;
-    }
-
-    @media (max-width: 768px) {
-      .container {
-        width: 95%;
-        padding: 30px;
-      }
-
-      h1 {
-        font-size: 2.2em;
-      }
-
-      h2 {
-        font-size: 1.3em;
-      }
-
-      p {
-        font-size: 1em;
-      }
-    }
+    .footgrid a{color:var(--muted)}
+    .footgrid a:hover{color:var(--fg)}
   </style>
 </head>
 <body>
-
-<nav>
-  <a href="../index.html">Home</a>
-  <a href="../about/index.html">About</a>
-  <a href="../solutions/index.html">Solutions</a>
-  <a href="../projects/index.html">Projects</a>
-  <a href="../founders/index.html">Founders</a>
-  <a href="../contact/index.html">Contact</a>
-</nav>
-
-  <div class="container">
-    <h1>Our Projects</h1>
-
-    <div class="project">
-      <h2>Overwatch Dashboard</h2>
-      <p>A custom-built local web interface for network monitoring, device management, and system automation, fully integrated with Darkstat, Netdata, and Pi-hole.</p>
+  <header>
+    <div class="container">
+      <nav aria-label="Primary">
+        <div class="brand">Syfernetics</div>
+        <div class="menu">
+          <a href="../index.html">Home</a>
+          <a href="../about/about.html">About</a>
+          <a href="../solutions/solutions.html">Solutions</a>
+          <a href="../projects/index.html">Projects</a>
+          <a href="../founders/founders.html">Founders</a>
+          <a href="../contact/contact.html" class="cta">Contact</a>
+        </div>
+      </nav>
     </div>
+  </header>
 
-    <div class="project">
-      <h2>Syfernetics Desktop Deployment</h2>
-      <p>An immersive, fully themed Cyber-style Linux desktop environment using KDE Plasma, Kvantum themes, animated backgrounds, and terminal styling.</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p>Real, working builds that harden networks, surface telemetry, and automate defense—tailored to your gear.</p>
     </div>
+  </section>
 
-    <div class="project">
-      <h2>Redcell Home Network Security Suite</h2>
-      <p>A full-stack, enterprise-grade security implementation for residential networks, including VLAN segmentation, DNS filtering, and VPN enforcement.</p>
+  <section class="section">
+    <div class="container grid">
+      <div class="card">
+        <span class="badge">Dashboard</span>
+        <h3>Overwatch Dashboard</h3>
+        <p>Local web interface for monitoring and device control, integrated with Netdata, Darkstat, and Pi-hole. Supports unauthorized-device alerts and actions.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Desktop</span>
+        <h3>Syfernetics Desktop Deployment</h3>
+        <p>Polished Linux desktop stack (KDE + Kvantum) with animated backgrounds, hardened defaults, and operator-mode toggles.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Network</span>
+        <h3>Redcell Home Network Security Suite</h3>
+        <p>VLAN segmentation, Pi-hole DNS enforcement, VPN policies, and zero-trust defaults—tuned for consumer routers and managed switches.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Toolkit</span>
+        <h3>Sentinel Pen-Test Master Kit</h3>
+        <p>Automated recon, scanning, and HTML reporting for small businesses. One-click runs with clean, professional output.</p>
+      </div>
+      <div class="card">
+        <span class="badge">Recon</span>
+        <h3>CoretexMap Recon Console</h3>
+        <p>Device fingerprinting via ARP-scan and router scraping with MAC→Name matching, live alerts, and optional auto-suspend for unknown devices.</p>
+      </div>
     </div>
-
-    <div class="project">
-      <h2>Sentinel Pen-Test Master Kit</h2>
-      <p>An automated toolkit for security assessments and reporting, designed for small businesses. Includes vulnerability scans, reconnaissance tools, and professional report generation.</p>
-    </div>
-
-    <div class="project">
-      <h2>CoretexMap Recon Console</h2>
-      <p>A local device fingerprinting system using ARP-scan, router scraping, and MAC-to-name matching. Offers real-time alerts and auto-suspension for unknown devices.</p>
-    </div>
-  </div>
+  </section>
 
   <footer>
-    &copy; 2025 Syfernetics Labs. All rights reserved.
+    <div class="container footgrid">
+      <div>
+        <strong>Syfernetics</strong><br>
+        Macon, Georgia<br>
+        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
+      </div>
+      <div>
+        <strong>Links</strong><br>
+        <a href="../about/about.html">About</a><br>
+        <a href="../solutions/solutions.html">Solutions</a><br>
+        <a href="../projects/index.html">Projects</a>
+      </div>
+      <div>
+        <strong>Legal</strong><br>
+        <a href="../privacy.html">Privacy</a> (optional)<br>
+        <a href="../terms.html">Terms</a> (optional)
+      </div>
+    </div>
   </footer>
-
 </body>
 </html>
