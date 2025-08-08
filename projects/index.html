@@ -2,34 +2,21 @@
 <html lang="en">
 <head>
 <base id="site-base" href="/">
-<script>(function(){var p=location.pathname.includes("/Syfernetics-Home/")?"/Syfernetics-Home/":"/";document.getElementById("site-base").setAttribute("href",p);}())</script>
+<script>
+(function(){
+  var p = location.pathname.includes("/Syfernetics-Home/") ? "/Syfernetics-Home/" : "/";
+  document.getElementById("site-base").setAttribute("href", p);
+}());
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Projects | Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
-
-  <!-- SEO Meta -->
-  <meta name="description" content="Selected Syfernetics projects: network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
-  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
+  <meta name="description" content="Explore Syfernetics’ projects: Open-source toolkits, automated pen-test frameworks, and operator dashboards.">
   <meta name="robots" content="index,follow">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
-  <meta property="og:title" content="Projects | Syfernetics">
-  <meta property="og:description" content="Network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
-  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+  <!-- Open Graph & Twitter Meta tags omitted for brevity, but add if needed -->
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/projects/index.html">
-  <meta name="twitter:title" content="Projects | Syfernetics">
-  <meta name="twitter:description" content="Network hardening, monitoring dashboards, automated deployment kits, and recon tooling built for real networks.">
-  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
-
-  <!-- Favicon -->
-  <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
-
-  <!-- Styles -->
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <style>
     :root{
       --bg:#0b0f14;
@@ -45,7 +32,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
       background:var(--bg);
       color:var(--fg);
       line-height:1.5;
@@ -59,7 +46,9 @@
       background:rgba(11,15,20,.85); backdrop-filter: blur(6px);
       border-bottom:1px solid var(--border);
     }
-    nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:10px 0}
+    nav{
+      display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:10px 0
+    }
     .brand{font-weight:700; letter-spacing:.3px}
     .menu{display:flex; gap:18px; flex-wrap:wrap}
     .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
@@ -68,156 +57,128 @@
     .cta:hover{background:var(--accent-d)}
 
     /* Hero */
-    .hero{
-      position:relative;
-      min-height:48vh;
-      display:grid; place-items:center;
-      text-align:center;
-      overflow:hidden;
-      border-bottom:1px solid var(--border);
+    .hero-header{
+      position: relative;
+      width: 100%;
+      min-height: 330px;
+      background: linear-gradient(180deg, rgba(12, 18, 22, 0.32) 0%, rgba(12,18,22,0.92) 85%),
+                  url('../images/projectspage.png') center/cover no-repeat;
+      border-bottom: 2px solid #05262c;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
     }
-    .hero::before{
-      content:"";
-      position:absolute; inset:0;
-      background:
-        linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-        url('/Syfernetics-Home/images/projectspage.png") center/cover no-repeat;
-      filter:saturate(1.05) contrast(1.05);
-      z-index:-1;
+    .overlay {
+      width: 100%;
+      padding: 3.3em 1.2em 2.3em 1.2em;
+      text-align: center;
+      box-sizing: border-box;
+      animation: fadein 1.2s;
     }
-    .hero h1{
-      font-size: clamp(26px, 4.5vw, 46px);
-      margin:0 0 10px 0;
+    @keyframes fadein {
+      from { opacity: 0.7; }
+      to   { opacity: 1; }
     }
-    .hero p{
-      color:var(--muted);
-      max-width:900px; margin:0 auto 0;
-      font-size: clamp(16px, 2vw, 20px);
+    .hero-header h1 {
+      margin: 0 0 0.18em 0;
+      font-size: 2.8rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      color: #7fffd4;
+      text-shadow: 0 2px 8px #000a;
     }
-
-    /* Projects */
-    .section{padding:36px 0}
-    .grid{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .hero-header p {
+      margin: 0 auto;
+      font-size: 1.32rem;
+      font-weight: 400;
+      color: #d3fffa;
+      max-width: 700px;
+      text-shadow: 0 1px 6px #003;
     }
-    .card{
-      border:1px solid var(--border);
-      border-radius:16px; padding:18px; background:#0e1621;
-      display:flex; flex-direction:column; gap:10px;
+    main {
+      max-width: 850px;
+      margin: 2.4em auto 2.5em auto;
+      padding: 1.7em 1.2em;
+      background: rgba(18, 32, 39, 0.94);
+      border-radius: 1.4em;
+      box-shadow: 0 2px 32px rgba(0,255,224,0.04);
     }
-    .card h3{margin:0; font-size:18px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
-    .badge{
-      align-self:flex-start;
-      border:1px solid var(--border);
-      background:rgba(255,255,255,.03);
-      padding:4px 8px; border-radius:999px; font-size:12px; color:var(--muted);
+    section {margin-bottom: 2.2em;}
+    h2 {
+      color: #aaffee;
+      margin-top: 0.7em;
+      margin-bottom: 0.45em;
+      font-size: 1.56rem;
     }
-
-    /* Footer */
-    footer{
-      border-top:1px solid var(--border);
-      color:var(--muted);
-      padding:28px 0 48px;
+    ul {
+      margin-left: 1.5em;
+      margin-bottom: 1.3em;
+      font-size: 1.15em;
     }
-    .footgrid{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    li strong { color: #7fffd4; }
+    footer {
+      width: 100%;
+      background: rgba(12,18,22,0.98);
+      color: #7fffd4;
+      font-size: 1rem;
+      text-align: center;
+      padding: 1.4em 0 1.1em 0;
+      position: relative;
+      bottom: 0;
+      letter-spacing: 0.07em;
+      box-shadow: 0 -2px 10px rgba(0,255,224,0.03);
+      margin-top: 2.2em;
+      border-radius: 1em 1em 0 0;
     }
-    .footgrid a{color:var(--muted)}
-    .footgrid a:hover{color:var(--fg)}
-  /* Mobile header layout */
-  @media (max-width: 680px) {
-    .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
-    .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
-  }
-  @media (max-width: 420px) {
-    .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
-    .menu a { font-size:.9rem; padding:8px; }
-  }
-  /* --- Hero background (project-absolute path; CSS ignores <base>) --- */
-  .hero::before {
-    content:"";
-    position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-                url(/Syfernetics-Home/images/webpageimage1.jpg) center/cover no-repeat;
-    filter:saturate(1.05) contrast(1.05);
-    z-index:-1;
-  }
+    @media (max-width: 800px) {
+      main {
+        max-width: 98vw;
+        padding: 1em 0.3em;
+        border-radius: 0.7em;
+      }
+      .hero-header h1 {
+        font-size: 2.1rem;
+      }
+      .hero-header p {
+        font-size: 1.07rem;
+      }
+    }
+    @media (max-width: 680px) {
+      .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
+      .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
+    }
+    @media (max-width: 420px) {
+      .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
+      .menu a { font-size:.9rem; padding:8px; }
+    }
   </style>
+</head>
+<body>
 <header>
   <div class="container">
     <nav aria-label="Primary">
       <div class="brand">Syfernetics</div>
       <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="about/">About</a>
-        <a href="solutions/">Solutions</a>
-        <a href="projects/">Projects</a>
-        <a href="founders/">Founders</a>
-        <a href="contact/" class="cta">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../about/">About</a>
+        <a href="../solutions/">Solutions</a>
+        <a href="../projects/" class="cta">Projects</a>
+        <a href="../founders/">Founders</a>
+        <a href="../contact/">Contact</a>
       </div>
     </nav>
   </div>
 </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>Projects</h1>
-      <p>Real, working builds that harden networks, surface telemetry, and automate defense—tailored to your gear.</p>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container grid">
-      <div class="card">
-        <span class="badge">Dashboard</span>
-        <h3>Overwatch Dashboard</h3>
-        <p>Local web interface for monitoring and device control, integrated with Netdata, Darkstat, and Pi-hole. Supports unauthorized-device alerts and actions.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Desktop</span>
-        <h3>Syfernetics Desktop Deployment</h3>
-        <p>Polished Linux desktop stack (KDE + Kvantum) with animated backgrounds, hardened defaults, and operator-mode toggles.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Network</span>
-        <h3>Redcell Home Network Security Suite</h3>
-        <p>VLAN segmentation, Pi-hole DNS enforcement, VPN policies, and zero-trust defaults—tuned for consumer routers and managed switches.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Toolkit</span>
-        <h3>Sentinel Pen-Test Master Kit</h3>
-        <p>Automated recon, scanning, and HTML reporting for small businesses. One-click runs with clean, professional output.</p>
-      </div>
-      <div class="card">
-        <span class="badge">Recon</span>
-        <h3>CoretexMap Recon Console</h3>
-        <p>Device fingerprinting via ARP-scan and router scraping with MAC→Name matching, live alerts, and optional auto-suspend for unknown devices.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footgrid">
-      <div>
-        <strong>Syfernetics</strong><br>
-        Macon, Georgia<br>
-        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
-      </div>
-      <div>
-        <strong>Links</strong><br>
-        <a href="about/">About</a><br>
-        <a href="solutions/">Solutions</a><br>
-        <a href="projects/">Projects</a>
-      </div>
-      <div>
-        <strong>Legal</strong><br>
-        <a href="../privacy.html">Privacy</a> (optional)<br>
-        <a href="../terms.html">Terms</a> (optional)
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+<header class="hero-header">
+  <div class="overlay">
+    <h1>Our Projects</h1>
+    <p>Innovation in action: from Recon Console to custom Linux operator dashboards.</p>
+  </div>
+</header>
+<main>
+  <section>
+    <h2>Featured Projects</h2>
+    <ul>
+      <li><strong>Recon Console</strong> – Rapid network and vulnerability assessment toolkit for modern environments.</li>
+      <li><strong>Lex AI Dashboard</strong> – Operator interface for security monitoring, automation, and real-time visi

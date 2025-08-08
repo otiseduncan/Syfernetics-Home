@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
 <base id="site-base" href="/">
-<script>(function(){var p=location.pathname.includes("/Syfernetics-Home/")?"/Syfernetics-Home/":"/";document.getElementById("site-base").setAttribute("href",p);}())</script>
+<script>
+(function(){
+  var p = location.pathname.includes("/Syfernetics-Home/") ? "/Syfernetics-Home/" : "/";
+  document.getElementById("site-base").setAttribute("href", p);
+}());
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="Syfernetics delivers elite cybersecurity, network automation, and AI-driven defense systems for homes and businesses.">
-  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/">
+  <meta name="description" content="Syfernetics provides cutting-edge cybersecurity, AI-driven network defense, and automation solutions for businesses and innovators.">
+  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/index.html">
   <meta name="robots" content="index,follow">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/">
+  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/index.html">
   <meta property="og:title" content="Syfernetics | Cybersecurity & AI-Powered Network Solutions">
-  <meta property="og:description" content="Syfernetics delivers elite cybersecurity, network automation, and AI-driven defense systems for homes and businesses.">
-  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+  <meta property="og:description" content="AI-powered security and automation solutions to protect and optimize your network.">
+  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/heropage.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/">
+  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/index.html">
   <meta name="twitter:title" content="Syfernetics | Cybersecurity & AI-Powered Network Solutions">
-  <meta name="twitter:description" content="Syfernetics delivers elite cybersecurity, network automation, and AI-driven defense systems for homes and businesses.">
-  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+  <meta name="twitter:description" content="AI-powered security and automation solutions to protect and optimize your network.">
+  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/heropage.png">
 
   <!-- Favicon -->
   <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
 
-  <!-- Styles (kept inline so you can just paste and go) -->
+  <!-- Styles -->
   <style>
     :root{
       --bg:#0b0f14;
@@ -45,7 +50,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
       background:var(--bg);
       color:var(--fg);
       line-height:1.5;
@@ -62,19 +67,15 @@
     nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:10px 0}
     .brand{font-weight:700; letter-spacing:.3px}
     .menu{display:flex; gap:18px; flex-wrap:wrap}
-    .menu a{
-      padding:8px 12px; border-radius:10px; color:var(--muted);
-    }
+    .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
     .menu a:hover{background:var(--panel); color:var(--fg)}
-    .cta{
-      background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600;
-    }
+    .cta{background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600}
     .cta:hover{background:var(--accent-d)}
 
     /* Hero */
     .hero{
       position:relative;
-      min-height:70vh;
+      min-height:48vh;
       display:grid; place-items:center;
       text-align:center;
       overflow:hidden;
@@ -85,44 +86,29 @@
       position:absolute; inset:0;
       background:
         linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-        url('/Syfernetics-Home/images/webpageimage1.jpg') center/cover no-repeat;
+        url("images/heropage.png") center/cover no-repeat;
       filter:saturate(1.05) contrast(1.05);
       z-index:-1;
     }
     .hero h1{
-      font-size: clamp(28px, 5vw, 56px);
+      font-size: clamp(26px, 4.5vw, 46px);
       margin:0 0 10px 0;
     }
     .hero p{
       color:var(--muted);
-      max-width:800px; margin:0 auto 22px;
+      max-width:900px; margin:0 auto 0;
       font-size: clamp(16px, 2vw, 20px);
     }
-    .badges{
-      display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px;
-    }
-    .badge{
-      border:1px solid var(--border); background:rgba(255,255,255,.03);
-      padding:6px 10px; border-radius:999px; font-size:13px; color:var(--muted);
-    }
 
-    /* Feature strip */
-    .strip{
-      background:var(--panel);
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-    }
-    .strip-inner{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      padding:28px 0;
-    }
-    .card{
+    /* Section */
+    .section{padding:36px 0}
+    .intro-card{
+      max-width:800px; margin:0 auto;
+      background:#0e1621; padding:24px; border-radius:16px;
       border:1px solid var(--border);
-      border-radius:16px; padding:16px; background:#0e1621;
+      text-align:center; color:var(--muted);
     }
-    .card h3{margin:0 0 6px 0; font-size:18px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
+    .intro-card p{margin:8px 0; font-size:16px}
 
     /* Footer */
     footer{
@@ -136,24 +122,16 @@
     }
     .footgrid a{color:var(--muted)}
     .footgrid a:hover{color:var(--fg)}
-  /* Mobile header layout */
-  @media (max-width: 680px) {
-    .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
-    .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
-  }
-  @media (max-width: 420px) {
-    .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
-    .menu a { font-size:.9rem; padding:8px; }
-  }
-  /* --- Hero background (project-absolute path; CSS ignores <base>) --- */
-  .hero::before {
-    content:"";
-    position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-                url(/Syfernetics-Home/images/webpageimage1.jpg) center/cover no-repeat;
-    filter:saturate(1.05) contrast(1.05);
-    z-index:-1;
-  }
+
+    /* Mobile header layout */
+    @media (max-width: 680px) {
+      .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
+      .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
+    }
+    @media (max-width: 420px) {
+      .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
+      .menu a { font-size:.9rem; padding:8px; }
+    }
   </style>
 </head>
 <body>
@@ -162,68 +140,52 @@
     <nav aria-label="Primary">
       <div class="brand">Syfernetics</div>
       <div class="menu">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="cta">Home</a>
         <a href="about/">About</a>
         <a href="solutions/">Solutions</a>
         <a href="projects/">Projects</a>
         <a href="founders/">Founders</a>
-        <a href="contact/" class="cta">Contact</a>
+        <a href="contact/">Contact</a>
       </div>
     </nav>
   </div>
 </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>AI‑Powered Cyber Defense, Built for Real Networks</h1>
-      <p>From Pi‑hole–enforced DNS and VLAN segmentation to automated Netwatch and dashboarded telemetry, Syfernetics brings enterprise‑grade security to homes and small businesses—without enterprise‑grade headaches.</p>
-      <div class="badges" role="list" aria-label="Tech stack">
-        <span class="badge">Pi‑hole</span>
-        <span class="badge">OPNsense</span>
-        <span class="badge">Docker</span>
-        <span class="badge">Kali/Ubuntu</span>
-        <span class="badge">WireGuard</span>
-        <span class="badge">Netdata</span>
-      </div>
-    </div>
-  </section>
+<section class="hero">
+  <div class="container">
+    <h1>Cybersecurity & AI-Powered Network Solutions</h1>
+    <p>Protecting and optimizing your digital world with intelligence and precision.</p>
+  </div>
+</section>
 
-  <section class="strip">
-    <div class="container strip-inner">
-      <div class="card">
-        <h3>Network Hardening</h3>
-        <p>Segmentation, DNS enforcement, VPN policies, and zero‑trust defaults tailored to your gear.</p>
-      </div>
-      <div class="card">
-        <h3>Monitoring & Alerts</h3>
-        <p>Netdata, Darkstat, and custom dashboards with unauthorized‑device alerts and controls.</p>
-      </div>
-      <div class="card">
-        <h3>Automations</h3>
-        <p>One‑click deployment scripts, backup routines, and self‑healing checks.</p>
-      </div>
+<section class="section">
+  <div class="container">
+    <div class="intro-card">
+      <p>Welcome to Syfernetics — we combine advanced cybersecurity strategies with AI-driven automation to secure and enhance your network infrastructure.</p>
+      <p>From intrusion prevention to intelligent monitoring, our solutions are designed for resilience and performance.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <footer>
-    <div class="container footgrid">
-      <div>
-        <strong>Syfernetics</strong><br>
-        Macon, Georgia<br>
-        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
-      </div>
-      <div>
-        <strong>Links</strong><br>
-        <a href="about/">About</a><br>
-        <a href="solutions/">Solutions</a><br>
-        <a href="projects/">Projects</a>
-      </div>
-      <div>
-        <strong>Legal</strong><br>
-        <a href="privacy.html">Privacy</a> (optional)<br>
-        <a href="terms.html">Terms</a> (optional)
-      </div>
+<footer>
+  <div class="container footgrid">
+    <div>
+      <strong>Syfernetics</strong><br>
+      Macon, Georgia<br>
+      <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
     </div>
-  </footer>
+    <div>
+      <strong>Links</strong><br>
+      <a href="about/">About</a><br>
+      <a href="solutions/">Solutions</a><br>
+      <a href="projects/">Projects</a>
+    </div>
+    <div>
+      <strong>Legal</strong><br>
+      <a href="privacy.html">Privacy</a> (optional)<br>
+      <a href="terms.html">Terms</a> (optional)
+    </div>
+  </div>
+</footer>
 </body>
 </html>

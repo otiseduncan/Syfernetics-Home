@@ -2,34 +2,39 @@
 <html lang="en">
 <head>
 <base id="site-base" href="/">
-<script>(function(){var p=location.pathname.includes("/Syfernetics-Home/")?"/Syfernetics-Home/":"/";document.getElementById("site-base").setAttribute("href",p);}())</script>
+<script>
+(function(){
+  var p = location.pathname.includes("/Syfernetics-Home/") ? "/Syfernetics-Home/" : "/";
+  document.getElementById("site-base").setAttribute("href", p);
+}());
+</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | Syfernetics | Cybersecurity & AI-Powered Network Solutions</title>
 
   <!-- SEO Meta -->
-  <meta name="description" content="About Syfernetics — we build practical, AI‑assisted cyber defense: network hardening, monitoring, and automation for real homes and small businesses.">
-  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/about/about.html">
+  <meta name="description" content="Learn about Syfernetics—our mission, values, and the vision driving our approach to cybersecurity and automation.">
+  <link rel="canonical" href="https://otiseduncan.github.io/Syfernetics-Home/about/index.html">
   <meta name="robots" content="index,follow">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/about/about.html">
-  <meta property="og:title" content="About | Syfernetics">
-  <meta property="og:description" content="We engineer practical, AI‑assisted cyber defense: network hardening, monitoring, and automation for real homes and small businesses.">
-  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+  <meta property="og:url" content="https://otiseduncan.github.io/Syfernetics-Home/about/index.html">
+  <meta property="og:title" content="About | Syfernetics | Cybersecurity & AI-Powered Network Solutions">
+  <meta property="og:description" content="Learn about Syfernetics—our mission, values, and the vision driving our approach to cybersecurity and automation.">
+  <meta property="og:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/aboutpage.jpg">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/about/about.html">
-  <meta name="twitter:title" content="About | Syfernetics">
-  <meta name="twitter:description" content="We engineer practical, AI‑assisted cyber defense: network hardening, monitoring, and automation for real homes and small businesses.">
-  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/webpageimage1.jpg">
+  <meta name="twitter:url" content="https://otiseduncan.github.io/Syfernetics-Home/about/index.html">
+  <meta name="twitter:title" content="About | Syfernetics | Cybersecurity & AI-Powered Network Solutions">
+  <meta name="twitter:description" content="Learn about Syfernetics—our mission, values, and the vision driving our approach to cybersecurity and automation.">
+  <meta name="twitter:image" content="https://otiseduncan.github.io/Syfernetics-Home/images/aboutpage.jpg">
 
-  <!-- Favicon (same as index) -->
+  <!-- Favicon -->
   <link rel="icon" href="https://otiseduncan.github.io/Syfernetics-Home/images/favicon.ico" type="image/x-icon">
 
-  <!-- Styles: identical design system to index.html -->
+  <!-- Styles -->
   <style>
     :root{
       --bg:#0b0f14;
@@ -45,7 +50,7 @@
     html,body{height:100%}
     body{
       margin:0;
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
       background:var(--bg);
       color:var(--fg);
       line-height:1.5;
@@ -53,7 +58,7 @@
     a{color:inherit;text-decoration:none}
     .container{max-width:var(--max);margin:0 auto;padding:0 20px}
 
-    /* Nav (same) */
+    /* Nav */
     header{
       position:sticky; top:0; z-index:100;
       background:rgba(11,15,20,.85); backdrop-filter: blur(6px);
@@ -62,16 +67,12 @@
     nav{display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap; padding:10px 0}
     .brand{font-weight:700; letter-spacing:.3px}
     .menu{display:flex; gap:18px; flex-wrap:wrap}
-    .menu a{
-      padding:8px 12px; border-radius:10px; color:var(--muted);
-    }
+    .menu a{padding:8px 12px; border-radius:10px; color:var(--muted)}
     .menu a:hover{background:var(--panel); color:var(--fg)}
-    .cta{
-      background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600;
-    }
+    .cta{background:var(--accent); color:#071217; padding:10px 14px; border-radius:12px; font-weight:600}
     .cta:hover{background:var(--accent-d)}
 
-    /* Hero (About) */
+    /* Hero */
     .hero{
       position:relative;
       min-height:48vh;
@@ -85,7 +86,7 @@
       position:absolute; inset:0;
       background:
         linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-        url('/Syfernetics-Home/images/aboutpage.jpg") center/cover no-repeat;
+        url("../images/aboutpage.jpg") center/cover no-repeat;
       filter:saturate(1.05) contrast(1.05);
       z-index:-1;
     }
@@ -99,37 +100,17 @@
       font-size: clamp(16px, 2vw, 20px);
     }
 
-    /* Main content */
-    .section{
-      padding:36px 0;
-      border-bottom:1px solid var(--border);
-    }
-    .lead{
-      color:var(--muted);
-      font-size:18px;
-      max-width:1000px;
-      margin:0 auto;
-    }
-
-    /* Feature strip reused for sub-sections */
-    .strip{
-      background:var(--panel);
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-    }
-    .strip-inner{
-      display:grid; gap:16px;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      padding:28px 0;
-    }
-    .card{
+    /* Section */
+    .section{padding:36px 0}
+    .intro-card{
+      max-width:800px; margin:0 auto;
+      background:#0e1621; padding:24px; border-radius:16px;
       border:1px solid var(--border);
-      border-radius:16px; padding:18px; background:#0e1621;
+      text-align:center; color:var(--muted);
     }
-    .card h3{margin:0 0 6px 0; font-size:18px}
-    .card p{margin:0; color:var(--muted); font-size:14px}
+    .intro-card p{margin:8px 0; font-size:16px}
 
-    /* Footer (same) */
+    /* Footer */
     footer{
       border-top:1px solid var(--border);
       color:var(--muted);
@@ -141,94 +122,68 @@
     }
     .footgrid a{color:var(--muted)}
     .footgrid a:hover{color:var(--fg)}
-  /* Mobile header layout */
-  @media (max-width: 680px) {
-    .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
-    .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
-  }
-  @media (max-width: 420px) {
-    .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
-    .menu a { font-size:.9rem; padding:8px; }
-  }
-  /* --- Hero background (project-absolute path; CSS ignores <base>) --- */
-  .hero::before {
-    content:"";
-    position:absolute; inset:0;
-    background: linear-gradient(180deg, rgba(7,12,18,.75), rgba(7,12,18,.85)),
-                url(/Syfernetics-Home/images/webpageimage1.jpg) center/cover no-repeat;
-    filter:saturate(1.05) contrast(1.05);
-    z-index:-1;
-  }
+
+    /* Mobile header layout */
+    @media (max-width: 680px) {
+      .menu { width:100%; display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:10px; }
+      .menu a { text-align:center; font-size:.95rem; padding:8px 10px; }
+    }
+    @media (max-width: 420px) {
+      .menu { grid-template-columns: repeat(2, minmax(0,1fr)); gap:8px; }
+      .menu a { font-size:.9rem; padding:8px; }
+    }
   </style>
 </head>
 <body>
- <header>
+<header>
   <div class="container">
     <nav aria-label="Primary">
       <div class="brand">Syfernetics</div>
       <div class="menu">
-        <a href="index.html">Home</a>
-        <a href="about/">About</a>
-        <a href="solutions/">Solutions</a>
-        <a href="projects/">Projects</a>
-        <a href="founders/">Founders</a>
-        <a href="contact/" class="cta">Contact</a>
+        <a href="../index.html">Home</a>
+        <a href="../about/" class="cta">About</a>
+        <a href="../solutions/">Solutions</a>
+        <a href="../projects/">Projects</a>
+        <a href="../founders/">Founders</a>
+        <a href="../contact/">Contact</a>
       </div>
     </nav>
   </div>
 </header>
 
-  <section class="hero">
-    <div class="container">
-      <h1>About Syfernetics</h1>
-      <p>We build AI‑assisted, real‑world cyber defense: practical network hardening, deep visibility, and automation that puts you— not third parties— in control.</p>
-    </div>
-  </section>
+<section class="hero">
+  <div class="container">
+    <h1>About Syfernetics</h1>
+    <p>Building a safer, smarter digital world with transparency, innovation, and community.</p>
+  </div>
+</section>
 
-  <section class="section">
-    <div class="container">
-      <p class="lead">
-        We don’t just build AI. We engineer bulletproof digital control systems. The modern web hides your data behind platforms you don’t own and automated policies you can’t see. Syfernetics breaks that cycle. Our systems operate with real‑world situational awareness—where monitoring, defending, and controlling your environment isn’t outsourced; it’s built‑in.
+<section class="section">
+  <div class="container">
+    <div class="intro-card">
+      <p>
+        <b>Syfernetics</b> is committed to reshaping how cybersecurity and automation work for people—not against them.
+      </p>
+      <p>
+        We believe advanced protection and intelligent automation should be open, accessible, and adaptable for everyone—at home, at work, or anywhere your data travels.
+      </p>
+      <p>
+        Our team’s roots are in hands-on diagnostics, IT, and real-world network security, combining decades of practical experience with a relentless drive to understand and innovate.
+      </p>
+      <p>
+        <b>Our mission:</b> Give every user visibility, control, privacy, and the tools to defend what matters.
+      </p>
+      <p>
+        Whether you’re an IT pro, a business leader, or someone who just wants to reclaim their digital world—Syfernetics is your partner in building resilient, future-ready networks.
+      </p>
+      <p>
+        <i>Join us on the journey to open, transparent, user-empowered cybersecurity.</i>
       </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section class="strip">
-    <div class="container strip-inner">
-      <div class="card">
-        <h3>Our Mission</h3>
-        <p>Deliver autonomous, self‑reliant systems that reclaim your privacy, provide unfiltered real‑time visibility, and empower you with absolute digital authority.</p>
-      </div>
-      <div class="card">
-        <h3>Why Syfernetics?</h3>
-        <p>Because Big Tech limits you. We don’t. We restore digital sovereignty, eliminate unnecessary third‑party dependencies, and hand you the controls.</p>
-      </div>
-      <div class="card">
-        <h3>What We’re Building</h3>
-        <p>Control Core, Autonomous Defense Frameworks, and Real‑Time Visibility—platforms that adapt, self‑heal, and secure every node of your network.</p>
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <div class="container footgrid">
-      <div>
-        <strong>Syfernetics</strong><br>
-        Macon, Georgia<br>
-        <a href="mailto:contact@syfernetics.com">contact@syfernetics.com</a>
-      </div>
-      <div>
-        <strong>Links</strong><br>
-        <a href="about/">About</a><br>
-        <a href="solutions/">Solutions</a><br>
-        <a href="projects/">Projects</a>
-      </div>
-      <div>
-        <strong>Legal</strong><br>
-        <a href="../privacy.html">Privacy</a> (optional)<br>
-        <a href="../terms.html">Terms</a> (optional)
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+<footer>
+  <div class="container footgrid">
+    <div>
+      <strong>Syfernetics</strong
