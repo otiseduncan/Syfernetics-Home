@@ -108,20 +108,20 @@
       font-size: 1.1rem;
       padding: 16px 0;
       border-radius: 0;
-      background: none;
+      background: none !important;
       color: var(--accent);
-      font-weight: 600;
-      text-align: center;
-      transition: background .2s;
+      box-shadow: none;
     }
     .mobile-nav a.cta {
       color: var(--fg);
-      background: var(--accent);
+      background: var(--accent) !important;
       border-radius: 8px;
+      box-shadow: none;
     }
     .mobile-nav a:hover {
-      background: var(--panel);
+      background: none !important;
       color: var(--fg);
+      box-shadow: none;
     }
   }
   @media(max-width:420px){.menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.menu a{font-size:.9rem;padding:8px}}
