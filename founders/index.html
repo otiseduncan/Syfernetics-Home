@@ -90,17 +90,52 @@ nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-
   border-radius: 6px;
 }
 @media(max-width:680px){
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    position: relative;
+  }
+  nav {
+    width: 100%;
+    order: 2;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(11,15,20,.95);
+    border-top: 1px solid var(--border);
+    box-shadow: 0 -2px 8px #0002;
+    padding: 0;
+    z-index: 101;
+  }
   .menu {
-    flex-wrap: nowrap;
-    gap: 10px;
-    overflow-x: auto;
-    padding-bottom: 6px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    gap: 0;
+    padding: 10px 0;
+    overflow-x: visible;
   }
   .menu a {
-    min-width: 110px;
+    flex: 1 1 0;
+    min-width: 0;
+    font-size: 1.1rem;
+    padding: 14px 0;
+    border-radius: 0;
+    background: none;
+    color: var(--accent);
+    font-weight: 600;
     text-align: center;
-    font-size: .95rem;
-    padding: 8px 10px;
+    transition: background .2s;
+  }
+  .menu a.cta {
+    color: var(--fg);
+    background: var(--accent);
+    border-radius: 8px;
+  }
+  .menu a:hover {
+    background: var(--panel);
+    color: var(--fg);
   }
 }
 @media(max-width:420px){
