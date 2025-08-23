@@ -74,9 +74,43 @@ a{color:inherit;text-decoration:none}
 header{position:sticky;top:0;z-index:100;background:rgba(11,15,20,.85);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
 nav{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:10px 0}
 .brand{font-weight:700;letter-spacing:.3px}
-.menu{display:flex;gap:18px;flex-wrap:wrap}
-.menu a{padding:8px 12px;border-radius:10px;color:var(--muted)}
-.menu a:hover{background:var(--panel);color:var(--fg)}
+.menu {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--panel);
+}
+.menu::-webkit-scrollbar {
+  height: 6px;
+}
+.menu::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 6px;
+}
+@media(max-width:680px){
+  .menu {
+    flex-wrap: nowrap;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+  .menu a {
+    min-width: 110px;
+    text-align: center;
+    font-size: .95rem;
+    padding: 8px 10px;
+  }
+}
+@media(max-width:420px){
+  .menu a {
+    min-width: 90px;
+    font-size: .9rem;
+    padding: 8px;
+  }
+}
 .cta{background:var(--accent);color:#071217;padding:10px 14px;border-radius:12px;font-weight:600}
 .cta:hover{background:var(--accent-d)}
 
