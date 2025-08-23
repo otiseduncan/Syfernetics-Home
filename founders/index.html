@@ -106,7 +106,6 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:28px 0 48px
 @media(max-width:680px){
   .menu{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
   .menu a{text-align:center;font-size:.95rem;padding:8px 10px}
-  .hamburger{display:block;}
 }
 @media(max-width:420px){
   .menu{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
@@ -126,10 +125,7 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:28px 0 48px
       </div>
     </div>
     <nav aria-label="Primary">
-      <button class="hamburger" aria-label="Open menu" aria-controls="menu" aria-expanded="false" style="display:none;background:none;border:none;padding:8px;cursor:pointer;">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect y="7" width="32" height="3" rx="1.5" fill="#29d3a0"/><rect y="15" width="32" height="3" rx="1.5" fill="#29d3a0"/><rect y="23" width="32" height="3" rx="1.5" fill="#29d3a0"/></svg>
-      </button>
-      <div class="menu" id="menu">
+      <div class="menu">
         <a href="../index.html">Home</a>
         <a href="../about/">About</a>
         <a href="../solutions/">Solutions</a>
@@ -137,26 +133,6 @@ footer{border-top:1px solid var(--border);color:var(--muted);padding:28px 0 48px
         <a href="founders/" class="cta">Founders</a>
         <a href="../contact/">Contact</a>
       </div>
-      <script>
-        const hamburger = document.querySelector('.hamburger');
-        const menu = document.getElementById('menu');
-        function checkMobileMenu() {
-          if(window.innerWidth <= 900) {
-            hamburger.style.display = 'block';
-            menu.style.display = hamburger.getAttribute('aria-expanded') === 'true' ? 'grid' : 'none';
-          } else {
-            hamburger.style.display = 'none';
-            menu.style.display = 'flex';
-          }
-        }
-        hamburger.addEventListener('click', function() {
-          const expanded = hamburger.getAttribute('aria-expanded') === 'true';
-          hamburger.setAttribute('aria-expanded', !expanded);
-          menu.style.display = !expanded ? 'grid' : 'none';
-        });
-        window.addEventListener('resize', checkMobileMenu);
-        checkMobileMenu();
-      </script>
     </nav>
   </div>
 </header>
