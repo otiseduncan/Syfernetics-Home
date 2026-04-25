@@ -11,7 +11,7 @@ export default function ProjectDetailPage() {
           Detailed case study coming soon
         </h1>
         <p className="text-lg leading-8 text-muted">
-          Full project case studies will include the problem, solution, stack, screenshots, workflow, and results.
+          Full project case studies will include the problem, solution, stack, screenshots, workflow, and results. For now, use the project buttons on the Projects page to view the live builds and source repositories.
         </p>
         <Link
           href="/projects"

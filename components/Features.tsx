@@ -1,21 +1,22 @@
+import Link from 'next/link'
 import SectionIntro from './SectionIntro'
 
 export default function Features() {
   const features = [
     {
-      icon: '</>',
+      eyebrow: 'Web',
       title: 'Full-Stack Web Development',
-      desc: 'Modern, responsive websites and web applications built with clean architecture, performance, and maintainability in mind.',
+      desc: 'Responsive websites and web applications built with modern frameworks, clean UI, routing, forms, and real data workflows.',
     },
     {
-      icon: '▦',
+      eyebrow: 'Ops',
       title: 'Workflow & Operations Tools',
-      desc: 'Custom dashboards and workflow apps that streamline processes, improve visibility, and drive operational efficiency.',
+      desc: 'Custom dashboards, job trackers, admin views, and internal tools designed to reduce confusion and improve visibility.',
     },
     {
-      icon: '▣',
+      eyebrow: 'Secure',
       title: 'Security-Minded Implementation',
-      desc: 'Security-conscious development practices, secure integrations, and infrastructure choices that protect your data and users.',
+      desc: 'Authentication, role-based access, structured database design, and practical attention to reliability and safe data handling.',
     },
   ]
 
@@ -31,19 +32,18 @@ export default function Features() {
 
         <div className="grid gap-8 md:grid-cols-3">
           {features.map((feature) => (
-            <article
+            <div
               key={feature.title}
-              className="group rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft transition hover:border-accent/45 hover:shadow-teal"
+              className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft transition-colors duration-200 hover:border-accent/15"
             >
-              <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-full border border-accent/30 bg-accent/10 text-lg font-black text-accent">
-                {feature.icon}
+              <div className="mb-5 inline-flex h-12 items-center justify-center rounded-full border border-accent/30 bg-accent/10 px-4 text-xs font-black uppercase tracking-wider text-accent">
+                {feature.eyebrow}
               </div>
-              <h3 className="mb-3 text-xl font-bold text-fg">{feature.title}</h3>
-              <p className="mb-5 leading-7 text-muted">{feature.desc}</p>
-              <span className="text-sm font-semibold text-accent">
-                Learn more <span aria-hidden="true">→</span>
-              </span>
-            </article>
+              <h3 className="mb-3 text-xl font-bold text-fg">
+                {feature.title}
+              </h3>
+              <p className="mb-0 leading-7 text-muted">{feature.desc}</p>
+            </div>
           ))}
         </div>
       </div>

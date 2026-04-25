@@ -9,11 +9,11 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
     <section className="py-20 bg-panel px-6">
       <div className="max-w-3xl mx-auto bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-8 shadow-lg">
         <h1 className="text-3xl font-bold text-accent mb-2">{project.title}</h1>
-        <div className="text-muted mb-6 italic">{project.type}</div>
+        <div className="text-muted mb-6 italic">{project.category}</div>
 
         {/* Overview */}
         <h3 className="text-fg font-semibold mb-2">Overview</h3>
-        <p className="text-muted mb-6">{project.summary}</p>
+        <p className="text-muted mb-6">{project.description}</p>
 
         {/* Stack */}
         <h3 className="text-fg font-semibold mb-2">Stack Used</h3>
@@ -23,43 +23,25 @@ export default function ProjectDetail({ params }: { params: { slug: string } }) 
           ))}
         </ul>
 
-        {/* Problem → Approach → Results */}
-        <h3 className="text-fg font-semibold mb-2">Problem</h3>
-        <p className="text-muted mb-6">{project.problem}</p>
-
-        <h3 className="text-fg font-semibold mb-2">Approach</h3>
-        <p className="text-muted mb-6">{project.approach}</p>
-
-        <h3 className="text-fg font-semibold mb-2">Results</h3>
-        <p className="text-muted mb-6">{project.results}</p>
-
         {/* Links */}
-        {project.github && (
-          <p className="mb-2">
-            🔗{' '}
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              View on GitHub
-            </a>
-          </p>
-        )}
-        {project.demo && (
-          <p className="mb-2">
-            ▶️{' '}
-            <a
-              href={project.demo}
-              target="_blank"
-              rel="noreferrer"
-              className="text-accent hover:underline"
-            >
-              Live Demo
-            </a>
-          </p>
-        )}
+        <div className="flex gap-4 mt-6">
+          <a
+            href={project.liveUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition hover:bg-accent-dark"
+          >
+            {project.liveLabel}
+          </a>
+          <a
+            href={project.repoUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center rounded-lg border border-accent/50 px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent/10"
+          >
+            GitHub Repo
+          </a>
+        </div>
       </div>
     </section>
   )

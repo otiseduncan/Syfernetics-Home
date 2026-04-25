@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Testimonials() {
   const audiences = [
     {
@@ -42,12 +44,12 @@ export default function Testimonials() {
           <p className="mx-auto mb-6 max-w-2xl text-muted">
             I’m focused on building practical, clean, and reliable digital solutions that help people work smarter.
           </p>
-          <a
+          <Link
             href="/contact"
             className="inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-bg transition hover:bg-accent-dark"
           >
             Start a Conversation
-          </a>
+          </Link>
         </div>
       </div>
     </section>

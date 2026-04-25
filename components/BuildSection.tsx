@@ -1,52 +1,30 @@
-
 import Link from 'next/link'
 import SectionIntro from './SectionIntro'
-
-export const projectList = [
-  {
-    title: 'FieldOps IQ',
-    category: 'Field Service Workflow App',
-    description:
-      'A technician and manager workflow MVP with authentication, role-based routing, required photo documentation, job status tracking, analytics, and invoice output.',
-    stack: ['React', 'Supabase', 'Tailwind CSS', 'Realtime Data'],
-  },
-  {
-    title: 'Financial Tracker',
-    category: 'Finance Dashboard',
-    description:
-      'A dashboard-focused project for organizing account activity, transaction categories, spending visibility, and financial review workflows.',
-    stack: ['React', 'Dashboard UI', 'Data Modeling', 'Automation Planning'],
-  },
-  {
-    title: 'Soggy Doggy Grooming',
-    category: 'Small Business Website',
-    description:
-      'A responsive small-business website with service information, booking flow, and a clean customer-facing design.',
-    stack: ['Web Design', 'Forms', 'Responsive Layout', 'Client Website'],
-  },
-  {
-    title: 'Syfernetics',
-    category: 'Professional Portfolio / Brand Site',
-    description:
-      'A professional technology site designed to present services, projects, skills, and client/employer-ready positioning.',
-    stack: ['Next.js', 'Tailwind CSS', 'Brand Design', 'Content Strategy'],
-  },
-]
+import { projects } from '@/data/projects'
 
 export function ProjectGrid({ limit }: { limit?: number }) {
-  const shown = limit ? projectList.slice(0, limit) : projectList
+  const shown = limit ? projects.slice(0, limit) : projects
 
   return (
     <div className="grid gap-8 md:grid-cols-2">
       {shown.map((project) => (
         <article
           key={project.title}
-          className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft transition hover:border-accent/45 hover:shadow-teal"
+          className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft transition-colors duration-200 hover:border-accent/20"
         >
-          <p className="mb-3 text-sm font-semibold text-accent">{project.category}</p>
-          <h3 className="mb-3 text-2xl font-bold text-fg">{project.title}</h3>
-          <p className="mb-5 leading-7 text-muted">{project.description}</p>
-          <div className="flex flex-wrap gap-2">
+          <p className="mb-3 text-sm font-semibold text-accent">
+            {project.category}
+          </p>
+
+          <h3 className="mb-3 text-2xl font-bold text-fg">
+            {project.title}
+          </h3>
+
+          <p className="mb-5 leading-7 text-muted">
+            {project.description}
+          </p>
+
+          <div className="mb-6 flex flex-wrap gap-2">
             {project.stack.map((skill) => (
               <span
                 key={skill}
@@ -55,6 +33,28 @@ export function ProjectGrid({ limit }: { limit?: number }) {
                 {skill}
               </span>
             ))}
+          </div>
+
+          <div className="flex flex-col gap-3 sm:flex-row">
+            {project.liveUrl ? (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition hover:bg-accent-dark focus:outline-none focus:ring-2 focus:ring-accent-dark"
+              >
+                {project.liveLabel || 'Live Site'}
+              </a>
+            ) : null}
+
+            <a
+              href={project.repoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-accent/50 px-4 py-2 text-sm font-semibold text-accent transition hover:bg-accent/10 focus:outline-none focus:ring-2 focus:ring-accent"
+            >
+              {project.repoLabel || 'GitHub Repo'}
+            </a>
           </div>
         </article>
       ))}
@@ -71,7 +71,9 @@ export default function BuildSection() {
             eyebrow="Selected Work"
             title="Projects that show practical capability"
           >
-            These projects demonstrate front-end development, database-backed workflows, authentication, dashboards, and real-world problem solving.
+            These projects demonstrate front-end development, database-backed
+            workflows, authentication, dashboards, deployment, and real-world
+            problem solving.
           </SectionIntro>
 
           <Link

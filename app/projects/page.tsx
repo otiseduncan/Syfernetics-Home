@@ -11,7 +11,8 @@ export default function ProjectsPage() {
           Selected work and technical projects
         </h1>
         <p className="mb-12 max-w-3xl text-lg leading-8 text-muted">
-          A collection of practical projects focused on web development, dashboards, workflow tools, and business-focused software solutions.
+          Explore a collection of practical projects focused on web development, dashboards, workflow tools, and business-focused software solutions.<br />
+          <span className="block mt-2">Each project card below includes direct links to the live build and source repository where available. Use the buttons to view the deployed site or review the code.</span>
         </p>
 
         <ProjectGrid />
