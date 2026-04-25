@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Hero() {
   return (
     <section className="brand-shell relative overflow-hidden px-6 py-24 md:py-32">
@@ -22,20 +24,20 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <a
+            <Link
               href="/projects"
               className="inline-flex items-center justify-center gap-2 rounded-lg bg-accent px-6 py-3 font-semibold text-bg transition hover:bg-accent-dark"
             >
               View Projects
               <span aria-hidden="true">→</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="/contact"
               className="inline-flex items-center justify-center gap-2 rounded-lg border border-accent/60 bg-transparent px-6 py-3 font-semibold text-accent transition hover:bg-accent/10"
             >
               Contact Me
               <span aria-hidden="true">✉</span>
-            </a>
+            </Link>
           </div>
         </div>
 

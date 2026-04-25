@@ -1,3 +1,5 @@
+
+import Link from 'next/link'
 import SectionIntro from './SectionIntro'
 
 export const projectList = [
@@ -72,12 +74,12 @@ export default function BuildSection() {
             These projects demonstrate front-end development, database-backed workflows, authentication, dashboards, and real-world problem solving.
           </SectionIntro>
 
-          <a
+          <Link
             href="/projects"
             className="mb-12 inline-flex items-center justify-center rounded-lg border border-accent/50 px-5 py-3 font-semibold text-accent transition hover:bg-accent/10"
           >
             See All Projects
-          </a>
+          </Link>
         </div>
 
         <ProjectGrid limit={4} />
