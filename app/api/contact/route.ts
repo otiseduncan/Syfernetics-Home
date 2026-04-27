@@ -18,6 +18,7 @@ export async function POST(request: Request) {
 
     if (!process.env.RESEND_API_KEY) {
       console.error("Missing RESEND_API_KEY");
+
       return NextResponse.json(
         { error: "Contact form email service is not configured." },
         { status: 500 }
@@ -38,7 +39,7 @@ export async function POST(request: Request) {
       from: fromEmail,
       to: [toEmail],
       subject: `New Syfernetics Contact Message from ${name}`,
-      reply_to: email,
+      replyTo: email,
       text: `
 New Syfernetics contact form message
 
@@ -48,10 +49,21 @@ Email: ${email}
 Message:
 ${message}
       `.trim(),
+      html: `
+        <div style="font-family: Arial, sans-serif; line-height: 1.6;">
+          <h2>New Syfernetics Contact Message</h2>
+          <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <hr />
+          <p><strong>Message:</strong></p>
+          <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
+        </div>
+      `,
     });
 
     if (error) {
       console.error("Resend contact form error:", error);
+
       return NextResponse.json(
         { error: "Message could not be sent." },
         { status: 500 }
@@ -71,4 +83,13 @@ ${message}
       { status: 500 }
     );
   }
+}
+
+function escapeHtml(value: string) {
+  return value
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
 }
