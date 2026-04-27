@@ -1,75 +1,142 @@
-export default function ContactPage() {
-  return (
-    <main className="brand-shell px-6 py-20 text-fg">
-      <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[0.9fr_1.1fr]">
-        <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-            Contact
-          </p>
-          <h1 className="text-balance mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-            Let’s talk about your website, dashboard, or workflow tool.
-          </h1>
-          <p className="text-lg leading-8 text-muted">
-            Use this form to start a conversation about a project, collaboration, freelance work, or employment opportunity.
-          </p>
+"use client";
 
-          <div className="mt-8 rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft">
-            <h2 className="mb-3 text-xl font-bold text-fg">Good fit for:</h2>
-            <ul className="space-y-3 text-muted">
-              <li>• Website rebuilds and small business sites</li>
-              <li>• Internal dashboards and workflow tools</li>
-              <li>• Portfolio, freelance, and technical opportunities</li>
-            </ul>
-          </div>
-        </div>
+import { FormEvent, useState } from "react";
+
+export default function ContactPage() {
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
+    "idle"
+  );
+  const [errorMessage, setErrorMessage] = useState("");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setStatus("sending");
+    setErrorMessage("");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Message failed.");
+      }
+
+      form.reset();
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+      setErrorMessage("Something went wrong. Please try again.");
+    }
+  }
+
+  return (
+    <main className="min-h-screen bg-bg px-6 py-24 text-fg">
+      <section className="mx-auto max-w-4xl">
+        <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-accent">
+          Contact
+        </p>
+
+        <h1 className="mb-6 text-4xl font-extrabold tracking-tight md:text-6xl">
+          Let’s talk through the problem.
+        </h1>
+
+        <p className="mb-10 max-w-2xl text-lg leading-8 text-muted">
+          Need a website, dashboard, workflow tool, automation, or
+          security-minded technology cleanup? Send a message and I’ll follow up.
+        </p>
 
         <form
-          action="/api/contact"
-          method="POST"
-          className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft"
+          onSubmit={handleSubmit}
+          className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft backdrop-blur-xl md:p-8"
         >
-          <div className="grid gap-4">
-            <label className="grid gap-2">
-              <span className="text-sm font-semibold text-muted">Name</span>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div>
+              <label
+                htmlFor="name"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Name
+              </label>
               <input
+                id="name"
                 name="name"
+                type="text"
                 required
-                className="rounded-lg border border-white/10 bg-bg2 px-4 py-3 text-fg outline-none transition focus:border-accent"
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
                 placeholder="Your name"
               />
-            </label>
+            </div>
 
-            <label className="grid gap-2">
-              <span className="text-sm font-semibold text-muted">Email</span>
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Email
+              </label>
               <input
-                type="email"
+                id="email"
                 name="email"
+                type="email"
                 required
-                className="rounded-lg border border-white/10 bg-bg2 px-4 py-3 text-fg outline-none transition focus:border-accent"
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
                 placeholder="you@example.com"
               />
-            </label>
-
-            <label className="grid gap-2">
-              <span className="text-sm font-semibold text-muted">Message</span>
-              <textarea
-                name="message"
-                rows={6}
-                required
-                className="rounded-lg border border-white/10 bg-bg2 px-4 py-3 text-fg outline-none transition focus:border-accent"
-                placeholder="Tell me what you are trying to build or improve."
-              />
-            </label>
-
-            <button
-              type="submit"
-              className="rounded-lg bg-accent px-6 py-3 font-semibold text-bg transition hover:bg-accent-dark"
-            >
-              Send Message
-            </button>
+            </div>
           </div>
+
+          <div className="mt-6">
+            <label
+              htmlFor="message"
+              className="mb-2 block text-sm font-semibold text-fg"
+            >
+              Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              required
+              rows={7}
+              className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+              placeholder="Tell me what you need help with..."
+            />
+          </div>
+
+          <button
+            type="submit"
+            disabled={status === "sending"}
+            className="mt-6 inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-bg transition hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-60"
+          >
+            {status === "sending" ? "Sending..." : "Send Message"}
+          </button>
+
+          {status === "sent" && (
+            <p className="mt-4 text-sm font-semibold text-accent">
+              Message sent successfully.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="mt-4 text-sm font-semibold text-red-400">
+              {errorMessage}
+            </p>
+          )}
         </form>
-      </div>
+      </section>
     </main>
-  )
+  );
 }
