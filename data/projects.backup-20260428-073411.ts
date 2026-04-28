@@ -1,23 +1,5 @@
-﻿export const projects = [
-  
+export const projects = [
   {
-    title: "SyferSec Lab Console",
-    category: "Cybersecurity Lab Dashboard",
-    description:
-      "A portfolio-grade cybersecurity lab console built with Next.js for authorized local Nmap scanning, scan history, parsed hosts, open ports, defensive findings, and report-style review workflows.",
-    stack: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Neon Postgres",
-      "Nmap",
-      "API Routes",
-    ],
-    liveUrl: "",
-    repoUrl: "https://github.com/otiseduncan/syfersec-lab-console",
-    repoLabel: "GitHub Repo",
-  },
-{
     slug: 'fieldops-iq',
     title: 'FieldOps IQ',
     category: 'Field Service Workflow App',
@@ -62,4 +44,3 @@
     repoLabel: 'GitHub Repo',
   },
 ]
-

@@ -13,7 +13,8 @@
       "Nmap",
       "API Routes",
     ],
-    liveUrl: "",
+    liveUrl: "https://syfersec-lab-console.vercel.app",
+    liveLabel: "Live Demo",
     repoUrl: "https://github.com/otiseduncan/syfersec-lab-console",
     repoLabel: "GitHub Repo",
   },
@@ -62,4 +63,3 @@
     repoLabel: 'GitHub Repo',
   },
 ]
-
