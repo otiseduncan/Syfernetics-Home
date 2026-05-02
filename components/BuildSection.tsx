@@ -90,7 +90,7 @@ export default function BuildSection() {
           </Link>
         </div>
 
-        <ProjectGrid limit={4} />
+        <ProjectGrid limit={6} />
       </div>
     </section>
   );

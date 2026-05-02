@@ -50,6 +50,28 @@
     repoLabel: 'GitHub Repo',
   },
   {
+    slug: 'katiebugs-country-kitchen',
+    title: "Katie Bug's Country Kitchen",
+    category: 'E-commerce Platform',
+    description: 'A specialized e-commerce platform for artisanal homemade food products, featuring custom branding, product categorization, and a streamlined shopping experience.',
+    stack: ['React', 'Next.js', 'Tailwind CSS', 'PostgreSQL'],
+    liveUrl: 'https://otiseduncan.github.io/katiebugs-country-kitchen/',
+    repoUrl: 'https://github.com/otiseduncan/katiebugs-country-kitchen',
+    liveLabel: 'Live Site',
+    repoLabel: 'GitHub Repo'
+  },
+  {
+    slug: 'fuze-boxx',
+    title: 'Fuze Boxx Website',
+    category: 'Modern Web Presence',
+    description: 'A high-performance, responsive brand website built with modern frameworks to showcase technical services and solutions with a professional aesthetic.',
+    stack: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+    liveUrl: 'https://otiseduncan.github.io/fuze-boxx-website/',
+    repoUrl: 'https://github.com/otiseduncan/fuze-boxx-website',
+    liveLabel: 'Live Site',
+    repoLabel: 'GitHub Repo'
+  },
+  {
     slug: 'syfernetics',
     title: 'Syfernetics',
     category: 'Professional Portfolio / Brand Site',
