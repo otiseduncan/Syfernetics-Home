@@ -6,23 +6,26 @@ export default function AboutPage() {
           About Syfernetics
         </p>
         <h1 className="text-balance mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Practical software built from real-world problem solving.
+          Practical technology support built from real-world problem solving.
         </h1>
 
         <div className="space-y-6 text-lg leading-8 text-muted">
           <p>
-            Syfernetics is the professional technology brand of Otis Duncan, focused on web development, workflow tools, dashboards, and security-minded software solutions.
+            Syfernetics is the professional technology brand of Otis Duncan, focused on websites, workflow automation, business email setup, networking support, and practical IT help for small businesses in Central Georgia.
           </p>
           <p>
-            My background includes hands-on operations, diagnostics, technical troubleshooting, and field service environments. That experience gives me a practical view of software: it should reduce confusion, improve visibility, and make work easier to complete correctly.
+            My background includes decades of hands-on troubleshooting, field operations, diagnostics, customer communication, documentation pressure, and repair-process thinking. That experience shapes how I approach technology: it should reduce confusion, improve visibility, and make work easier to complete correctly.
           </p>
           <p>
-            I build with modern tools including React, Next.js, Tailwind CSS, Supabase, PostgreSQL, and API-driven workflows. My focus is growing into full-stack development, security-minded engineering, and business-focused software solutions.
+            Today, Syfernetics applies that problem-solving background to small business websites, workflow tools, dashboards, domain and email setup, networking support, and security-minded digital habits.
+          </p>
+          <p>
+            Based in Milledgeville, GA and serving Central Georgia with local and remote support.
           </p>
         </div>
 
         <div className="mt-10 grid gap-4 md:grid-cols-3">
-          {['Web Apps', 'Workflow Tools', 'Security-Minded Systems'].map((item) => (
+          {['Small Business Websites', 'Workflow Automation', 'Networking & IT Help'].map((item) => (
             <div key={item} className="rounded-2xl border border-white/10 bg-card/70 p-5 font-semibold text-fg shadow-soft">
               {item}
             </div>
@@ -32,7 +35,7 @@ export default function AboutPage() {
         <div className="mt-12 rounded-2xl border border-accent/25 bg-accent/10 p-7 shadow-teal">
           <h2 className="mb-3 text-2xl font-bold text-fg">The advantage</h2>
           <p className="leading-8 text-muted">
-            I am not approaching development from theory only. I have worked around real deadlines, real service environments, communication gaps, documentation problems, and operational pressure. That helps me build tools that match the way people actually work.
+            I am not approaching technology from theory only. I have worked around real deadlines, real service environments, communication gaps, documentation problems, and operational pressure. That helps Syfernetics build practical solutions that match the way small businesses actually work.
           </p>
         </div>
       </div>

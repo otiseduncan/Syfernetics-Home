@@ -8,11 +8,10 @@ export default function ProjectsPage() {
           Projects
         </p>
         <h1 className="text-balance mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Selected work and technical projects
+          Project proof built around practical business problems
         </h1>
         <p className="mb-12 max-w-3xl text-lg leading-8 text-muted">
-          Explore a collection of practical projects focused on web development, dashboards, workflow tools, and business-focused software solutions.<br />
-          <span className="block mt-2">Each project card below includes direct links to the live build and source repository where available. Use the buttons to view the deployed site or review the code.</span>
+          Explore selected Syfernetics projects focused on small business websites, workflow tools, dashboards, brand direction, and practical technology solutions. Each project shows how the work starts with a real problem, then turns into a clearer website, a better workflow, or a more useful digital system.
         </p>
 
         <ProjectGrid />

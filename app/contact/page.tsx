@@ -18,7 +18,12 @@ export default function ContactPage() {
 
     const payload = {
       name: formData.get("name"),
+      businessName: formData.get("businessName"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
+      serviceNeeded: formData.get("serviceNeeded"),
+      currentWebsite: formData.get("currentWebsite"),
+      preferredContactMethod: formData.get("preferredContactMethod"),
       message: formData.get("message"),
     };
 
@@ -51,13 +56,37 @@ export default function ContactPage() {
         </p>
 
         <h1 className="mb-6 text-4xl font-extrabold tracking-tight md:text-6xl">
-          Let’s talk through the problem.
+          Request a website, workflow, networking, or small business IT review.
         </h1>
 
         <p className="mb-10 max-w-2xl text-lg leading-8 text-muted">
-          Need a website, dashboard, workflow tool, automation, or
-          security-minded technology cleanup? Send a message and I’ll follow up.
+          Tell me what you need help with - a website, website refresh, workflow
+          automation, business email setup, networking issue, or practical IT
+          cleanup. I&apos;ll review the request and follow up with a clear next step.
         </p>
+
+        <div className="mb-8 grid gap-4 md:grid-cols-2">
+          <a
+            href="tel:4783435252"
+            className="rounded-xl border border-white/10 bg-card/70 p-4 text-muted transition hover:border-accent/50 hover:bg-card"
+          >
+            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Call/Text
+            </span>
+            <span className="mt-2 block text-lg font-semibold text-fg">478-343-5252</span>
+          </a>
+          <a
+            href="mailto:otis.duncan@syfernetics.com"
+            className="rounded-xl border border-white/10 bg-card/70 p-4 text-muted transition hover:border-accent/50 hover:bg-card"
+          >
+            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+              Email
+            </span>
+            <span className="mt-2 block text-lg font-semibold text-fg">
+              otis.duncan@syfernetics.com
+            </span>
+          </a>
+        </div>
 
         <form
           onSubmit={handleSubmit}
@@ -83,6 +112,22 @@ export default function ContactPage() {
 
             <div>
               <label
+                htmlFor="businessName"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Business name
+              </label>
+              <input
+                id="businessName"
+                name="businessName"
+                type="text"
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+                placeholder="Your business (optional)"
+              />
+            </div>
+
+            <div>
+              <label
                 htmlFor="email"
                 className="mb-2 block text-sm font-semibold text-fg"
               >
@@ -96,6 +141,86 @@ export default function ContactPage() {
                 className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
                 placeholder="you@example.com"
               />
+            </div>
+
+            <div>
+              <label
+                htmlFor="phone"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Phone
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="tel"
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+                placeholder="(Optional)"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="serviceNeeded"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Service needed
+              </label>
+              <select
+                id="serviceNeeded"
+                name="serviceNeeded"
+                required
+                defaultValue=""
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+              >
+                <option value="" disabled>
+                  Select one
+                </option>
+                <option>Website design</option>
+                <option>Website refresh</option>
+                <option>Workflow automation</option>
+                <option>Business email/domain setup</option>
+                <option>Networking/Wi-Fi support</option>
+                <option>Practical IT help</option>
+                <option>Security basics</option>
+                <option>Custom project</option>
+              </select>
+            </div>
+
+            <div>
+              <label
+                htmlFor="currentWebsite"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Current website
+              </label>
+              <input
+                id="currentWebsite"
+                name="currentWebsite"
+                type="url"
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 placeholder-slate-500 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+                placeholder="https://... (optional)"
+              />
+            </div>
+
+            <div>
+              <label
+                htmlFor="preferredContactMethod"
+                className="mb-2 block text-sm font-semibold text-fg"
+              >
+                Preferred contact method
+              </label>
+              <select
+                id="preferredContactMethod"
+                name="preferredContactMethod"
+                defaultValue=""
+                className="w-full rounded-lg border border-white/10 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-accent focus:ring-2 focus:ring-accent/30"
+              >
+                <option value="">No preference</option>
+                <option>Email</option>
+                <option>Phone call</option>
+                <option>Text message</option>
+              </select>
             </div>
           </div>
 

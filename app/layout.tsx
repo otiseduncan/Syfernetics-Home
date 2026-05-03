@@ -1,10 +1,30 @@
 import './globals.css'
 
 export const metadata = {
+  metadataBase: new URL('https://syfernetics.com'),
   title:
     'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
   description:
     'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, networking support, and practical IT help. Based in Milledgeville, GA.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title:
+      'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
+    description:
+      'Websites, workflow automation, networking support, business email setup, and practical IT help for Central Georgia small businesses.',
+    url: 'https://syfernetics.com/',
+    siteName: 'Syfernetics',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Syfernetics | Small Business Websites & Practical IT Help',
+    description:
+      'Practical websites, workflow automation, networking, and IT help for Central Georgia small businesses.',
+  },
   verification: {
     google: 'fbeb0a8d990156bc',
   },

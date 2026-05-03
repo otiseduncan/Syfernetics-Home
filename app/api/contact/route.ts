@@ -6,12 +6,17 @@ export async function POST(request: Request) {
     const body = await request.json();
 
     const name = String(body.name || "").trim();
+    const businessName = String(body.businessName || "").trim();
     const email = String(body.email || "").trim();
+    const phone = String(body.phone || "").trim();
+    const serviceNeeded = String(body.serviceNeeded || "").trim();
+    const currentWebsite = String(body.currentWebsite || "").trim();
+    const preferredContactMethod = String(body.preferredContactMethod || "").trim();
     const message = String(body.message || "").trim();
 
-    if (!name || !email || !message) {
+    if (!name || !email || !serviceNeeded || !message) {
       return NextResponse.json(
-        { error: "Name, email, and message are required." },
+        { error: "Name, email, service needed, and message are required." },
         { status: 400 }
       );
     }
@@ -38,22 +43,32 @@ export async function POST(request: Request) {
     const { data, error } = await resend.emails.send({
       from: fromEmail,
       to: [toEmail],
-      subject: `New Syfernetics Contact Message from ${name}`,
+      subject: `New Syfernetics Inquiry: ${serviceNeeded} from ${name}`,
       replyTo: email,
       text: `
-New Syfernetics contact form message
+New Syfernetics inquiry
 
 Name: ${name}
+Business: ${businessName || "Not provided"}
 Email: ${email}
+Phone: ${phone || "Not provided"}
+Service Needed: ${serviceNeeded}
+Current Website: ${currentWebsite || "Not provided"}
+Preferred Contact Method: ${preferredContactMethod || "Not provided"}
 
 Message:
 ${message}
       `.trim(),
       html: `
         <div style="font-family: Arial, sans-serif; line-height: 1.6;">
-          <h2>New Syfernetics Contact Message</h2>
+          <h2>New Syfernetics Inquiry</h2>
           <p><strong>Name:</strong> ${escapeHtml(name)}</p>
+          <p><strong>Business:</strong> ${escapeHtml(businessName || "Not provided")}</p>
           <p><strong>Email:</strong> ${escapeHtml(email)}</p>
+          <p><strong>Phone:</strong> ${escapeHtml(phone || "Not provided")}</p>
+          <p><strong>Service Needed:</strong> ${escapeHtml(serviceNeeded)}</p>
+          <p><strong>Current Website:</strong> ${escapeHtml(currentWebsite || "Not provided")}</p>
+          <p><strong>Preferred Contact Method:</strong> ${escapeHtml(preferredContactMethod || "Not provided")}</p>
           <hr />
           <p><strong>Message:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>

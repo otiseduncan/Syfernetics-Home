@@ -10,8 +10,11 @@ export function ProjectGrid({ limit }: { limit?: number }) {
 
   return (
     <div className="grid gap-8 md:grid-cols-2">
-      {shown.map((project) => (
-        <MotionCard key={project.title} className="p-6" href={project.repoUrl}>
+      {shown.map((project) => {
+        const primaryHref = project.liveUrl || project.repoUrl || "/contact";
+
+        return (
+        <MotionCard key={project.title} className="p-6" href={primaryHref}>
           <p className="mb-3 text-sm font-semibold text-accent">
             {project.category}
           </p>
@@ -44,22 +47,33 @@ export function ProjectGrid({ limit }: { limit?: number }) {
                 onClick={(event) => event.stopPropagation()}
                 className="inline-flex items-center justify-center rounded-lg bg-accent px-4 py-2 text-sm font-semibold text-bg transition duration-300 hover:-translate-y-1 hover:bg-cyan-200 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.55),0_0_24px_rgba(34,211,238,0.35)] focus:outline-none focus:ring-2 focus:ring-accent-dark"
               >
-                {project.liveLabel || "Live Site"}
+                View Live Project
               </a>
             ) : null}
 
-            <a
-              href={project.repoUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(event) => event.stopPropagation()}
-              className="inline-flex items-center justify-center rounded-lg border border-accent/50 px-4 py-2 text-sm font-semibold text-accent transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-accent/10 hover:text-cyan-200 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.45),0_0_22px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-accent"
-            >
-              {project.repoLabel || "GitHub Repo"}
-            </a>
+            {project.repoUrl ? (
+              <a
+                href={project.repoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(event) => event.stopPropagation()}
+                className="inline-flex items-center justify-center rounded-lg border border-accent/50 px-4 py-2 text-sm font-semibold text-accent transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-accent/10 hover:text-cyan-200 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.45),0_0_22px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-accent"
+              >
+                View Repository
+              </a>
+            ) : (
+              <Link
+                href="/contact"
+                onClick={(event) => event.stopPropagation()}
+                className="inline-flex items-center justify-center rounded-lg border border-accent/50 px-4 py-2 text-sm font-semibold text-accent transition duration-300 hover:-translate-y-1 hover:border-cyan-300 hover:bg-accent/10 hover:text-cyan-200 hover:shadow-[0_0_0_1px_rgba(34,211,238,0.45),0_0_22px_rgba(34,211,238,0.28)] focus:outline-none focus:ring-2 focus:ring-accent"
+              >
+                Request Details
+              </Link>
+            )}
           </div>
         </MotionCard>
-      ))}
+        );
+      })}
     </div>
   );
 }

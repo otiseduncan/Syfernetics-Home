@@ -1,40 +1,20 @@
 ﻿export const projects = [
-  
   {
-    title: "SyferSec Lab Console",
-    category: "Cybersecurity Lab Dashboard",
+    slug: 'syfernetics-website-rebuild',
+    title: 'Syfernetics Website Rebuild',
+    category: 'Business Website / SEO',
     description:
-      "A portfolio-grade cybersecurity lab console built with Next.js for authorized local Nmap scanning, scan history, parsed hosts, open ports, defensive findings, and report-style review workflows.",
+      'A complete business-site rebuild focused on service clarity, local SEO structure, pricing visibility, contact flow, and customer-facing credibility for a practical technology brand.',
     stack: [
-      "Next.js",
-      "React",
-      "Tailwind CSS",
-      "Neon Postgres",
-      "Nmap",
-      "API Routes",
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'Local SEO',
+      'Service Positioning',
     ],
-    liveUrl: "",
-    repoUrl: "https://github.com/otiseduncan/syfersec-lab-console",
-    repoLabel: "GitHub Repo",
-  },
-{
-    slug: 'fieldops-iq',
-    title: 'FieldOps IQ',
-    category: 'Field Service Workflow App',
-    description:
-      'A technician and manager workflow MVP with authentication, role-based routing, required photo documentation, job status tracking, analytics, and invoice output.',
-    stack: ['React', 'Supabase', 'Tailwind CSS', 'Netlify'],
-    repoUrl: 'https://github.com/otiseduncan/fieldops-iq-mvp',
-    repoLabel: 'GitHub Repo',
-  },
-  {
-    slug: 'financial-tracker',
-    title: 'Financial Tracker',
-    category: 'Finance Dashboard',
-    description:
-      'A dashboard-focused project for organizing account activity, transaction categories, spending visibility, and financial review workflows.',
-    stack: ['React', 'Dashboard UI', 'Data Modeling', 'Automation Planning'],
-    repoUrl: 'https://github.com/otiseduncan/Financial-Tracker',
+    liveUrl: 'https://syfernetics.com/',
+    repoUrl: 'https://github.com/otiseduncan/Syfernetics-Home',
+    liveLabel: 'Live Site',
     repoLabel: 'GitHub Repo',
   },
   {
@@ -42,8 +22,8 @@
     title: 'Soggy Doggy Grooming',
     category: 'Small Business Website',
     description:
-      'A responsive small-business website with service information, booking flow, and a clean customer-facing design.',
-    stack: ['Web Design', 'Forms', 'Responsive Layout', 'GitHub Pages'],
+      'A small business website project focused on friendly branding, clear service information, customer booking flow, and an affordable path to getting a professional web presence online.',
+    stack: ['Web Design', 'Responsive Layout', 'Forms', 'GitHub Pages'],
     liveUrl: 'https://otiseduncan.github.io/soggydoggy/',
     repoUrl: 'https://github.com/otiseduncan/soggydoggy',
     liveLabel: 'Live Site',
@@ -52,35 +32,86 @@
   {
     slug: 'katiebugs-country-kitchen',
     title: "Katie Bug's Country Kitchen",
-    category: 'E-commerce Platform',
-    description: 'A specialized e-commerce platform for artisanal homemade food products, featuring custom branding, product categorization, and a streamlined shopping experience.',
-    stack: ['React', 'Next.js', 'Tailwind CSS', 'PostgreSQL'],
+    category: 'Small Business Website',
+    description:
+      'A restaurant-style small business website project focused on local branding, menu and service clarity, warm visual presentation, and a cleaner online presence for customers browsing before they visit.',
+    stack: [
+      'Web Design',
+      'Responsive Layout',
+      'Local Business Branding',
+      'GitHub Pages',
+    ],
     liveUrl: 'https://otiseduncan.github.io/katiebugs-country-kitchen/',
     repoUrl: 'https://github.com/otiseduncan/katiebugs-country-kitchen',
     liveLabel: 'Live Site',
-    repoLabel: 'GitHub Repo'
+    repoLabel: 'GitHub Repo',
+  },
+  {
+    slug: 'financial-tracker',
+    title: 'Financial Tracker App',
+    category: 'Full-stack / Dashboard',
+    description:
+      'A finance-focused app project built around clear data flow, practical dashboard views, API integration planning, and a user interface designed to make financial information easier to understand.',
+    stack: ['React', 'Dashboard UI', 'Data Modeling', 'API Planning'],
+    repoUrl: 'https://github.com/otiseduncan/Financial-Tracker',
+    repoLabel: 'GitHub Repo',
+  },
+  {
+    slug: 'driveops-iq-shopops-iq',
+    title: 'DriveOps-IQ / ShopOps-IQ',
+    category: 'Workflow Platform',
+    description:
+      'A workflow platform concept for field-service and repair operations, covering job queues, user roles, status tracking, required documents, invoice logic, and better operational visibility.',
+    stack: [
+      'Workflow Design',
+      'Role-Based Views',
+      'Job Tracking',
+      'Dashboard Planning',
+    ],
+    repoUrl: 'https://github.com/otiseduncan',
+    repoLabel: 'GitHub Repo',
   },
   {
     slug: 'fuze-boxx',
-    title: 'Fuze Boxx Website',
-    category: 'Modern Web Presence',
-    description: 'A high-performance, responsive brand website built with modern frameworks to showcase technical services and solutions with a professional aesthetic.',
-    stack: ['Next.js', 'React', 'Tailwind CSS', 'Framer Motion'],
+    title: 'FUZE Boxx Brand & Website Direction',
+    category: 'Business Strategy / Web Direction',
+    description:
+      'A business strategy and web-positioning project for a specialized automotive service brand, including service packaging, market research, pricing logic, and customer-facing messaging.',
+    stack: [
+      'Brand Strategy',
+      'Service Packaging',
+      'Market Research',
+      'Web Direction',
+    ],
     liveUrl: 'https://otiseduncan.github.io/fuze-boxx-website/',
     repoUrl: 'https://github.com/otiseduncan/fuze-boxx-website',
     liveLabel: 'Live Site',
-    repoLabel: 'GitHub Repo'
+    repoLabel: 'GitHub Repo',
   },
   {
-    slug: 'syfernetics',
-    title: 'Syfernetics',
-    category: 'Professional Portfolio / Brand Site',
+    slug: 'fieldops-iq',
+    title: 'FieldOps IQ',
+    category: 'Workflow Operations Prototype',
     description:
-      'A professional technology site designed to present services, projects, skills, and client/employer-ready positioning.',
-    stack: ['Next.js', 'Tailwind CSS', 'Brand Design', 'Vercel'],
-    liveUrl: 'https://www.syfernetics.com/',
-    repoUrl: 'https://github.com/otiseduncan/Syfernetics-Home',
-    liveLabel: 'Live Site',
+      'A workflow prototype centered on technician and manager coordination, role-aware status flow, required documentation, and operational handoff clarity.',
+    stack: ['React', 'Supabase', 'Tailwind CSS', 'Netlify'],
+    repoUrl: 'https://github.com/otiseduncan/fieldops-iq-mvp',
+    repoLabel: 'GitHub Repo',
+  },
+  {
+    slug: 'syfersec-lab-console',
+    title: 'SyferSec Lab Console',
+    category: 'Security Operations Demo',
+    description:
+      'A security operations demonstration project for scan workflow organization, result visibility, and report-style review of defensive findings.',
+    stack: [
+      'Next.js',
+      'React',
+      'Tailwind CSS',
+      'Neon Postgres',
+      'API Routes',
+    ],
+    repoUrl: 'https://github.com/otiseduncan/syfersec-lab-console',
     repoLabel: 'GitHub Repo',
   },
 ]

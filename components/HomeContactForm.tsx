@@ -18,7 +18,10 @@ export default function HomeContactForm() {
 
     const payload = {
       name: formData.get("name"),
+      businessName: formData.get("businessName"),
       email: formData.get("email"),
+      phone: formData.get("phone"),
+      serviceNeeded: formData.get("serviceNeeded"),
       message: formData.get("message"),
     };
 
@@ -68,6 +71,21 @@ export default function HomeContactForm() {
         </div>
         <div>
           <label
+            htmlFor="home-contact-business"
+            className="mb-2 block text-xs font-black uppercase tracking-[0.2em] text-teal-300"
+          >
+            Business
+          </label>
+          <input
+            id="home-contact-business"
+            name="businessName"
+            type="text"
+            className="w-full rounded-xl border border-white/15 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-300/30"
+            placeholder="Business name (optional)"
+          />
+        </div>
+        <div>
+          <label
             htmlFor="home-contact-email"
             className="mb-2 block text-xs font-black uppercase tracking-[0.2em] text-teal-300"
           >
@@ -82,6 +100,49 @@ export default function HomeContactForm() {
             placeholder="you@example.com"
           />
         </div>
+        <div>
+          <label
+            htmlFor="home-contact-phone"
+            className="mb-2 block text-xs font-black uppercase tracking-[0.2em] text-teal-300"
+          >
+            Phone
+          </label>
+          <input
+            id="home-contact-phone"
+            name="phone"
+            type="tel"
+            className="w-full rounded-xl border border-white/15 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-300/30"
+            placeholder="Optional"
+          />
+        </div>
+      </div>
+
+      <div className="mt-4">
+        <label
+          htmlFor="home-contact-service"
+          className="mb-2 block text-xs font-black uppercase tracking-[0.2em] text-teal-300"
+        >
+          Service needed
+        </label>
+        <select
+          id="home-contact-service"
+          name="serviceNeeded"
+          required
+          defaultValue=""
+          className="w-full rounded-xl border border-white/15 bg-white px-4 py-3 text-slate-950 outline-none transition focus:border-teal-400 focus:ring-2 focus:ring-teal-300/30"
+        >
+          <option value="" disabled>
+            Select one
+          </option>
+          <option>Website design</option>
+          <option>Website refresh</option>
+          <option>Workflow automation</option>
+          <option>Business email/domain setup</option>
+          <option>Networking/Wi-Fi support</option>
+          <option>Practical IT help</option>
+          <option>Security basics</option>
+          <option>Custom project</option>
+        </select>
       </div>
 
       <div className="mt-4">
