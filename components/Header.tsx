@@ -5,6 +5,8 @@ import { useState } from 'react'
 
 const links = [
   { href: '/', label: 'Home' },
+  { href: '/#services', label: 'Services' },
+  { href: '/#pricing', label: 'Pricing' },
   { href: '/projects', label: 'Projects' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
@@ -16,8 +18,13 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/10 bg-bg/90 backdrop-blur-xl">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-        <Link href="/" className="text-2xl font-extrabold tracking-tight text-fg">
-          Syfer<span className="text-accent">netics</span>
+        <Link href="/" className="flex flex-col leading-tight">
+          <span className="text-xl font-extrabold tracking-tight text-fg">
+            Syfer<span className="text-accent">netics</span>
+          </span>
+          <span className="text-[10px] font-semibold tracking-widest text-muted uppercase">
+            Websites • Workflow • Practical IT
+          </span>
         </Link>
 
         <button

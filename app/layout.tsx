@@ -3,9 +3,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Syfernetics | Practical Web Apps, Workflow Tools, and Technical Solutions',
+  title: 'Syfernetics | Small Business Websites & Workflow Automation in Central Georgia',
   description:
-    'Syfernetics builds responsive websites, dashboards, workflow applications, and security-minded software solutions for businesses, employers, and technical teams.',
+    'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, and practical IT support. Based in Milledgeville, GA.',
 }
 
 export default function RootLayout({
