@@ -243,7 +243,7 @@ function SectionIntro({
   children: React.ReactNode;
 }) {
   return (
-    <div className="mb-12 max-w-4xl">
+    <div className="mb-8 max-w-4xl md:mb-12">
       <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
         {eyebrow}
       </p>
@@ -271,7 +271,7 @@ function ServiceCard({ service }: { service: Service }) {
     <Link
       href={service.href}
       aria-label={`Learn more about ${service.label}`}
-      className="group flex h-full flex-col rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-6 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/40 hover:bg-slate-900/90 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.28)]"
+      className="group flex h-full flex-col rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-5 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/40 hover:bg-slate-900/90 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.28)] md:p-6"
     >
       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-400/10 text-2xl font-black text-teal-300 transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-teal-400/20 group-hover:text-teal-100">
         {service.icon}
@@ -296,7 +296,7 @@ function ServiceCard({ service }: { service: Service }) {
 function PackageCard({ pkg }: { pkg: Package }) {
   return (
     <div
-      className={`group relative rounded-[1.6rem] border p-6 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:shadow-[0_22px_60px_-15px_rgba(45,212,191,0.25)] ${
+      className={`group relative rounded-[1.6rem] border p-5 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:shadow-[0_22px_60px_-15px_rgba(45,212,191,0.25)] md:p-6 ${
         pkg.featured
           ? "border-teal-300/50 bg-teal-400/10 hover:border-teal-200/70 hover:bg-teal-400/15"
           : "border-white/10 bg-slate-900/70 hover:border-teal-300/35 hover:bg-slate-900/90"
@@ -338,7 +338,7 @@ function ProjectCard({ project }: { project: Project }) {
       href={href}
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-      className="group rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-6 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/35 hover:bg-slate-900/85 hover:shadow-[0_20px_50px_-15px_rgba(45,212,191,0.24)]"
+      className="group rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-5 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/35 hover:bg-slate-900/85 hover:shadow-[0_20px_50px_-15px_rgba(45,212,191,0.24)] md:p-6"
     >
       <p className="text-sm font-black uppercase tracking-widest text-teal-300 transition-colors group-hover:text-teal-100">
         {project.category}
@@ -360,10 +360,10 @@ export default function SyferneticsFreshProfessionalPreview() {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
       <div className="relative overflow-hidden">
-        <div className="absolute -left-40 top-10 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
-        <div className="absolute right-0 top-60 h-[32rem] w-[32rem] rounded-full bg-cyan-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute -left-40 top-10 h-96 w-96 rounded-full bg-teal-500/10 blur-3xl" />
+        <div className="pointer-events-none absolute right-0 top-60 h-[32rem] w-[32rem] rounded-full bg-cyan-500/10 blur-3xl" />
         <div
-          className="absolute inset-0 opacity-25"
+          className="pointer-events-none absolute inset-0 opacity-25"
           style={{
             backgroundImage:
               "radial-gradient(circle at 1px 1px, rgba(148,163,184,0.28) 1px, transparent 0)",
@@ -409,7 +409,7 @@ export default function SyferneticsFreshProfessionalPreview() {
         </header>
 
         <main id="home" className="relative z-10">
-          <RevealSection className="mx-auto grid max-w-7xl gap-12 px-6 pb-20 pt-16 md:grid-cols-[1.08fr_0.92fr] md:items-center md:pt-24">
+          <RevealSection className="mx-auto grid max-w-7xl gap-8 px-5 pb-12 pt-10 md:grid-cols-[1.08fr_0.92fr] md:items-center md:gap-12 md:px-6 md:pb-20 md:pt-24">
             <div>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-teal-400/30 bg-teal-400/10 px-4 py-2 text-sm font-bold uppercase tracking-[0.18em] text-teal-200">
                 Based in Milledgeville, GA • Serving Central Georgia
@@ -460,7 +460,7 @@ export default function SyferneticsFreshProfessionalPreview() {
               </div>
             </div>
 
-            <aside className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-6 shadow-2xl shadow-black/30 backdrop-blur">
+            <aside className="rounded-[2rem] border border-white/10 bg-slate-900/80 p-5 shadow-2xl shadow-black/30 backdrop-blur md:p-6">
               <div className="mb-5 border-b border-white/10 pb-4">
                 <p className="text-sm font-bold uppercase tracking-widest text-teal-300">
                   Built for small business
@@ -500,7 +500,7 @@ export default function SyferneticsFreshProfessionalPreview() {
 
       <RevealSection
         id="services"
-        className="border-y border-white/10 bg-slate-900/70 px-6 py-20"
+        className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -520,7 +520,11 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <RevealSection id="website-design" className="px-6 py-20" delay={0.03}>
+      <RevealSection
+        id="website-design"
+        className="px-5 py-12 md:px-6 md:py-20"
+        delay={0.03}
+      >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionIntro
             eyebrow="Website Design"
@@ -531,7 +535,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             trust you, and how they can contact you.
           </SectionIntro>
           <div className="grid gap-4 md:grid-cols-2">
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:p-6">
               <h3 className="text-xl font-black text-white">
                 Built for customer action
               </h3>
@@ -540,7 +544,7 @@ export default function SyferneticsFreshProfessionalPreview() {
                 layout, and simple navigation so visitors know what to do next.
               </p>
             </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:p-6">
               <h3 className="text-xl font-black text-white">
                 Built for local search
               </h3>
@@ -549,7 +553,7 @@ export default function SyferneticsFreshProfessionalPreview() {
                 designed around local customers searching for real help.
               </p>
             </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6 md:col-span-2">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:col-span-2 md:p-6">
               <h3 className="text-xl font-black text-white">Best fit</h3>
               <p className="mt-3 leading-7 text-slate-400">
                 Contractors, repair shops, dog groomers, churches, food
@@ -563,7 +567,7 @@ export default function SyferneticsFreshProfessionalPreview() {
 
       <RevealSection
         id="workflow-automation"
-        className="border-y border-white/10 bg-slate-900/70 px-6 py-20"
+        className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
         delay={0.04}
       >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
@@ -582,7 +586,7 @@ export default function SyferneticsFreshProfessionalPreview() {
               notifications, and dashboards that are easier to manage.
             </p>
           </div>
-          <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-6">
+          <div className="rounded-[2rem] border border-white/10 bg-slate-950/70 p-5 md:p-6">
             <div className="space-y-4">
               <CheckItem>Customer request forms</CheckItem>
               <CheckItem>Quote or appointment intake</CheckItem>
@@ -597,7 +601,11 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <RevealSection id="packages" className="px-6 py-20" delay={0.05}>
+      <RevealSection
+        id="packages"
+        className="px-5 py-12 md:px-6 md:py-20"
+        delay={0.05}
+      >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
             eyebrow="Starting Packages"
@@ -617,7 +625,7 @@ export default function SyferneticsFreshProfessionalPreview() {
 
       <RevealSection
         id="projects"
-        className="border-y border-white/10 bg-slate-900/70 px-6 py-20"
+        className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
         delay={0.06}
       >
         <div className="mx-auto max-w-7xl">
@@ -638,9 +646,13 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <RevealSection id="about" className="px-6 py-20" delay={0.07}>
-        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
-          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/30 p-8 shadow-2xl shadow-black/20">
+      <RevealSection
+        id="about"
+        className="px-5 py-12 md:px-6 md:py-20"
+        delay={0.07}
+      >
+        <div className="mx-auto grid max-w-7xl gap-6 md:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+          <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/30 p-6 shadow-2xl shadow-black/20 md:p-8">
             <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
               Why Syfernetics is different
             </p>
@@ -655,7 +667,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             </p>
           </div>
           <div className="space-y-4">
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:p-6">
               <h3 className="text-xl font-black text-white">
                 30 years of real-world technical problem solving
               </h3>
@@ -666,7 +678,7 @@ export default function SyferneticsFreshProfessionalPreview() {
                 technology support.
               </p>
             </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:p-6">
               <h3 className="text-xl font-black text-white">
                 Modern software, networking, and IT project experience
               </h3>
@@ -677,7 +689,7 @@ export default function SyferneticsFreshProfessionalPreview() {
                 solutions for real business needs.
               </p>
             </div>
-            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6">
+            <div className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 md:p-6">
               <h3 className="text-xl font-black text-white">
                 Plain-language support for small business owners
               </h3>
@@ -693,7 +705,7 @@ export default function SyferneticsFreshProfessionalPreview() {
 
       <RevealSection
         id="service-area"
-        className="border-y border-white/10 bg-slate-900/70 px-6 py-20"
+        className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
         delay={0.08}
       >
         <div className="mx-auto max-w-7xl">
@@ -720,7 +732,11 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <RevealSection id="process" className="px-6 py-20" delay={0.09}>
+      <RevealSection
+        id="process"
+        className="px-5 py-12 md:px-6 md:py-20"
+        delay={0.09}
+      >
         <div className="mx-auto max-w-7xl">
           <SectionIntro eyebrow="Process" title="A simple process built for clarity">
             Small business owners do not need a complicated technical process.
@@ -751,7 +767,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             ].map(([num, title, text]) => (
               <div
                 key={num}
-                className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-teal-300/35 hover:shadow-[0_20px_50px_-15px_rgba(45,212,191,0.22)]"
+                className="rounded-[1.5rem] border border-white/10 bg-slate-900/70 p-5 transition-all duration-300 hover:-translate-y-2 hover:border-teal-300/35 hover:shadow-[0_20px_50px_-15px_rgba(45,212,191,0.22)] md:p-6"
               >
                 <p className="text-4xl font-black text-teal-300">{num}</p>
                 <h3 className="mt-4 text-2xl font-black text-white">{title}</h3>
@@ -764,7 +780,7 @@ export default function SyferneticsFreshProfessionalPreview() {
 
       <RevealSection
         id="faq"
-        className="border-y border-white/10 bg-slate-900/70 px-6 py-20"
+        className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
         delay={0.1}
       >
         <div className="mx-auto max-w-7xl">
@@ -780,7 +796,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             {faqs.map((faq) => (
               <div
                 key={faq.q}
-                className="rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-6"
+                className="rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-5 md:p-6"
               >
                 <h3 className="text-xl font-black text-white">{faq.q}</h3>
                 <p className="mt-3 leading-7 text-slate-400">{faq.a}</p>
@@ -790,8 +806,12 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <RevealSection id="contact" className="px-6 py-20" delay={0.12}>
-        <div className="mx-auto max-w-5xl rounded-[2rem] border border-teal-300/20 bg-gradient-to-br from-teal-400/15 via-slate-900 to-cyan-500/10 p-8 text-center shadow-2xl shadow-teal-900/20 md:p-12">
+      <RevealSection
+        id="contact"
+        className="px-5 py-12 md:px-6 md:py-20"
+        delay={0.12}
+      >
+        <div className="mx-auto max-w-5xl rounded-[2rem] border border-teal-300/20 bg-gradient-to-br from-teal-400/15 via-slate-900 to-cyan-500/10 p-6 text-center shadow-2xl shadow-teal-900/20 md:p-12">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
             Start here
           </p>
