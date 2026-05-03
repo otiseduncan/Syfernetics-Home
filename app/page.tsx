@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import HomeContactForm from "@/components/HomeContactForm";
 import RevealSection from "@/components/RevealSection";
 
@@ -7,6 +8,7 @@ type Service = {
   title: string;
   description: string;
   icon: string;
+  href: string;
 };
 
 type Package = {
@@ -32,6 +34,7 @@ const services: Service[] = [
     description:
       "Clean, mobile-friendly websites for local service businesses that need to look professional, explain their services clearly, and make it easy for customers to call, email, or request help.",
     icon: "▣",
+    href: "/website-design",
   },
   {
     label: "Website Refresh",
@@ -39,6 +42,7 @@ const services: Service[] = [
     description:
       "For businesses with outdated, confusing, or broken websites that need a cleaner layout, clearer wording, a better mobile experience, and stronger calls-to-action.",
     icon: "◩",
+    href: "/website-refresh",
   },
   {
     label: "Workflow Automation",
@@ -46,6 +50,7 @@ const services: Service[] = [
     description:
       "Quote forms, job request workflows, Google Sheets tracking, notifications, dashboards, and simple internal tools that reduce repeated manual work.",
     icon: "↔",
+    href: "/workflow-automation",
   },
   {
     label: "Business Setup",
@@ -53,6 +58,7 @@ const services: Service[] = [
     description:
       "Professional email setup, domain connection, SPF/DKIM/DMARC basics, branded signatures, contact forms, and practical launch support.",
     icon: "✉",
+    href: "/business-email-setup",
   },
   {
     label: "Care Plans",
@@ -60,6 +66,7 @@ const services: Service[] = [
     description:
       "Monthly support for small updates, content changes, form checks, backups, minor page edits, and practical website maintenance.",
     icon: "✓",
+    href: "/contact",
   },
   {
     label: "IT Help",
@@ -67,6 +74,7 @@ const services: Service[] = [
     description:
       "No-nonsense support for account setup, MFA, password manager guidance, safer online habits, backups, and digital process cleanup.",
     icon: "⚙",
+    href: "/small-business-it-help",
   },
   {
     label: "Networking",
@@ -74,6 +82,7 @@ const services: Service[] = [
     description:
       "Practical support for routers, Wi-Fi coverage, device connectivity, basic network organization, and troubleshooting systems that need to communicate reliably.",
     icon: "◎",
+    href: "/networking-support",
   },
   {
     label: "Security Basics",
@@ -81,6 +90,7 @@ const services: Service[] = [
     description:
       "Practical support for MFA, password managers, safer account habits, backup conversations, email/domain records, and reducing common small-business technology risks.",
     icon: "◌",
+    href: "/small-business-it-help",
   },
 ];
 
@@ -306,7 +316,11 @@ function CheckItem({ children }: { children: React.ReactNode }) {
 
 function ServiceCard({ service }: { service: Service }) {
   return (
-    <div className="group rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-6 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/40 hover:bg-slate-900/90 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.28)]">
+    <Link
+      href={service.href}
+      aria-label={`Learn more about ${service.label}`}
+      className="group flex h-full flex-col rounded-[1.5rem] border border-white/10 bg-slate-950/60 p-6 shadow-xl shadow-black/20 transition-all duration-300 ease-out hover:-translate-y-2 hover:scale-[1.01] hover:border-teal-300/40 hover:bg-slate-900/90 hover:shadow-[0_20px_60px_-15px_rgba(45,212,191,0.28)]"
+    >
       <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl bg-teal-400/10 text-2xl font-black text-teal-300 transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-teal-400/20 group-hover:text-teal-100">
         {service.icon}
       </div>
@@ -319,7 +333,11 @@ function ServiceCard({ service }: { service: Service }) {
       <p className="mt-4 leading-7 text-slate-400 transition-colors duration-300 group-hover:text-slate-300">
         {service.description}
       </p>
-    </div>
+
+      <p className="mt-6 inline-flex items-center gap-2 text-sm font-black text-teal-300 transition duration-300 group-hover:translate-x-1 group-hover:text-teal-100">
+        Learn more -&gt;
+      </p>
+    </Link>
   );
 }
 

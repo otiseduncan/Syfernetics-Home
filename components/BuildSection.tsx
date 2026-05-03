@@ -9,7 +9,7 @@ export function ProjectGrid({ limit }: { limit?: number }) {
   const shown = limit ? projects.slice(0, limit) : projects;
 
   return (
-    <div className="grid gap-8 md:grid-cols-2">
+    <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
       {shown.map((project) => {
         const primaryHref = project.liveUrl || project.repoUrl || "/contact";
 
@@ -87,9 +87,10 @@ export default function BuildSection() {
             eyebrow="Selected Work"
             title="Projects that show practical capability"
           >
-            These projects demonstrate front-end development, database-backed
-            workflows, authentication, dashboards, deployment, and real-world
-            problem solving.
+            These projects show how Syfernetics approaches practical business
+            problems: understanding the workflow first, then building websites,
+            tools, dashboards, and digital systems that make the work easier to
+            manage.
           </SectionIntro>
 
           <Link

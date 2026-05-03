@@ -1,4 +1,5 @@
 import './globals.css'
+import StructuredData from '@/components/StructuredData'
 
 export const metadata = {
   metadataBase: new URL('https://syfernetics.com'),
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-bg text-fg antialiased">
+        <StructuredData />
         {children}
       </body>
     </html>
