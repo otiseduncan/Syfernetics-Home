@@ -523,7 +523,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="website-design"
         className="px-5 py-12 md:px-6 md:py-20"
-        delay={0.03}
       >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
           <SectionIntro
@@ -568,7 +567,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="workflow-automation"
         className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
-        delay={0.04}
       >
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
           <div>
@@ -604,7 +602,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="packages"
         className="px-5 py-12 md:px-6 md:py-20"
-        delay={0.05}
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -626,7 +623,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="projects"
         className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
-        delay={0.06}
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -649,7 +645,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="about"
         className="px-5 py-12 md:px-6 md:py-20"
-        delay={0.07}
       >
         <div className="mx-auto grid max-w-7xl gap-6 md:gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="rounded-[2rem] border border-white/10 bg-gradient-to-br from-slate-900 via-slate-950 to-teal-950/30 p-6 shadow-2xl shadow-black/20 md:p-8">
@@ -706,7 +701,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="service-area"
         className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
-        delay={0.08}
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -735,7 +729,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="process"
         className="px-5 py-12 md:px-6 md:py-20"
-        delay={0.09}
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro eyebrow="Process" title="A simple process built for clarity">
@@ -781,7 +774,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="faq"
         className="border-y border-white/10 bg-slate-900/70 px-5 py-12 md:px-6 md:py-20"
-        delay={0.1}
       >
         <div className="mx-auto max-w-7xl">
           <SectionIntro
@@ -809,7 +801,6 @@ export default function SyferneticsFreshProfessionalPreview() {
       <RevealSection
         id="contact"
         className="px-5 py-12 md:px-6 md:py-20"
-        delay={0.12}
       >
         <div className="mx-auto max-w-5xl rounded-[2rem] border border-teal-300/20 bg-gradient-to-br from-teal-400/15 via-slate-900 to-cyan-500/10 p-6 text-center shadow-2xl shadow-teal-900/20 md:p-12">
           <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
