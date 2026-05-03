@@ -1,11 +1,10 @@
 import './globals.css'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
 
 export const metadata = {
-  title: 'Syfernetics | Small Business Websites & Workflow Automation in Central Georgia',
+  title:
+    'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
   description:
-    'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, and practical IT support. Based in Milledgeville, GA.',
+    'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, networking support, and practical IT help. Based in Milledgeville, GA.',
 }
 
 export default function RootLayout({
@@ -16,9 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-bg text-fg antialiased">
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   )

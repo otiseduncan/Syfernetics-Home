@@ -104,7 +104,7 @@ const packages: Package[] = [
     description:
       "For local businesses that need a professional web presence with the right pages, clear service sections, and a clean path for customers to contact you.",
     includes: [
-      "4-6 page website structure",
+      "4–6 page website structure",
       "Home, About, Services, Contact",
       "Mobile-friendly design",
       "Local search setup basics",
@@ -430,10 +430,10 @@ export default function SyferneticsFreshProfessionalPreview() {
               FAQ
             </a>
             <a
-              href="#contact-form"
+              href="tel:4783435252"
               className="rounded-xl border border-teal-400/40 px-4 py-2 text-teal-200 hover:bg-teal-400/10"
             >
-              Start a project
+              Call/Text 478-343-5252
             </a>
           </nav>
         </header>
@@ -465,10 +465,10 @@ export default function SyferneticsFreshProfessionalPreview() {
                   View starting packages -&gt;
                 </a>
                 <a
-                  href="#contact-form"
+                  href="tel:4783435252"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-4 font-bold text-slate-100 transition hover:-translate-y-1 hover:border-teal-300/50 hover:bg-teal-400/10"
                 >
-                  Send a message
+                  Call/Text 478-343-5252
                 </a>
               </div>
               <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-400">
@@ -556,7 +556,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             eyebrow="Website Design"
             title="Small business website design that explains what you do fast"
           >
-            A good small business website should answer the customer's first
+            A good small business website should answer the customer&apos;s first
             questions quickly: what you do, where you serve, why they should
             trust you, and how they can contact you.
           </SectionIntro>
@@ -836,6 +836,15 @@ export default function SyferneticsFreshProfessionalPreview() {
           </p>
           <div className="mx-auto mt-6 grid max-w-3xl gap-4 text-left md:grid-cols-2">
             <a
+              href="tel:4783435252"
+              className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-teal-300/40 hover:bg-teal-400/10"
+            >
+              <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-300">
+                Call/Text
+              </p>
+              <p className="mt-2 text-lg font-black text-white">478-343-5252</p>
+            </a>
+            <a
               href="mailto:otis.duncan@syfernetics.com"
               className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-teal-300/40 hover:bg-teal-400/10"
             >
@@ -844,17 +853,6 @@ export default function SyferneticsFreshProfessionalPreview() {
               </p>
               <p className="mt-2 break-words text-lg font-black text-white">
                 otis.duncan@syfernetics.com
-              </p>
-            </a>
-            <a
-              href="/contact"
-              className="rounded-2xl border border-white/10 bg-slate-950/50 p-4 transition hover:border-teal-300/40 hover:bg-teal-400/10"
-            >
-              <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-300">
-                Contact page
-              </p>
-              <p className="mt-2 text-lg font-black text-white">
-                Open full inquiry form
               </p>
             </a>
           </div>
@@ -884,7 +882,7 @@ export default function SyferneticsFreshProfessionalPreview() {
           </p>
           <p>
             Based in Milledgeville, GA • Websites • Workflow • Networking •
-            Practical IT
+            Practical IT • 478-343-5252
           </p>
         </div>
       </footer>
