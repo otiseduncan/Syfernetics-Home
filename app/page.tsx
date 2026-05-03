@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import HomeContactForm from "@/components/HomeContactForm";
 import RevealSection from "@/components/RevealSection";
+import { projects as sharedProjects } from "@/data/projects";
 
 type Service = {
   label: string;
@@ -19,13 +20,7 @@ type Package = {
   featured?: boolean;
 };
 
-type Project = {
-  title: string;
-  category: string;
-  description: string;
-  liveUrl?: string;
-  repoUrl?: string;
-};
+type Project = (typeof sharedProjects)[number];
 
 const services: Service[] = [
   {
@@ -202,50 +197,7 @@ const packages: Package[] = [
   },
 ];
 
-const projects: Project[] = [
-  {
-    title: "Syfernetics Website Rebuild",
-    category: "Business Website / SEO",
-    description:
-      "A complete business-site rebuild focused on service clarity, local SEO structure, pricing visibility, contact flow, and customer-facing credibility for a practical technology brand.",
-    repoUrl: "https://github.com/otiseduncan/Syfernetics-Home",
-  },
-  {
-    title: "Financial Tracker App",
-    category: "Full-stack / Dashboard",
-    description:
-      "A finance-focused app project built around clear data flow, practical dashboard views, API integration planning, and a user interface designed to make financial information easier to understand.",
-    repoUrl: "https://github.com/otiseduncan",
-  },
-  {
-    title: "Soggy Doggy Grooming",
-    category: "Small Business Website",
-    description:
-      "A small business website project focused on friendly branding, clear service information, customer booking flow, and an affordable path to getting a professional web presence online.",
-    repoUrl: "https://github.com/otiseduncan",
-  },
-  {
-    title: "Katie Bug's Country Kitchen",
-    category: "Small Business Website",
-    description:
-      "A restaurant-style small business website project focused on local branding, menu and service clarity, warm visual presentation, and a cleaner online presence for customers browsing before they visit.",
-    repoUrl: "https://github.com/otiseduncan",
-  },
-  {
-    title: "DriveOps-IQ / ShopOps-IQ",
-    category: "Workflow Platform",
-    description:
-      "A workflow platform concept for field-service and repair operations, covering job queues, user roles, status tracking, required documents, invoice logic, and better operational visibility.",
-    repoUrl: "https://github.com/otiseduncan",
-  },
-  {
-    title: "FUZE Boxx Brand & Market Research",
-    category: "Business Strategy / Web Direction",
-    description:
-      "A business strategy and web-positioning project for a specialized automotive service brand, including service packaging, market research, pricing logic, and customer-facing messaging.",
-    repoUrl: "https://github.com/otiseduncan",
-  },
-];
+const homepageProjects: Project[] = sharedProjects.slice(0, 6);
 
 const areas = [
   "Milledgeville",
@@ -679,7 +631,7 @@ export default function SyferneticsFreshProfessionalPreview() {
             manage.
           </SectionIntro>
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project) => (
+            {homepageProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
           </div>
