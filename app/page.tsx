@@ -430,10 +430,10 @@ export default function SyferneticsFreshProfessionalPreview() {
               FAQ
             </a>
             <a
-              href="tel:4783435252"
+              href="#contact-form"
               className="rounded-xl border border-teal-400/40 px-4 py-2 text-teal-200 hover:bg-teal-400/10"
             >
-              Call/Text 478-343-5252
+              Send inquiry
             </a>
           </nav>
         </header>
@@ -465,10 +465,10 @@ export default function SyferneticsFreshProfessionalPreview() {
                   View starting packages -&gt;
                 </a>
                 <a
-                  href="tel:4783435252"
+                  href="#contact-form"
                   className="inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 px-6 py-4 font-bold text-slate-100 transition hover:-translate-y-1 hover:border-teal-300/50 hover:bg-teal-400/10"
                 >
-                  Call/Text 478-343-5252
+                  Send inquiry
                 </a>
               </div>
               <div className="mt-8 flex flex-wrap gap-3 text-sm text-slate-400">
