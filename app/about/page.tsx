@@ -1,3 +1,8 @@
+import ButtonLink from '@/components/ButtonLink'
+import CardShell from '@/components/CardShell'
+import PageShell from '@/components/PageShell'
+import SectionShell from '@/components/SectionShell'
+
 export const metadata = {
   title: 'About Syfernetics | Practical Technology Help in Milledgeville, GA',
   description:
@@ -19,45 +24,66 @@ export const metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="brand-shell px-6 py-20 text-fg">
-      <div className="mx-auto max-w-4xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-          About Syfernetics
-        </p>
-        <h1 className="text-balance mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Practical technology support built from real-world problem solving.
-        </h1>
-
-        <div className="space-y-6 text-lg leading-8 text-muted">
-          <p>
-            Syfernetics is the professional technology brand of Otis Duncan, focused on websites, workflow automation, business email setup, networking support, and practical IT help for small businesses in Central Georgia.
-          </p>
-          <p>
-            My background includes decades of hands-on troubleshooting, field operations, diagnostics, customer communication, documentation pressure, and repair-process thinking. That experience shapes how I approach technology: it should reduce confusion, improve visibility, and make work easier to complete correctly.
-          </p>
-          <p>
-            Today, Syfernetics applies that problem-solving background to small business websites, workflow tools, dashboards, domain and email setup, networking support, and security-minded digital habits.
-          </p>
-          <p>
-            Based in Milledgeville, GA and serving Central Georgia with local and remote support.
-          </p>
-        </div>
-
-        <div className="mt-10 grid gap-4 md:grid-cols-3">
+    <PageShell>
+      <SectionShell
+        eyebrow="About Syfernetics"
+        title="Practical technology support built from real-world problem solving."
+        description={
+          <>
+            <p>
+              Syfernetics is the professional technology brand of Otis Duncan, focused on websites,
+              workflow automation, business email setup, networking support, and practical IT help for
+              small businesses in Central Georgia.
+            </p>
+            <p className="mt-4">
+              The approach is shaped by decades of hands-on troubleshooting, field operations,
+              diagnostics, customer communication, and repair-process thinking. The goal is not to add
+              complexity. The goal is to reduce confusion, improve visibility, and make the next step
+              clear.
+            </p>
+          </>
+        }
+        headingAs="h1"
+      >
+        <div className="grid gap-6 md:grid-cols-3">
           {['Small Business Websites', 'Workflow Automation', 'Networking & IT Help'].map((item) => (
-            <div key={item} className="rounded-2xl border border-white/10 bg-card/70 p-5 font-semibold text-fg shadow-soft">
+            <CardShell key={item} className="p-5 font-semibold text-slate-100">
               {item}
-            </div>
+            </CardShell>
           ))}
         </div>
 
-        <div className="mt-12 rounded-2xl border border-accent/25 bg-accent/10 p-7 shadow-teal">
-          <h2 className="mb-3 text-2xl font-bold text-fg">The advantage</h2>
-          <p className="leading-8 text-muted">
-            I am not approaching technology from theory only. I have worked around real deadlines, real service environments, communication gaps, documentation problems, and operational pressure. That helps Syfernetics build practical solutions that match the way small businesses actually work.
-          </p>
+        <div className="mt-6 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
+          <CardShell className="p-7">
+            <h2 className="mb-3 text-2xl font-bold text-white">The advantage</h2>
+            <p className="leading-8 text-slate-300">
+              This work is grounded in real service environments, real deadlines, and real communication
+              gaps. That helps Syfernetics build solutions that fit the way small businesses actually
+              work instead of forcing them into a generic agency process.
+            </p>
+          </CardShell>
+
+          <CardShell className="p-7">
+            <h2 className="mb-3 text-2xl font-bold text-white">From field work to better systems</h2>
+            <p className="leading-8 text-slate-300">
+              Clear websites, simple workflows, professional email, and better digital organization all
+              support the same outcome: a business that looks credible, runs smoother, and is easier for
+              customers to reach.
+            </p>
+          </CardShell>
         </div>
-      </div>
-    </main>
+
+        <CardShell className="mt-6 border-teal-300/25 bg-teal-400/10 p-7">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-teal-200">
+            Ready to start?
+          </p>
+          <p className="mb-4 leading-8 text-slate-300">
+            Most projects start with a short practical review of what you have and what you need. No
+            long contracts. No tech jargon.
+          </p>
+          <ButtonLink href="/contact">Request a review</ButtonLink>
+        </CardShell>
+      </SectionShell>
+    </PageShell>
   )
 }

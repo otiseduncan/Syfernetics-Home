@@ -32,11 +32,14 @@ Syfernetics focuses on practical technology solutions:
 ## Pages
 
 - Home
+- Services
+- Pricing
 - Projects
 - About
+- Service Area
+- FAQ
 - Contact
-- Blog placeholder
-- Project detail placeholder
+- Project detail pages
 
 ## Local Development
 
@@ -51,6 +54,6 @@ npm run dev
 npm run build
 ```
 
-## Rebuild Notes
+## Rebuild Summary
 
 This version was redesigned to match a professional SaaS/product-design direction instead of a heavy cyber/futuristic theme. It keeps a dark technical identity while making the brand feel more credible for employers and clients.
