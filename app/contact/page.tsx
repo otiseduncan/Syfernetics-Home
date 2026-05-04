@@ -58,7 +58,7 @@ export default function ContactPage() {
       <SectionShell
         eyebrow="Contact"
         title="Request a website, workflow, networking, or small business IT review."
-        description="Tell me what you need help with and I&apos;ll review the request with a clear next step."
+        description="Tell me what you need help with and I'll review the request with a clear next step."
         headingAs="h1"
       >
         <CardShell className="mb-8 border-teal-300/25 bg-teal-400/10 px-6 py-4">
