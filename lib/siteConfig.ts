@@ -325,5 +325,7 @@ export const sitemapRoutes = [
   '/service-area',
   '/faq',
   '/contact',
+  '/privacy-policy',
+  '/terms',
   ...servicePages.map((service) => service.href),
 ]

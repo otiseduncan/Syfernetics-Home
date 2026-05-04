@@ -1,0 +1,14 @@
+{
+  "redirects": [
+    {
+      "source": "/projects/cyber-dashboard",
+      "destination": "/projects",
+      "permanent": true
+    },
+    {
+      "source": "/projects/secure-remote-work",
+      "destination": "/projects",
+      "permanent": true
+    }
+  ]
+}

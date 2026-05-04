@@ -27,6 +27,7 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
           <div>
             <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Services</p>
             <div className="flex flex-col gap-1.5">
@@ -41,6 +42,19 @@ export default function Footer() {
               ))}
             </div>
           </div>
+
+          <div>
+            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Legal</p>
+            <div className="flex flex-col gap-1.5">
+              <Link href="/privacy-policy" className="transition hover:text-accent">
+                Privacy Policy
+              </Link>
+              <Link href="/terms" className="transition hover:text-accent">
+                Terms
+              </Link>
+            </div>
+          </div>
+
           <div>
             <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Contact</p>
             <div className="flex flex-col gap-1.5">

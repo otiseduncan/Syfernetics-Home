@@ -1,7 +1,7 @@
 export default function StructuredData() {
   const data = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': ['LocalBusiness', 'ProfessionalService'],
     '@id': 'https://www.syfernetics.com/#business',
     name: 'Syfernetics',
     url: 'https://www.syfernetics.com/',
@@ -9,7 +9,13 @@ export default function StructuredData() {
     email: 'otis.duncan@syfernetics.com',
     description:
       'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, networking support, and practical IT help.',
-    priceRange: '$$',
+    priceRange: 'Cyan',
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Milledgeville',
+      addressRegion: 'GA',
+      addressCountry: 'US',
+    },
     areaServed: [
       'Milledgeville GA',
       'Eatonton GA',
