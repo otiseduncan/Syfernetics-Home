@@ -1,4 +1,7 @@
-import { ProjectGrid } from '@/components/BuildSection'
+import CardShell from '@/components/CardShell'
+import PageShell from '@/components/PageShell'
+import ProjectGrid from '@/components/ProjectGrid'
+import SectionShell from '@/components/SectionShell'
 
 export const metadata = {
   title: 'Syfernetics Projects | Websites, Workflow Tools & Practical IT Demos',
@@ -22,20 +25,24 @@ export const metadata = {
 
 export default function ProjectsPage() {
   return (
-    <main className="brand-shell px-6 py-20 text-fg">
-      <div className="mx-auto max-w-6xl">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-accent">
-          Projects
-        </p>
-        <h1 className="text-balance mb-6 text-4xl font-extrabold tracking-tight md:text-5xl">
-          Project proof built around practical business problems
-        </h1>
-        <p className="mb-12 max-w-3xl text-lg leading-8 text-muted">
-          Explore selected Syfernetics projects focused on small business websites, workflow tools, dashboards, brand direction, and practical technology solutions. Each project shows how the work starts with a real problem, then turns into a clearer website, a better workflow, or a more useful digital system.
-        </p>
-
+    <PageShell>
+      <SectionShell
+        eyebrow="Projects"
+        title="Project proof built around practical business problems"
+        description="Explore selected Syfernetics projects focused on small business websites, workflow tools, dashboards, brand direction, and practical technology solutions."
+        headingAs="h1"
+      >
         <ProjectGrid />
-      </div>
-    </main>
+
+        <CardShell className="mt-6 p-6">
+          <h2 className="mb-3 text-2xl font-bold text-white">What these projects show</h2>
+          <p className="leading-8 text-slate-300">
+            Each project starts with a practical business problem and ends with a clearer website, a
+            stronger workflow, or a more useful digital system. The focus is solving the right problem,
+            not adding complexity for its own sake.
+          </p>
+        </CardShell>
+      </SectionShell>
+    </PageShell>
   )
 }

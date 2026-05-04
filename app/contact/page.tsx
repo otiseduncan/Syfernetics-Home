@@ -1,6 +1,11 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import CardShell from "@/components/CardShell";
+import PageShell from "@/components/PageShell";
+import SectionShell from "@/components/SectionShell";
+import { contactServiceOptions } from "@/lib/siteConfig";
+import { getButtonClassName } from "@/components/ButtonLink";
 
 export default function ContactPage() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">(
@@ -49,49 +54,44 @@ export default function ContactPage() {
   }
 
   return (
-    <main className="min-h-screen bg-bg px-6 py-24 text-fg">
-      <section className="mx-auto max-w-4xl">
-        <p className="mb-4 text-sm font-bold uppercase tracking-[0.35em] text-accent">
-          Contact
-        </p>
-
-        <h1 className="mb-6 text-4xl font-extrabold tracking-tight md:text-6xl">
-          Request a website, workflow, networking, or small business IT review.
-        </h1>
-
-        <p className="mb-10 max-w-2xl text-lg leading-8 text-muted">
-          Tell me what you need help with - a website, website refresh, workflow
-          automation, business email setup, networking issue, or practical IT
-          cleanup. I&apos;ll review the request and follow up with a clear next step.
-        </p>
+    <PageShell>
+      <SectionShell
+        eyebrow="Contact"
+        title="Request a website, workflow, networking, or small business IT review."
+        description="Tell me what you need help with and I&apos;ll review the request with a clear next step."
+        headingAs="h1"
+      >
+        <CardShell className="mb-8 border-teal-300/25 bg-teal-400/10 px-6 py-4">
+          <p className="text-sm font-semibold text-teal-200">
+            Start with a practical review. You will get a clear next-step recommendation before
+            committing to a larger project.
+          </p>
+        </CardShell>
 
         <div className="mb-8 grid gap-4 md:grid-cols-2">
-          <a
-            href="tel:4783435252"
-            className="rounded-xl border border-white/10 bg-card/70 p-4 text-muted transition hover:border-accent/50 hover:bg-card"
-          >
-            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+          <CardShell className="p-4 text-slate-300">
+            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
               Call/Text
             </span>
-            <span className="mt-2 block text-lg font-semibold text-fg">478-343-5252</span>
-          </a>
-          <a
-            href="mailto:otis.duncan@syfernetics.com"
-            className="rounded-xl border border-white/10 bg-card/70 p-4 text-muted transition hover:border-accent/50 hover:bg-card"
-          >
-            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-accent">
+            <a href="tel:4783435252" className="mt-2 block text-lg font-semibold text-slate-100 transition hover:text-teal-100">
+              478-343-5252
+            </a>
+          </CardShell>
+          <CardShell className="p-4 text-slate-300">
+            <span className="block text-xs font-semibold uppercase tracking-[0.2em] text-teal-300">
               Email
             </span>
-            <span className="mt-2 block text-lg font-semibold text-fg">
+            <a
+              href="mailto:otis.duncan@syfernetics.com"
+              className="mt-2 block text-lg font-semibold text-slate-100 transition hover:text-teal-100"
+            >
               otis.duncan@syfernetics.com
-            </span>
-          </a>
+            </a>
+          </CardShell>
         </div>
 
-        <form
-          onSubmit={handleSubmit}
-          className="rounded-2xl border border-white/10 bg-card/70 p-6 shadow-soft backdrop-blur-xl md:p-8"
-        >
+        <CardShell as="div" className="p-6 md:p-8">
+        <form onSubmit={handleSubmit}>
           <div className="grid gap-6 md:grid-cols-2">
             <div>
               <label
@@ -176,14 +176,11 @@ export default function ContactPage() {
                 <option value="" disabled>
                   Select one
                 </option>
-                <option>Website design</option>
-                <option>Website refresh</option>
-                <option>Workflow automation</option>
-                <option>Business email/domain setup</option>
-                <option>Networking/Wi-Fi support</option>
-                <option>Practical IT help</option>
-                <option>Security basics</option>
-                <option>Custom project</option>
+                {contactServiceOptions.map((option) => (
+                  <option key={option.value} value={option.value}>
+                    {option.label}
+                  </option>
+                ))}
               </select>
             </div>
 
@@ -244,7 +241,7 @@ export default function ContactPage() {
           <button
             type="submit"
             disabled={status === "sending"}
-            className="mt-6 inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-semibold text-bg transition hover:bg-accent-dark disabled:cursor-not-allowed disabled:opacity-60"
+            className={`${getButtonClassName("primary")} mt-6 disabled:cursor-not-allowed disabled:opacity-60`}
           >
             {status === "sending" ? "Sending..." : "Send Message"}
           </button>
@@ -261,7 +258,8 @@ export default function ContactPage() {
             </p>
           )}
         </form>
-      </section>
-    </main>
+        </CardShell>
+      </SectionShell>
+    </PageShell>
   );
 }

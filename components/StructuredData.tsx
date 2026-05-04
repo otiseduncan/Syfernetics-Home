@@ -32,6 +32,9 @@ export default function StructuredData() {
         { '@type': 'Offer', name: 'Business Email and Domain Setup' },
         { '@type': 'Offer', name: 'Networking and Wi-Fi Support' },
         { '@type': 'Offer', name: 'Practical Small Business IT Help' },
+        { '@type': 'Offer', name: 'Security Basics' },
+        { '@type': 'Offer', name: 'Google Business Profile Help' },
+        { '@type': 'Offer', name: 'Website Care Plans' },
       ],
     },
   }
