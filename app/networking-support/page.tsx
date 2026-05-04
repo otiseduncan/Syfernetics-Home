@@ -4,6 +4,19 @@ export const metadata = {
   title: 'Small office networking and Wi-Fi support | Syfernetics',
   description:
     'Syfernetics provides practical small-office networking and Wi-Fi support in Central Georgia including setup cleanup, coverage checks, and troubleshooting.',
+  openGraph: {
+    title: 'Networking & Wi-Fi Support | Syfernetics',
+    description:
+      'Small office networking support in Central Georgia. Wi-Fi coverage, router setup, troubleshooting, connectivity help.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/networking-support',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Networking & Wi-Fi Support | Syfernetics',
+    description:
+      'Practical networking help for small offices in Central Georgia. Wi-Fi, routers, connectivity support.',
+  },
 }
 
 export default function NetworkingSupportPage() {

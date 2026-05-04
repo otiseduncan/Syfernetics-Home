@@ -4,6 +4,19 @@ export const metadata = {
   title: 'Business email and domain setup | Syfernetics',
   description:
     'Syfernetics helps Central Georgia small businesses set up professional email, domain records, and account security basics for daily reliability.',
+  openGraph: {
+    title: 'Professional Business Email Setup | Syfernetics',
+    description:
+      'Get a professional business email address with your domain. Build customer trust and improve deliverability.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/business-email-setup',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Business Email & Domain Setup | Syfernetics',
+    description:
+      'Professional email setup using your business domain for Central Georgia small businesses.',
+  },
 }
 
 export default function BusinessEmailSetupPage() {

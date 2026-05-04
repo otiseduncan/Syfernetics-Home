@@ -1,8 +1,10 @@
 import './globals.css'
 import StructuredData from '@/components/StructuredData'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
 export const metadata = {
-  metadataBase: new URL('https://syfernetics.com'),
+  metadataBase: new URL('https://www.syfernetics.com'),
   title:
     'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
   description:
@@ -15,7 +17,7 @@ export const metadata = {
       'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
     description:
       'Websites, workflow automation, networking support, business email setup, and practical IT help for Central Georgia small businesses.',
-    url: 'https://syfernetics.com/',
+    url: 'https://www.syfernetics.com/',
     siteName: 'Syfernetics',
     type: 'website',
     locale: 'en_US',
@@ -40,7 +42,9 @@ export default function RootLayout({
     <html lang="en">
       <body className="bg-bg text-fg antialiased">
         <StructuredData />
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   )

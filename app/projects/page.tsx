@@ -1,5 +1,25 @@
 import { ProjectGrid } from '@/components/BuildSection'
 
+export const metadata = {
+  title: 'Syfernetics Projects | Websites, Workflow Tools & Practical IT Demos',
+  description:
+    'View Syfernetics projects showing website design, workflow automation, dashboards, local SEO structure, and practical business technology solutions.',
+  openGraph: {
+    title: 'Syfernetics Projects | Websites, Workflow Tools & Practical IT Demos',
+    description:
+      'View Syfernetics projects showing website design, workflow automation, dashboards, local SEO structure, and practical business technology solutions.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/projects',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Syfernetics Projects | Websites, Workflow Tools & Practical IT Demos',
+    description:
+      'View Syfernetics projects showing website design, workflow automation, dashboards, local SEO structure, and practical business technology solutions.',
+  },
+}
+
+
 export default function ProjectsPage() {
   return (
     <main className="brand-shell px-6 py-20 text-fg">

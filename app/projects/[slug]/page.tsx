@@ -1,5 +1,15 @@
 import Link from 'next/link'
 
+export const metadata = {
+  title: 'Project Details | Syfernetics',
+  description: 'Detailed case study coming soon.',
+  robots: {
+    index: false,
+    follow: false,
+  },
+}
+
+
 export default function ProjectDetailPage() {
   return (
     <main className="brand-shell px-6 py-20 text-fg">

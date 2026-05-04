@@ -4,7 +4,20 @@ export const metadata = {
   title: 'Workflow automation for small businesses | Syfernetics',
   description:
     'Syfernetics helps Central Georgia small businesses simplify manual handoffs and improve workflow visibility across requests, tracking, and daily operations.',
-}
+    openGraph: {
+      title: 'Workflow Automation for Small Businesses | Syfernetics',
+      description:
+        'Stop chasing scattered messages. Automate intake, tracking, and notifications for your service business.',
+      type: 'website',
+      url: 'https://www.syfernetics.com/workflow-automation',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Workflow Automation | Syfernetics',
+      description:
+        'Reduce manual tracking and scattered messages with practical workflow automation for small businesses.',
+    },
+  }
 
 export default function WorkflowAutomationPage() {
   return (

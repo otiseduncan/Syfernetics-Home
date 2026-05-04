@@ -7,9 +7,11 @@ const links = [
   { href: '/', label: 'Home' },
   { href: '/#services', label: 'Services' },
   { href: '/#pricing', label: 'Pricing' },
-  { href: '/projects', label: 'Projects' },
-  { href: '/about', label: 'About' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#service-area', label: 'Service Area' },
+  { href: '/#faq', label: 'FAQ' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/#contact', label: 'Send Inquiry' },
 ]
 
 export default function Header() {

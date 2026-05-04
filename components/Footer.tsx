@@ -19,19 +19,22 @@ export default function Footer() {
 
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm">
           <div>
-            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Services</p>
+            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Navigation</p>
             <div className="flex flex-col gap-1.5">
-              <Link href="/#services" className="transition hover:text-accent">Website Design</Link>
-              <Link href="/#workflow" className="transition hover:text-accent">Workflow Automation</Link>
-              <Link href="/#pricing" className="transition hover:text-accent">Starting Packages</Link>
+              <Link href="/" className="transition hover:text-accent">Home</Link>
+              <Link href="/about" className="transition hover:text-accent">About</Link>
+              <Link href="/#services" className="transition hover:text-accent">Services</Link>
+              <Link href="/#pricing" className="transition hover:text-accent">Pricing</Link>
             </div>
           </div>
           <div>
-            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Company</p>
+            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">More</p>
             <div className="flex flex-col gap-1.5">
-              <Link href="/about" className="transition hover:text-accent">About</Link>
               <Link href="/projects" className="transition hover:text-accent">Projects</Link>
+              <Link href="/blog" className="transition hover:text-accent">Blog</Link>
               <Link href="/contact" className="transition hover:text-accent">Contact</Link>
+              <Link href="/#service-area" className="transition hover:text-accent">Service Area</Link>
+              <Link href="/#faq" className="transition hover:text-accent">FAQ</Link>
             </div>
           </div>
           <div>

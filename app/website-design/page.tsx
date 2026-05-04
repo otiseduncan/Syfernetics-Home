@@ -4,6 +4,19 @@ export const metadata = {
   title: 'Small business website design in Central Georgia | Syfernetics',
   description:
     'Syfernetics builds clean, mobile-friendly websites for small businesses in Central Georgia with clear services, strong contact flow, and practical local positioning.',
+  openGraph: {
+    title: 'Small Business Website Design | Syfernetics',
+    description:
+      'Professional, mobile-friendly websites that help small businesses look credible and convert customers.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/website-design',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Small Business Website Design | Syfernetics',
+    description:
+      'Professional websites for Central Georgia small businesses. Clear services, strong contact flow, practical positioning.',
+  },
 }
 
 export default function WebsiteDesignPage() {

@@ -4,6 +4,19 @@ export const metadata = {
   title: 'Practical IT help for small businesses | Syfernetics',
   description:
     'Syfernetics provides practical IT support for Central Georgia small businesses including account setup, software issues, backups, MFA, and digital cleanup.',
+  openGraph: {
+    title: 'Practical IT Help for Small Businesses | Syfernetics',
+    description:
+      'Security-minded IT support without the tech jargon. Account setup, troubleshooting, and digital cleanup.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/small-business-it-help',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Practical IT Help | Syfernetics',
+    description:
+      'No-nonsense IT support for Central Georgia small businesses. Security basics, troubleshooting, and setup.',
+  },
 }
 
 export default function SmallBusinessITHelpPage() {

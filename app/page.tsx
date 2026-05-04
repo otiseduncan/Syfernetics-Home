@@ -371,43 +371,6 @@ export default function SyferneticsFreshProfessionalPreview() {
           }}
         />
 
-        <header className="relative z-20 mx-auto flex max-w-7xl items-center justify-between px-6 py-6">
-          <a href="#home" className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-2xl border border-teal-400/30 bg-teal-400/10 text-xl font-black text-teal-300 shadow-lg shadow-teal-500/10">
-              S
-            </div>
-            <div>
-              <p className="text-lg font-black tracking-tight">Syfernetics</p>
-              <p className="text-xs text-slate-400">
-                Websites • Workflow • Practical IT
-              </p>
-            </div>
-          </a>
-          <nav className="hidden items-center gap-6 text-sm font-semibold text-slate-300 lg:flex">
-            <a href="#services" className="hover:text-teal-300">
-              Services
-            </a>
-            <a href="#packages" className="hover:text-teal-300">
-              Pricing
-            </a>
-            <a href="#projects" className="hover:text-teal-300">
-              Projects
-            </a>
-            <a href="#service-area" className="hover:text-teal-300">
-              Service Area
-            </a>
-            <a href="#faq" className="hover:text-teal-300">
-              FAQ
-            </a>
-            <a
-              href="#contact-form"
-              className="rounded-xl border border-teal-400/40 px-4 py-2 text-teal-200 hover:bg-teal-400/10"
-            >
-              Send inquiry
-            </a>
-          </nav>
-        </header>
-
         <main id="home" className="relative z-10">
           <RevealSection className="mx-auto grid max-w-7xl gap-8 px-5 pb-12 pt-10 md:grid-cols-[1.08fr_0.92fr] md:items-center md:gap-12 md:px-6 md:pb-20 md:pt-24">
             <div>
@@ -855,18 +818,6 @@ export default function SyferneticsFreshProfessionalPreview() {
         </div>
       </RevealSection>
 
-      <footer className="border-t border-white/10 px-6 py-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-sm text-slate-400 md:flex-row md:items-center">
-          <p>
-            © 2026 Syfernetics. Practical technology solutions for small
-            businesses in Central Georgia.
-          </p>
-          <p>
-            Based in Milledgeville, GA • Websites • Workflow • Networking •
-            Practical IT • 478-343-5252
-          </p>
-        </div>
-      </footer>
     </div>
   );
 }

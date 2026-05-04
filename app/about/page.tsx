@@ -1,3 +1,22 @@
+export const metadata = {
+  title: 'About Syfernetics | Practical Technology Help in Milledgeville, GA',
+  description:
+    'Learn how Syfernetics helps small businesses solve practical technology problems with websites, workflows, business email, networking, and IT support.',
+  openGraph: {
+    title: 'About Syfernetics | Practical Technology Help in Milledgeville, GA',
+    description:
+      'Learn how Syfernetics helps small businesses solve practical technology problems with websites, workflows, business email, networking, and IT support.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/about',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Syfernetics | Practical Technology Help in Milledgeville, GA',
+    description:
+      'Learn how Syfernetics helps small businesses solve practical technology problems with websites, workflows, business email, networking, and IT support.',
+  },
+}
+
 export default function AboutPage() {
   return (
     <main className="brand-shell px-6 py-20 text-fg">

@@ -4,6 +4,19 @@ export const metadata = {
   title: 'Website cleanup and redesign for small businesses | Syfernetics',
   description:
     'Syfernetics helps Central Georgia small businesses clean up outdated websites with better layout, service clarity, mobile experience, and contact flow.',
+  openGraph: {
+    title: 'Website Cleanup & Redesign | Syfernetics',
+    description:
+      'Fix outdated layouts, unclear messaging, and broken contact flows. Modernize your website without starting from scratch.',
+    type: 'website',
+    url: 'https://www.syfernetics.com/website-refresh',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Website Refresh & Redesign | Syfernetics',
+    description:
+      'Website cleanup for Central Georgia small businesses. Better layout, clarity, mobile experience.',
+  },
 }
 
 export default function WebsiteRefreshPage() {
