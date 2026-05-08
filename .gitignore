@@ -21,3 +21,13 @@ dist
 # Local SEO repair backups
 .seo-fix-backup/
 app/sitemap.ts.broken-backup-*
+# Local preview exports
+Xoduz Preview.html
+Xoduz Preview_files/
+
+# Local preview exports
+Xoduz Preview.html
+Xoduz Preview_files/
+
+# Local route cleanup backups
+_route-cleanup-backup-*/
