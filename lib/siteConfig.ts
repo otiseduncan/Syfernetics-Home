@@ -4,8 +4,8 @@ export type TopNavItem = {
 }
 
 export type ServicePage = {
-  slug: string
-  href: string
+  id: string
+  href: '/services'
   navLabel: string
   title: string
   shortDescription: string
@@ -43,10 +43,10 @@ export const topLevelPages: TopNavItem[] = [
 
 export const servicePages: ServicePage[] = [
   {
-    slug: 'website-design',
-    href: '/services/website-design',
+    id: 'website-design',
+    href: '/services',
     navLabel: 'Website Design',
-    title: 'Small Business Website Design',
+    title: 'Website design',
     shortDescription:
       'New websites built for small businesses that need a clear, professional online presence.',
     intro:
@@ -63,10 +63,10 @@ export const servicePages: ServicePage[] = [
     contactLabel: 'Website Design',
   },
   {
-    slug: 'website-refresh',
-    href: '/services/website-refresh',
+    id: 'website-refresh',
+    href: '/services',
     navLabel: 'Website Refresh',
-    title: 'Website Refresh',
+    title: 'Website refresh',
     shortDescription:
       'Modernize outdated websites with clearer messaging, better mobile behavior, and stronger calls-to-action.',
     intro:
@@ -82,10 +82,10 @@ export const servicePages: ServicePage[] = [
     startingPoint: 'Starting at $500',
   },
   {
-    slug: 'workflow-automation',
-    href: '/services/workflow-automation',
+    id: 'workflow-automation',
+    href: '/services',
     navLabel: 'Workflow Automation',
-    title: 'Workflow Automation',
+    title: 'Workflow automation',
     shortDescription:
       'Forms, trackers, and practical automations that reduce manual work and missed handoffs.',
     intro:
@@ -101,10 +101,10 @@ export const servicePages: ServicePage[] = [
     startingPoint: 'Starting at $500',
   },
   {
-    slug: 'business-email',
-    href: '/services/business-email',
-    navLabel: 'Business Email',
-    title: 'Business Email Setup',
+    id: 'business-email-setup',
+    href: '/services',
+    navLabel: 'Business Email Setup',
+    title: 'Business email setup',
     shortDescription:
       'Professional email and domain setup for credibility, deliverability, and daily reliability.',
     intro:
@@ -121,10 +121,10 @@ export const servicePages: ServicePage[] = [
     contactLabel: 'Business Email Setup',
   },
   {
-    slug: 'networking',
-    href: '/services/networking',
-    navLabel: 'Networking & Wi-Fi',
-    title: 'Networking and Wi-Fi Support',
+    id: 'networking-wifi',
+    href: '/services',
+    navLabel: 'Networking / Wi-Fi',
+    title: 'Networking / Wi-Fi',
     shortDescription:
       'Practical support for routers, Wi-Fi coverage, and connected devices in small business environments.',
     intro:
@@ -138,13 +138,13 @@ export const servicePages: ServicePage[] = [
       'Practical recommendation summary',
     ],
     startingPoint: 'Starting at $175',
-    contactLabel: 'Networking & Wi-Fi',
+    contactLabel: 'Networking / Wi-Fi',
   },
   {
-    slug: 'it-help',
-    href: '/services/it-help',
-    navLabel: 'Practical IT Help',
-    title: 'Practical Small Business IT Help',
+    id: 'it-help',
+    href: '/services',
+    navLabel: 'IT Help',
+    title: 'IT help',
     shortDescription:
       'Hands-on IT support focused on real operations, clear next steps, and practical outcomes.',
     intro:
@@ -160,10 +160,10 @@ export const servicePages: ServicePage[] = [
     startingPoint: 'Starting at $125 remote',
   },
   {
-    slug: 'security-basics',
-    href: '/services/security-basics',
+    id: 'security-basics',
+    href: '/services',
     navLabel: 'Security Basics',
-    title: 'Security Basics',
+    title: 'Security basics',
     shortDescription:
       'Security-minded setup to reduce common small-business risks without overengineering.',
     intro:
@@ -179,10 +179,10 @@ export const servicePages: ServicePage[] = [
     contactLabel: 'Security Basics',
   },
   {
-    slug: 'google-business-profile',
-    href: '/services/google-business-profile',
-    navLabel: 'Google Business Profile',
-    title: 'Google Business Profile Help',
+    id: 'google-business-profile-help',
+    href: '/services',
+    navLabel: 'Google Business Profile Help',
+    title: 'Google Business Profile help',
     shortDescription:
       'Practical setup and optimization support for local visibility in Google search and maps.',
     intro:
@@ -195,13 +195,13 @@ export const servicePages: ServicePage[] = [
       'Basic posting/review workflow guidance',
       'Alignment with website contact and service data',
     ],
-    contactLabel: 'Google Business Profile',
+    contactLabel: 'Google Business Profile Help',
   },
   {
-    slug: 'care-plans',
-    href: '/services/care-plans',
+    id: 'care-plans',
+    href: '/services',
     navLabel: 'Care Plans',
-    title: 'Website Care Plans',
+    title: 'Care plans',
     shortDescription:
       'Ongoing website care for updates, checks, and practical monthly improvements.',
     intro:
@@ -246,7 +246,7 @@ export const pricingPackages: PricingPackage[] = [
       'Service wording refinement',
       'CTA and contact path improvements',
     ],
-    href: '/services/website-refresh',
+    href: '/services',
   },
   {
     name: 'Small Business Website',
@@ -259,7 +259,7 @@ export const pricingPackages: PricingPackage[] = [
       'Service and trust-page guidance',
       'Launch and handoff support',
     ],
-    href: '/services/website-design',
+    href: '/services',
     featured: true,
   },
   {
@@ -273,7 +273,7 @@ export const pricingPackages: PricingPackage[] = [
       'Notifications setup',
       'Documentation and next-step plan',
     ],
-    href: '/services/workflow-automation',
+    href: '/services',
   },
   {
     name: 'Business Email Setup',
@@ -286,7 +286,7 @@ export const pricingPackages: PricingPackage[] = [
       'SPF/DKIM/DMARC basics',
       'Security-minded account setup',
     ],
-    href: '/services/business-email',
+    href: '/services',
   },
   {
     name: 'Network & Wi-Fi Checkup',
@@ -299,7 +299,7 @@ export const pricingPackages: PricingPackage[] = [
       'Network organization guidance',
       'Practical recommendation summary',
     ],
-    href: '/services/networking',
+    href: '/services',
   },
   {
     name: 'Website Care Plan',
@@ -312,7 +312,7 @@ export const pricingPackages: PricingPackage[] = [
       'Small edits and cleanups',
       'Priority support window',
     ],
-    href: '/services/care-plans',
+    href: '/services',
   },
 ]
 
@@ -325,7 +325,4 @@ export const sitemapRoutes = [
   '/service-area',
   '/faq',
   '/contact',
-  '/privacy-policy',
-  '/terms',
-  ...servicePages.map((service) => service.href),
 ]

@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { servicePages, topLevelPages } from '@/lib/siteConfig'
+import { topLevelPages } from '@/lib/siteConfig'
 
 export default function Footer() {
   return (
@@ -25,33 +25,6 @@ export default function Footer() {
                   {link.label}
                 </Link>
               ))}
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Services</p>
-            <div className="flex flex-col gap-1.5">
-              {servicePages.map((service) => (
-                <Link
-                  key={service.slug}
-                  href={service.href}
-                  className="transition hover:text-accent"
-                >
-                  {service.navLabel}
-                </Link>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Legal</p>
-            <div className="flex flex-col gap-1.5">
-              <Link href="/privacy-policy" className="transition hover:text-accent">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="transition hover:text-accent">
-                Terms
-              </Link>
             </div>
           </div>
 

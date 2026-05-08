@@ -1,22 +1,35 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  trailingSlash: false,
 
   async redirects() {
     return [
-      // Old blog routes
-      { source: '/blog', destination: '/', permanent: true },
-      { source: '/blog/:slug*', destination: '/', permanent: true },
-      // Old project detail slugs that were indexed
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'syfernetics.com' }],
+        destination: 'https://www.syfernetics.com/:path*',
+        permanent: true,
+      },
+      { source: '/index.html', destination: '/', permanent: true },
+      { source: '/founders', destination: '/about', permanent: true },
+      { source: '/founders/', destination: '/about', permanent: true },
+      { source: '/services/website-design', destination: '/services', permanent: true },
+      { source: '/services/website-refresh', destination: '/services', permanent: true },
+      { source: '/services/workflow-automation', destination: '/services', permanent: true },
+      { source: '/services/business-email', destination: '/services', permanent: true },
+      { source: '/services/networking-wifi', destination: '/services', permanent: true },
+      { source: '/services/networking', destination: '/services', permanent: true },
+      { source: '/services/it-help', destination: '/services', permanent: true },
+      { source: '/services/security-basics', destination: '/services', permanent: true },
+      { source: '/services/google-business-profile', destination: '/services', permanent: true },
+      { source: '/services/care-plans', destination: '/services', permanent: true },
+      { source: '/blog/nextjs-tailwind-portfolio', destination: '/projects', permanent: true },
+      { source: '/blog/penetration-testing-value', destination: '/services', permanent: true },
+      { source: '/blog', destination: '/projects', permanent: true },
+      { source: '/blog/:path*', destination: '/projects', permanent: true },
       { source: '/projects/cyber-dashboard', destination: '/projects', permanent: true },
       { source: '/projects/secure-remote-work', destination: '/projects', permanent: true },
-      // Old top-level service alias pages → canonical service detail pages
-      { source: '/website-design', destination: '/services/website-design', permanent: true },
-      { source: '/website-refresh', destination: '/services/website-refresh', permanent: true },
-      { source: '/workflow-automation', destination: '/services/workflow-automation', permanent: true },
-      { source: '/business-email-setup', destination: '/services/business-email', permanent: true },
-      { source: '/networking-support', destination: '/services/networking', permanent: true },
-      { source: '/small-business-it-help', destination: '/services/it-help', permanent: true },
     ]
   },
 }
