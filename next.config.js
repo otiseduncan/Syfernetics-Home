@@ -17,8 +17,6 @@ const nextConfig = {
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/services/business-email', destination: '/services/business-email-setup', permanent: true },
       { source: '/services/networking', destination: '/services/networking-wifi', permanent: true },
-      { source: '/projects/cyber-dashboard', destination: '/projects', permanent: true },
-      { source: '/projects/secure-remote-work', destination: '/projects', permanent: true },
     ]
   },
 }
