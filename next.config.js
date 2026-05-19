@@ -14,6 +14,7 @@ const nextConfig = {
       { source: '/index.html', destination: '/', permanent: true },
       { source: '/founders', destination: '/about', permanent: true },
       { source: '/founders/', destination: '/about', permanent: true },
+      { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/services/website-design', destination: '/services', permanent: true },
       { source: '/services/website-refresh', destination: '/services', permanent: true },
       { source: '/services/workflow-automation', destination: '/services', permanent: true },

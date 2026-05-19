@@ -325,4 +325,6 @@ export const sitemapRoutes = [
   '/service-area',
   '/faq',
   '/contact',
+  '/privacy',
+  '/terms',
 ]

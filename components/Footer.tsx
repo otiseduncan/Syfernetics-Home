@@ -35,6 +35,14 @@ export default function Footer() {
               <a href="mailto:otis.duncan@syfernetics.com" className="transition hover:text-accent">otis.duncan@syfernetics.com</a>
             </div>
           </div>
+
+          <div>
+            <p className="font-semibold text-fg mb-2 uppercase tracking-widest text-xs">Legal</p>
+            <div className="flex flex-col gap-1.5">
+              <Link href="/privacy" className="transition hover:text-accent">Privacy</Link>
+              <Link href="/terms" className="transition hover:text-accent">Terms</Link>
+            </div>
+          </div>
         </div>
       </div>
 
