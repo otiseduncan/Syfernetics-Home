@@ -97,3 +97,37 @@ Confirmed:
 ## Git / Push Status
 
 - No Git push performed for this phase patch.
+
+---
+
+## Phase F Hotfix - Responsive Formatting
+
+Issue found:
+- The promo panel could clip because the outer promo card wrapper used rigid square sizing (`aspect-square`) combined with `overflow-hidden`, which constrained dynamic text/card content at some viewport sizes.
+
+Fix applied in `app/page.tsx`:
+- Removed rigid square/overflow constraint from the promo wrapper.
+- Allowed natural height expansion for promo content.
+- Increased and tuned inner spacing for cleaner border-safe text layout.
+- Adjusted feature-card grid breakpoints:
+   - mobile: 1 column
+   - tablet: 2 columns
+   - wide desktop: 3 columns
+- Adjusted CTA row breakpoints:
+   - mobile: stacked vertically
+   - desktop: horizontal row
+- Set CTA button to full width on mobile (`w-full`) and auto width on desktop.
+- Kept all approved promo copy unchanged.
+
+Validation results after hotfix:
+- npm run build: PASS
+- npm run lint: PASS
+- npm run validate:seo:phaseA: PASS
+- npm run validate:seo:phaseB: PASS
+
+Hotfix compliance:
+- No blog/vlog work added.
+- No photos added.
+- No videos added.
+- No SEO routing changes made.
+- No Git push performed.

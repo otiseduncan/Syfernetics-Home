@@ -95,11 +95,11 @@ export default function HomePage() {
             </div>
           </div>
 
-          <CardShell className="group relative aspect-square overflow-hidden p-0">
-            <div className="relative flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.2),rgba(2,6,23,0.96)_58%)] p-5 sm:p-6">
-              <div className="w-full rounded-xl border border-cyan-300/20 bg-slate-900/75 p-5 sm:p-6">
+          <CardShell className="group relative p-0">
+            <div className="relative flex w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.2),rgba(2,6,23,0.96)_58%)] p-4 sm:p-6 lg:p-7">
+              <div className="min-w-0 w-full rounded-xl border border-cyan-300/20 bg-slate-900/75 p-5 sm:p-6 lg:p-7">
                 <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">Special Offer</p>
-                <h2 className="mt-3 text-2xl font-black leading-tight text-white sm:text-3xl">
+                <h2 className="mt-3 text-2xl font-black leading-tight text-white md:text-[1.9rem]">
                   Free 20-Minute Website &amp; Workflow Review
                 </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-300">
@@ -107,7 +107,7 @@ export default function HomePage() {
                   recommendations for your next step.
                 </p>
 
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                <div className="mt-5 grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                   <div className="rounded-lg border border-white/10 bg-slate-950/60 p-3">
                     <p className="text-sm font-bold text-white">Website clarity</p>
                     <p className="mt-1 text-xs leading-5 text-slate-300">Find layout, message, and CTA gaps.</p>
@@ -122,9 +122,9 @@ export default function HomePage() {
                   </div>
                 </div>
 
-                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                  <ButtonLink href="/contact">Book an Inquiry</ButtonLink>
-                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
+                <div className="mt-5 flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                  <ButtonLink href="/contact" className="w-full md:w-auto">Book an Inquiry</ButtonLink>
+                  <p className="text-xs font-semibold uppercase leading-5 tracking-[0.14em] text-cyan-200 md:text-right">
                     For Central Georgia small businesses
                   </p>
                 </div>

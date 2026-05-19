@@ -47,6 +47,9 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/otiseduncan/Syfernetics-Home',
     liveLabel: 'Open live site ↗',
     repoLabel: 'Open repo ↗',
+    imageSrc: '/images/projects/syfernetics-website.png',
+    imageAlt: 'Syfernetics website project preview',
+    imageFit: 'contain',
   },
   {
     slug: 'soggy-doggy-grooming',
@@ -59,6 +62,9 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/otiseduncan/soggydoggy',
     liveLabel: 'Open live site ↗',
     repoLabel: 'Open repo ↗',
+    imageSrc: '/images/projects/soggy-doggy-website.png',
+    imageAlt: 'Soggy Doggy Grooming website project preview',
+    imageFit: 'contain',
   },
   {
     slug: 'fuze-boxx-website',
@@ -71,6 +77,9 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/otiseduncan/fuze-boxx-website',
     liveLabel: 'Open live site ↗',
     repoLabel: 'Open repo ↗',
+    imageSrc: '/images/projects/fuze-boxx-website.png',
+    imageAlt: 'Fuze Boxx website project preview',
+    imageFit: 'contain',
   },
   {
     slug: 'katiebugs-country-kitchen',
