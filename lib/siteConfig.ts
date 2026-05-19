@@ -3,9 +3,40 @@ export type TopNavItem = {
   href: string
 }
 
+export type ServiceSlug =
+  | 'website-design'
+  | 'website-refresh'
+  | 'workflow-automation'
+  | 'business-email-setup'
+  | 'networking-wifi'
+  | 'it-help'
+  | 'security-basics'
+  | 'google-business-profile'
+  | 'care-plans'
+
+export type ServicePath = `/services/${ServiceSlug}`
+
+export type ServiceDetail = {
+  slug: ServiceSlug
+  href: ServicePath
+  navLabel: string
+  title: string
+  h1: string
+  seoTitle: string
+  metaDescription: string
+  shortDescription: string
+  angle: string
+  whoItHelps: string
+  includes: string[]
+  commonProblems: string[]
+  startingPrice: string
+  relatedServiceSlugs: ServiceSlug[]
+  contactLabel?: string
+}
+
 export type ServicePage = {
-  id: string
-  href: '/services'
+  id: ServiceSlug
+  href: ServicePath
   navLabel: string
   title: string
   shortDescription: string
@@ -41,183 +72,337 @@ export const topLevelPages: TopNavItem[] = [
   { label: 'Contact', href: '/contact' },
 ]
 
-export const servicePages: ServicePage[] = [
+export const standardServiceProcess = [
+  'Review the need',
+  'Recommend the right fix',
+  'Build or configure the solution',
+  'Test and clean up',
+  'Support next steps',
+]
+
+export const standardServiceAreaCopy =
+  'Syfernetics serves small businesses across Central Georgia, including Milledgeville, Eatonton, Macon, Gray, Warner Robins, Perry, Lake Oconee, Greensboro, and Madison.'
+
+export const standardServiceCta = {
+  heading: 'Need help with this?',
+  text:
+    'Syfernetics helps small businesses build practical technology systems that are clean, useful, and easier to manage.',
+  href: '/contact',
+  label: 'Contact Syfernetics',
+}
+
+export const serviceDetails: ServiceDetail[] = [
   {
-    id: 'website-design',
-    href: '/services',
+    slug: 'website-design',
+    href: '/services/website-design',
     navLabel: 'Website Design',
     title: 'Website design',
+    h1: 'Website Design for Small Businesses in Central Georgia',
+    seoTitle: 'Website Design for Small Businesses in Central Georgia | Syfernetics',
+    metaDescription:
+      'Syfernetics builds clean, mobile-friendly websites for small businesses in Central Georgia with clear page structure, readable content, and contact-focused design.',
     shortDescription:
-      'New websites built for small businesses that need a clear, professional online presence.',
-    intro:
-      'Syfernetics builds clean, mobile-friendly websites that help customers quickly understand what you do and how to contact you.',
+      'New websites for small businesses that need a professional online presence without unnecessary complexity.',
+    angle:
+      'New websites for small businesses that need a professional online presence without unnecessary complexity.',
     whoItHelps:
-      'Small service businesses that need a stronger first impression and a clearer customer path.',
+      'Small businesses that need a clear, professional website customers can trust and navigate quickly.',
     includes: [
-      'Clear page structure for services and contact actions',
-      'Mobile-friendly layout and readable content hierarchy',
-      'Local SEO-friendly headings and page copy guidance',
-      'Contact form and conversion path setup',
+      'Mobile-friendly website design',
+      'Clear page structure',
+      'Contact-focused calls to action',
+      'Basic SEO setup',
+      'Service and business information organization',
+      'Launch support',
     ],
-    startingPoint: 'Starting at $1,200',
+    commonProblems: [
+      'No clear online presence for new customers',
+      'Confusing page structure that hides key services',
+      'Low mobile readability and weak contact flow',
+      'Website copy that does not support local search intent',
+    ],
+    startingPrice: 'Starting at $1,200',
+    relatedServiceSlugs: ['website-refresh', 'google-business-profile', 'care-plans'],
     contactLabel: 'Website Design',
   },
   {
-    id: 'website-refresh',
-    href: '/services',
+    slug: 'website-refresh',
+    href: '/services/website-refresh',
     navLabel: 'Website Refresh',
     title: 'Website refresh',
+    h1: 'Website Refresh Services for Small Businesses in Central Georgia',
+    seoTitle: 'Website Refresh Services in Central Georgia | Syfernetics',
+    metaDescription:
+      'Modernize an outdated small business website with cleaner messaging, better mobile behavior, local SEO improvements, and stronger calls to action.',
     shortDescription:
-      'Modernize outdated websites with clearer messaging, better mobile behavior, and stronger calls-to-action.',
-    intro:
-      'If your current site is confusing, outdated, or hard to use on mobile, Syfernetics can refresh it without overcomplicating the process.',
+      'Improve an existing site without starting completely over.',
+    angle: 'Improve an existing site without starting completely over.',
     whoItHelps:
-      'Businesses with an existing site that needs practical improvements instead of a full rebuild.',
+      'Businesses with an existing website that needs practical upgrades for clarity, usability, and conversion.',
     includes: [
-      'Layout cleanup and readability improvements',
-      'Service page wording and CTA improvements',
-      'Mobile and contact flow fixes',
-      'Search snippet title and description guidance',
+      'Visual cleanup',
+      'Content organization',
+      'Mobile layout improvements',
+      'Call-to-action improvements',
+      'Basic SEO cleanup',
+      'Homepage and service section polish',
     ],
-    startingPoint: 'Starting at $500',
+    commonProblems: [
+      'Outdated visuals that reduce trust',
+      'Service messaging that is hard to scan',
+      'Weak mobile behavior and layout breaks',
+      'CTAs that do not guide users to contact',
+    ],
+    startingPrice: 'Starting at $500',
+    relatedServiceSlugs: ['website-design', 'google-business-profile', 'care-plans'],
   },
   {
-    id: 'workflow-automation',
-    href: '/services',
+    slug: 'workflow-automation',
+    href: '/services/workflow-automation',
     navLabel: 'Workflow Automation',
     title: 'Workflow automation',
+    h1: 'Workflow Automation for Small Businesses',
+    seoTitle: 'Workflow Automation for Small Businesses | Syfernetics',
+    metaDescription:
+      'Syfernetics helps small businesses reduce manual work with practical forms, trackers, notifications, handoff flows, and simple automation systems.',
     shortDescription:
-      'Forms, trackers, and practical automations that reduce manual work and missed handoffs.',
-    intro:
-      'Syfernetics helps turn scattered calls, texts, and handoffs into forms, trackers, and notification flows your team can actually use.',
+      'Reduce repetitive manual work with practical business tools and automations.',
+    angle: 'Reduce repetitive manual work with practical business tools and automations.',
     whoItHelps:
-      'Teams managing repeated service requests, job handoffs, or intake work with inconsistent processes.',
+      'Teams that lose time to repeated manual tasks, inconsistent handoffs, and scattered status tracking.',
     includes: [
-      'Request forms and intake flow setup',
-      'Simple tracker systems using practical tools',
-      'Notifications and follow-up visibility',
-      'Documentation for repeatable use',
+      'Intake forms',
+      'Trackers and spreadsheets',
+      'Notifications',
+      'Task handoff flows',
+      'Simple dashboards',
+      'Process cleanup',
     ],
-    startingPoint: 'Starting at $500',
+    commonProblems: [
+      'Manual intake and follow-up causing delays',
+      'No shared visibility into task status',
+      'Dropped handoffs between team members',
+      'Repeated admin tasks consuming productive time',
+    ],
+    startingPrice: 'Starting at $500',
+    relatedServiceSlugs: ['business-email-setup', 'it-help', 'care-plans'],
   },
   {
-    id: 'business-email-setup',
-    href: '/services',
+    slug: 'business-email-setup',
+    href: '/services/business-email-setup',
     navLabel: 'Business Email Setup',
     title: 'Business email setup',
+    h1: 'Business Email Setup for Small Businesses',
+    seoTitle: 'Business Email Setup for Small Businesses | Syfernetics',
+    metaDescription:
+      'Get professional business email and domain setup help, including DNS alignment, SPF, DKIM, DMARC, and secure account configuration.',
     shortDescription:
-      'Professional email and domain setup for credibility, deliverability, and daily reliability.',
-    intro:
-      'Get your domain and business email configured correctly so customers trust what they see and your messages land where they should.',
+      'Professional email setup that makes your business look legitimate and improves deliverability.',
+    angle:
+      'Professional email setup that makes your business look legitimate and improves deliverability.',
     whoItHelps:
-      'Businesses still using personal email or struggling with domain/email configuration issues.',
+      'Businesses moving off personal email or fixing domain and deliverability issues in existing setups.',
     includes: [
-      'Business email account setup',
-      'Domain and DNS alignment',
-      'SPF, DKIM, and DMARC basics',
-      'Security-minded account setup guidance',
+      'Domain email setup',
+      'DNS record review',
+      'SPF, DKIM, and DMARC guidance',
+      'Mailbox/account configuration',
+      'Basic security setup',
+      'Troubleshooting support',
     ],
-    startingPoint: 'Starting at $250',
+    commonProblems: [
+      'Business using personal email addresses',
+      'Messages landing in spam or being rejected',
+      'DNS records misaligned after setup changes',
+      'Unclear ownership of domain and mailbox settings',
+    ],
+    startingPrice: 'Starting at $250',
+    relatedServiceSlugs: ['website-design', 'security-basics', 'it-help'],
     contactLabel: 'Business Email Setup',
   },
   {
-    id: 'networking-wifi',
-    href: '/services',
+    slug: 'networking-wifi',
+    href: '/services/networking-wifi',
     navLabel: 'Networking / Wi-Fi',
     title: 'Networking / Wi-Fi',
+    h1: 'Networking and Wi-Fi Help for Small Businesses',
+    seoTitle: 'Networking and Wi-Fi Help for Small Businesses | Syfernetics',
+    metaDescription:
+      'Practical router, Wi-Fi, coverage, and connectivity support for small businesses that need reliable day-to-day network performance.',
     shortDescription:
-      'Practical support for routers, Wi-Fi coverage, and connected devices in small business environments.',
-    intro:
-      'Syfernetics helps stabilize day-to-day connectivity so your team can stay productive and customers can be served without interruptions.',
+      'Fix unreliable Wi-Fi, coverage gaps, and basic small-business connectivity issues.',
+    angle:
+      'Fix unreliable Wi-Fi, coverage gaps, and basic small-business connectivity issues.',
     whoItHelps:
-      'Small offices, shops, and service businesses with inconsistent connectivity or network confusion.',
+      'Small businesses dealing with unstable Wi-Fi, poor coverage, and routine connectivity interruptions.',
     includes: [
-      'Router and Wi-Fi setup review',
-      'Coverage and connectivity troubleshooting',
-      'Device and network organization guidance',
-      'Practical recommendation summary',
+      'Router and Wi-Fi review',
+      'Coverage troubleshooting',
+      'Small office connectivity help',
+      'Device connection support',
+      'Basic network cleanup',
+      'Practical recommendations',
     ],
-    startingPoint: 'Starting at $175',
+    commonProblems: [
+      'Dead zones and weak signal in key work areas',
+      'Frequent disconnects disrupting customer service',
+      'Devices dropping or failing to join networks',
+      'Unclear router and access point configuration',
+    ],
+    startingPrice: 'Starting at $175',
+    relatedServiceSlugs: ['it-help', 'security-basics', 'care-plans'],
     contactLabel: 'Networking / Wi-Fi',
   },
   {
-    id: 'it-help',
-    href: '/services',
+    slug: 'it-help',
+    href: '/services/it-help',
     navLabel: 'IT Help',
     title: 'IT help',
+    h1: 'Small Business IT Help in Central Georgia',
+    seoTitle: 'Small Business IT Help in Central Georgia | Syfernetics',
+    metaDescription:
+      'Syfernetics provides practical IT help for account access, software issues, device setup, troubleshooting, and small business technology support.',
     shortDescription:
-      'Hands-on IT support focused on real operations, clear next steps, and practical outcomes.',
-    intro:
-      'Syfernetics provides practical help with account setup, access issues, software confusion, and technology cleanup without jargon overload.',
+      'Practical troubleshooting for small businesses that need help without a full internal IT department.',
+    angle:
+      'Practical troubleshooting for small businesses that need help without a full internal IT department.',
     whoItHelps:
-      'Owners and teams that need dependable troubleshooting and clear guidance for day-to-day technology issues.',
+      'Owners and teams who need straightforward troubleshooting and clear next steps when technology slows work down.',
     includes: [
-      'Account and access troubleshooting',
-      'Small-business software and setup support',
-      'Technology process cleanup and recommendations',
-      'Clear follow-up guidance with next-step options',
+      'Remote troubleshooting',
+      'Device setup help',
+      'Account access support',
+      'Software issue review',
+      'Basic cleanup and recommendations',
+      'Next-step guidance',
     ],
-    startingPoint: 'Starting at $125 remote',
+    commonProblems: [
+      'Recurring login, account, or access issues',
+      'Software setup problems interrupting operations',
+      'New devices not configured for business use',
+      'No clear priority list for technology fixes',
+    ],
+    startingPrice: 'Starting at $125 remote',
+    relatedServiceSlugs: ['networking-wifi', 'security-basics', 'business-email-setup'],
   },
   {
-    id: 'security-basics',
-    href: '/services',
+    slug: 'security-basics',
+    href: '/services/security-basics',
     navLabel: 'Security Basics',
     title: 'Security basics',
+    h1: 'Security Basics for Small Businesses',
+    seoTitle: 'Security Basics for Small Businesses | Syfernetics',
+    metaDescription:
+      'Reduce common small-business technology risks with password cleanup, MFA setup, backup guidance, safer habits, and basic account protection.',
     shortDescription:
-      'Security-minded setup to reduce common small-business risks without overengineering.',
-    intro:
-      'Syfernetics focuses on practical security habits that small businesses can maintain consistently.',
+      'Basic, practical security improvements for everyday small-business risks.',
+    angle: 'Basic, practical security improvements for everyday small-business risks.',
     whoItHelps:
-      'Businesses that need better account hygiene, safer routines, and backup awareness.',
+      'Businesses that want better baseline protection without enterprise-level complexity.',
     includes: [
-      'MFA and account protection basics',
-      'Password manager setup guidance',
-      'Backup and recovery planning basics',
-      'Safer daily technology habits',
+      'Password and account review',
+      'MFA setup guidance',
+      'Backup recommendations',
+      'Safer access practices',
+      'Common risk cleanup',
+      'Basic security checklist',
     ],
+    commonProblems: [
+      'Weak password practices across shared accounts',
+      'No MFA on critical tools and business logins',
+      'No clear backup expectations for recovery',
+      'Risky daily habits increasing avoidable exposure',
+    ],
+    startingPrice: 'Contact for estimate',
+    relatedServiceSlugs: ['business-email-setup', 'it-help', 'care-plans'],
     contactLabel: 'Security Basics',
   },
   {
-    id: 'google-business-profile-help',
-    href: '/services',
+    slug: 'google-business-profile',
+    href: '/services/google-business-profile',
     navLabel: 'Google Business Profile Help',
     title: 'Google Business Profile help',
+    h1: 'Google Business Profile Help in Central Georgia',
+    seoTitle: 'Google Business Profile Help in Central Georgia | Syfernetics',
+    metaDescription:
+      'Improve local visibility with Google Business Profile setup, cleanup, category review, service updates, and contact information alignment.',
     shortDescription:
-      'Practical setup and optimization support for local visibility in Google search and maps.',
-    intro:
-      'Syfernetics helps small businesses improve local visibility by organizing Google Business Profile basics that support trust and discoverability.',
+      'Help local businesses appear cleaner and more consistent in Google Search and Maps.',
+    angle:
+      'Help local businesses appear cleaner and more consistent in Google Search and Maps.',
     whoItHelps:
-      'Local businesses that want stronger search visibility and more consistent listing quality.',
+      'Local businesses that need clearer profile information and better consistency across search and maps.',
     includes: [
-      'Profile setup and category review',
-      'Service and business description cleanup',
-      'Basic posting/review workflow guidance',
-      'Alignment with website contact and service data',
+      'Profile setup or cleanup',
+      'Category and service review',
+      'Contact information alignment',
+      'Website link review',
+      'Service area review',
+      'Basic local visibility guidance',
     ],
+    commonProblems: [
+      'Inconsistent business details reducing trust',
+      'Missing or outdated category and service data',
+      'Website and listing information out of sync',
+      'Low local visibility from profile gaps',
+    ],
+    startingPrice: 'Contact for estimate',
+    relatedServiceSlugs: ['website-design', 'website-refresh', 'care-plans'],
     contactLabel: 'Google Business Profile Help',
   },
   {
-    id: 'care-plans',
-    href: '/services',
+    slug: 'care-plans',
+    href: '/services/care-plans',
     navLabel: 'Care Plans',
     title: 'Care plans',
+    h1: 'Website Care Plans for Small Businesses',
+    seoTitle: 'Website Care Plans for Small Businesses | Syfernetics',
+    metaDescription:
+      'Keep your small business website current with ongoing updates, checks, basic maintenance, and priority support for routine changes.',
     shortDescription:
-      'Ongoing website care for updates, checks, and practical monthly improvements.',
-    intro:
-      'Care plans keep your website dependable and current so small updates do not become large issues later.',
+      'Ongoing support for businesses that need routine help keeping their website and core tech updated.',
+    angle:
+      'Ongoing support for businesses that need routine help keeping their website and core tech updated.',
     whoItHelps:
-      'Businesses that want ongoing support without launching a full project every time.',
+      'Businesses that need ongoing support instead of restarting from scratch for every small request.',
     includes: [
-      'Content and page updates',
-      'Contact form checks and maintenance',
-      'Small design or wording improvements',
-      'Priority support for routine changes',
+      'Routine website updates',
+      'Basic site checks',
+      'Priority support for small changes',
+      'Content updates',
+      'Maintenance guidance',
+      'Ongoing improvement planning',
     ],
-    startingPoint: 'Starting at $99/mo',
+    commonProblems: [
+      'Updates piling up between larger projects',
+      'Small issues becoming bigger over time',
+      'No consistent maintenance rhythm or owner',
+      'Routine requests delayed by unclear support flow',
+    ],
+    startingPrice: 'Starting at $99/mo',
+    relatedServiceSlugs: ['website-design', 'website-refresh', 'google-business-profile'],
     contactLabel: 'Care Plans',
   },
 ]
+
+export const serviceDetailsBySlug: Record<ServiceSlug, ServiceDetail> =
+  Object.fromEntries(serviceDetails.map((service) => [service.slug, service])) as Record<
+    ServiceSlug,
+    ServiceDetail
+  >
+
+export const servicePages: ServicePage[] = serviceDetails.map((service) => ({
+  id: service.slug,
+  href: service.href,
+  navLabel: service.navLabel,
+  title: service.title,
+  shortDescription: service.shortDescription,
+  intro: service.angle,
+  whoItHelps: service.whoItHelps,
+  includes: service.includes,
+  startingPoint: service.startingPrice,
+  contactLabel: service.contactLabel,
+}))
 
 export const homepageServiceCards = servicePages.map((service) => ({
   label: service.navLabel,
@@ -320,9 +505,17 @@ export const sitemapRoutes = [
   '/',
   '/about',
   '/services',
+  '/services/website-design',
+  '/services/website-refresh',
+  '/services/workflow-automation',
+  '/services/business-email-setup',
+  '/services/networking-wifi',
+  '/services/it-help',
+  '/services/security-basics',
+  '/services/google-business-profile',
+  '/services/care-plans',
   '/pricing',
   '/projects',
-  '/projects/exodus-ai-avatar-console',
   '/service-area',
   '/faq',
   '/contact',

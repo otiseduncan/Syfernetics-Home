@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import CardShell from '@/components/CardShell'
+import ClickableCard from '@/components/ClickableCard'
 import PageShell from '@/components/PageShell'
 import SectionShell from '@/components/SectionShell'
 import { servicePages } from '@/lib/siteConfig'
@@ -26,12 +27,17 @@ export default function ServicesPage() {
       <SectionShell
         eyebrow="Services"
         title="Practical services for small businesses in Central Georgia"
-        description="All service offerings are consolidated here on one page to keep navigation and indexing clean, clear, and focused on current public pages."
+        description="Browse each service page for clear scope, practical deliverables, and direct contact paths."
         headingAs="h1"
       >
         <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {servicePages.map((service) => (
-            <CardShell key={service.id} className="flex h-full flex-col p-6">
+            <ClickableCard
+              key={service.id}
+              href={service.href}
+              ariaLabel={`Open ${service.navLabel} service details`}
+              className="flex h-full flex-col p-6"
+            >
               <p className="mb-2 text-sm font-bold uppercase tracking-widest text-teal-300 transition-colors group-hover:text-teal-100">
                 Service Area
               </p>
@@ -44,7 +50,7 @@ export default function ServicesPage() {
                 Best fit: {service.whoItHelps}
               </p>
               <ul className="mt-4 space-y-2 text-sm text-slate-300">
-                {service.includes.map((item) => (
+                {service.includes.slice(0, 3).map((item) => (
                   <li key={item} className="flex gap-2">
                     <span className="mt-1 h-1.5 w-1.5 rounded-full bg-teal-300" />
                     <span>{item}</span>
@@ -54,7 +60,10 @@ export default function ServicesPage() {
               {service.startingPoint && (
                 <p className="mt-5 text-sm font-semibold text-teal-300">{service.startingPoint}</p>
               )}
-            </CardShell>
+              <p className="mt-auto pt-5 text-sm font-semibold text-teal-300 transition-colors group-hover:text-teal-100">
+                View service page →
+              </p>
+            </ClickableCard>
           ))}
         </div>
 

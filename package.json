@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "validate:seo:phaseA": "powershell -ExecutionPolicy Bypass -File ./scripts/validate-seo-routing-phase-a.ps1",
+    "validate:seo:phaseB": "powershell -ExecutionPolicy Bypass -File ./scripts/validate-seo-routing-phase-b.ps1"
   },
   "dependencies": {
     "autoprefixer": "^10.4.14",

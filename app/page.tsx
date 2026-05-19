@@ -1,6 +1,7 @@
 import ButtonLink from '@/components/ButtonLink'
 import CardShell from '@/components/CardShell'
 import ClickableCard from '@/components/ClickableCard'
+import Image from 'next/image'
 import PageShell from '@/components/PageShell'
 import ProjectGrid from '@/components/ProjectGrid'
 import SectionShell from '@/components/SectionShell'
@@ -96,22 +97,20 @@ export default function HomePage() {
           </div>
 
           <CardShell className="group relative aspect-square overflow-hidden p-0">
-            <video
+            <Image
+              src="/videos/xoduz-intro-poster.jpg"
+              alt="Syfernetics visual placeholder"
+              fill
               className="h-full w-full object-cover"
-              src="/videos/xoduz-intro.mp4"
-              poster="/videos/xoduz-intro-poster.jpg"
-              autoPlay
-              muted
-              loop
-              playsInline
-              controls
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              priority
             />
             <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-5">
               <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
-                Meet Xoduz
+                Updated Visual
               </p>
               <h2 className="mt-2 text-2xl font-black text-white">
-                Syfernetics AI technology presence
+                Updated visual coming soon
               </h2>
             </div>
           </CardShell>
