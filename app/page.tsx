@@ -96,14 +96,42 @@ export default function HomePage() {
           </div>
 
           <CardShell className="group relative aspect-square overflow-hidden p-0">
-            <div className="relative flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(45,212,191,0.18),rgba(2,6,23,0.95)_55%)] p-8 text-center">
-              <div className="max-w-sm rounded-xl border border-white/15 bg-slate-900/70 p-6">
-                <p className="text-xs font-black uppercase tracking-[0.22em] text-teal-300">
-                  Project Visual
-                </p>
-                <h2 className="mt-3 text-2xl font-black text-white">Project visual coming soon</h2>
+            <div className="relative flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(34,211,238,0.2),rgba(2,6,23,0.96)_58%)] p-5 sm:p-6">
+              <div className="w-full rounded-xl border border-cyan-300/20 bg-slate-900/75 p-5 sm:p-6">
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-cyan-300">Special Offer</p>
+                <h2 className="mt-3 text-2xl font-black leading-tight text-white sm:text-3xl">
+                  Free 20-Minute Website &amp; Workflow Review
+                </h2>
                 <p className="mt-3 text-sm leading-6 text-slate-300">
-                  Final project imagery will be added in a later media pass.
+                  Get a quick review of your website, business workflow, or technology setup and receive practical
+                  recommendations for your next step.
+                </p>
+
+                <div className="mt-5 grid gap-3 sm:grid-cols-3">
+                  <div className="rounded-lg border border-white/10 bg-slate-950/60 p-3">
+                    <p className="text-sm font-bold text-white">Website clarity</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-300">Find layout, message, and CTA gaps.</p>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-slate-950/60 p-3">
+                    <p className="text-sm font-bold text-white">Workflow friction</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-300">Spot repetitive steps worth simplifying.</p>
+                  </div>
+                  <div className="rounded-lg border border-white/10 bg-slate-950/60 p-3">
+                    <p className="text-sm font-bold text-white">Practical next steps</p>
+                    <p className="mt-1 text-xs leading-5 text-slate-300">Leave with focused recommendations.</p>
+                  </div>
+                </div>
+
+                <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                  <ButtonLink href="/contact">Book an Inquiry</ButtonLink>
+                  <p className="text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200">
+                    For Central Georgia small businesses
+                  </p>
+                </div>
+
+                <p className="mt-4 text-xs leading-5 text-slate-400">
+                  Practical websites, automation, and IT help built for businesses that need tools they can actually
+                  use.
                 </p>
               </div>
             </div>
