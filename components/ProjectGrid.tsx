@@ -28,19 +28,33 @@ export default function ProjectGrid({ limit }: ProjectGridProps) {
             ariaLabel={`Open project: ${project.title}`}
             className="flex h-full flex-col p-6"
           >
-            {project.imageSrc && (
+            {project.imageSrc ? (
               <div className="mb-5 overflow-hidden rounded-xl border border-white/10 bg-slate-950/60 p-2">
                 <div className="relative aspect-[16/10] w-full">
                   <Image
                     src={project.imageSrc}
-                    alt={project.imageAlt ?? `${project.title} project preview`}
+                    alt={project.imageAlt ?? `${project.title} project visual`}
                     fill
-                    className="object-contain"
+                    className={project.imageFit === 'contain' ? 'object-contain p-1' : 'object-cover'}
                     sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   />
                 </div>
               </div>
-            )}
+            ) : project.showVisualPlaceholder ? (
+              <div className="mb-5 overflow-hidden rounded-xl border border-white/10 bg-slate-950/60 p-2">
+                <div className="flex aspect-[16/10] items-center justify-center rounded-lg border border-white/10 bg-[radial-gradient(circle_at_top,rgba(45,212,191,0.16),rgba(2,6,23,0.95)_58%)] p-4 text-center">
+                  <div className="max-w-xs rounded-lg border border-white/15 bg-slate-900/75 p-4">
+                    <p className="text-xs font-black uppercase tracking-[0.2em] text-teal-300">
+                      Project Visual
+                    </p>
+                    <p className="mt-2 text-base font-bold text-white">Project visual coming soon</p>
+                    <p className="mt-2 text-xs leading-5 text-slate-300">
+                      Final project imagery will be added in a later media pass.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            ) : null}
             <p className="mb-3 text-sm font-semibold text-teal-300 transition-colors group-hover:text-teal-100">
               {project.category}
             </p>

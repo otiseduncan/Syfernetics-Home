@@ -31,3 +31,17 @@ Xoduz Preview_files/
 
 # Local route cleanup backups
 _route-cleanup-backup-*/
+
+# Phase backup folders (local only, never commit)
+_phase*/
+_phase*_backup_*/
+
+# Temporary scan/diff artifacts
+diff_*.txt
+status.txt
+diff_stat.txt
+diff_name.txt
+ls_files.txt
+qa_script.js
+run_qa.js
+scan_results.csv

@@ -1,7 +1,6 @@
 import ButtonLink from '@/components/ButtonLink'
 import CardShell from '@/components/CardShell'
 import ClickableCard from '@/components/ClickableCard'
-import Image from 'next/image'
 import PageShell from '@/components/PageShell'
 import ProjectGrid from '@/components/ProjectGrid'
 import SectionShell from '@/components/SectionShell'
@@ -97,21 +96,16 @@ export default function HomePage() {
           </div>
 
           <CardShell className="group relative aspect-square overflow-hidden p-0">
-            <Image
-              src="/videos/xoduz-intro-poster.jpg"
-              alt="Syfernetics visual placeholder"
-              fill
-              className="h-full w-full object-cover"
-              sizes="(max-width: 1024px) 100vw, 50vw"
-              priority
-            />
-            <div className="pointer-events-none absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/90 via-slate-950/50 to-transparent p-5">
-              <p className="text-sm font-black uppercase tracking-[0.22em] text-teal-300">
-                Updated Visual
-              </p>
-              <h2 className="mt-2 text-2xl font-black text-white">
-                Updated visual coming soon
-              </h2>
+            <div className="relative flex h-full w-full items-center justify-center bg-[radial-gradient(circle_at_top,rgba(45,212,191,0.18),rgba(2,6,23,0.95)_55%)] p-8 text-center">
+              <div className="max-w-sm rounded-xl border border-white/15 bg-slate-900/70 p-6">
+                <p className="text-xs font-black uppercase tracking-[0.22em] text-teal-300">
+                  Project Visual
+                </p>
+                <h2 className="mt-3 text-2xl font-black text-white">Project visual coming soon</h2>
+                <p className="mt-3 text-sm leading-6 text-slate-300">
+                  Final project imagery will be added in a later media pass.
+                </p>
+              </div>
             </div>
           </CardShell>
         </div>

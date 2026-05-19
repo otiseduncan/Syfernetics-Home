@@ -12,6 +12,8 @@
   repoLabel?: string
   imageSrc?: string
   imageAlt?: string
+  imageFit?: 'cover' | 'contain'
+  showVisualPlaceholder?: boolean
 }
 
 export const projects: Project[] = [
@@ -20,12 +22,13 @@ export const projects: Project[] = [
     title: 'Exodus AI Avatar Console',
     category: 'Local AI / Web App / Workflow System',
     description:
-      'A local-first AI assistant interface with chat, voice, avatar presentation, knowledge management, and workflow tooling.',
+      'A local-first AI assistant interface with chat, avatar presentation, knowledge management, runtime checks, and workflow tooling.',
     stack: ['Local AI', 'Web App', 'Workflow Automation', 'UI/UX'],
     href: '/projects/exodus-ai-avatar-console',
-    ctaLabel: 'View case study →',
-    imageSrc: '/videos/xoduz-intro-poster.jpg',
-    imageAlt: 'Exodus AI avatar seated interface visual',
+    ctaLabel: 'View project details →',
+    imageSrc: '/images/projects/exodus-ai-avatar-console.png',
+    imageAlt: 'Exodus AI Avatar Console interface preview',
+    imageFit: 'contain',
   },
   {
     slug: 'syfernetics-website-rebuild',
