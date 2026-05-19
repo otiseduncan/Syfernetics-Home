@@ -1,4 +1,32 @@
-﻿export const projects = [
+﻿export type Project = {
+  slug: string
+  title: string
+  category: string
+  description: string
+  stack: string[]
+  href?: string
+  liveUrl?: string
+  repoUrl?: string
+  ctaLabel?: string
+  liveLabel?: string
+  repoLabel?: string
+  imageSrc?: string
+  imageAlt?: string
+}
+
+export const projects: Project[] = [
+  {
+    slug: 'exodus-ai-avatar-console',
+    title: 'Exodus AI Avatar Console',
+    category: 'Local AI / Web App / Workflow System',
+    description:
+      'A local-first AI assistant interface with chat, voice, avatar presentation, knowledge management, and workflow tooling.',
+    stack: ['Local AI', 'Web App', 'Workflow Automation', 'UI/UX'],
+    href: '/projects/exodus-ai-avatar-console',
+    ctaLabel: 'View case study →',
+    imageSrc: '/videos/xoduz-intro-poster.jpg',
+    imageAlt: 'Exodus AI avatar seated interface visual',
+  },
   {
     slug: 'syfernetics-website-rebuild',
     title: 'Syfernetics Website Rebuild',
@@ -84,6 +112,4 @@
     repoLabel: 'Open repo ↗',
   },
 ]
-
-export type Project = (typeof projects)[number]
 

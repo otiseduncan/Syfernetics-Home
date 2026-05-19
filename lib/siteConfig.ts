@@ -322,6 +322,7 @@ export const sitemapRoutes = [
   '/services',
   '/pricing',
   '/projects',
+  '/projects/exodus-ai-avatar-console',
   '/service-area',
   '/faq',
   '/contact',

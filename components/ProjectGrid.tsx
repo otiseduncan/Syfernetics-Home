@@ -1,5 +1,6 @@
 import ClickableCard from '@/components/ClickableCard'
 import { projects } from '@/data/projects'
+import Image from 'next/image'
 
 type ProjectGridProps = {
   limit?: number
@@ -11,11 +12,13 @@ export default function ProjectGrid({ limit }: ProjectGridProps) {
   return (
     <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
       {shownProjects.map((project) => {
-        const href = project.liveUrl || project.repoUrl || null
+        const href = project.href || project.liveUrl || project.repoUrl || null
         const isExternal = Boolean(href?.startsWith('http'))
-        const linkText = project.liveUrl
-          ? project.liveLabel ?? 'Open live site ↗'
-          : project.repoLabel ?? 'Open repo ↗'
+        const linkText = project.ctaLabel
+          ? project.ctaLabel
+          : project.liveUrl
+            ? project.liveLabel ?? 'Open live site ↗'
+            : project.repoLabel ?? 'Open repo ↗'
 
         return (
           <ClickableCard
@@ -25,6 +28,19 @@ export default function ProjectGrid({ limit }: ProjectGridProps) {
             ariaLabel={`Open project: ${project.title}`}
             className="flex h-full flex-col p-6"
           >
+            {project.imageSrc && (
+              <div className="mb-5 overflow-hidden rounded-xl border border-white/10 bg-slate-950/60 p-2">
+                <div className="relative aspect-[16/10] w-full">
+                  <Image
+                    src={project.imageSrc}
+                    alt={project.imageAlt ?? `${project.title} project preview`}
+                    fill
+                    className="object-contain"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                  />
+                </div>
+              </div>
+            )}
             <p className="mb-3 text-sm font-semibold text-teal-300 transition-colors group-hover:text-teal-100">
               {project.category}
             </p>
