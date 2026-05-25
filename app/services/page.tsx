@@ -92,7 +92,7 @@ export default function ServicesPage() {
     <PageShell>
       <SectionShell
         eyebrow="Services"
-        title="Practical websites, automation, and IT help for small businesses."
+        title="Syfernetics provides practical websites, automation, and IT help for small businesses."
         description="Choose the service that best fits your current business need, then start with a practical review and a clear next-step recommendation."
         headingAs="h1"
       >
@@ -100,8 +100,8 @@ export default function ServicesPage() {
           <CardShell className="p-6 md:p-7">
             <h2 className="text-2xl font-bold text-white md:text-3xl">Build the right next step, not extra complexity.</h2>
             <p className="mt-4 max-w-2xl leading-8 text-slate-300">
-              The service pages below are designed to stay focused: short overview, practical starting point, and a
-              direct path to get help.
+              The Syfernetics service pages below are designed to stay focused: short overview, practical starting
+              point, and a direct path to get help.
             </p>
           </CardShell>
 

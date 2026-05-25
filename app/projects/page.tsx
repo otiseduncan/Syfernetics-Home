@@ -28,7 +28,7 @@ export default function ProjectsPage() {
     <PageShell>
       <SectionShell
         eyebrow="Projects"
-        title="Project proof built around practical business problems"
+        title="Syfernetics project proof built around practical business problems"
         description="Explore selected Syfernetics projects focused on small business websites, workflow tools, dashboards, brand direction, and practical technology solutions."
         headingAs="h1"
       >
@@ -37,7 +37,7 @@ export default function ProjectsPage() {
         <CardShell className="mt-6 p-6">
           <h2 className="mb-3 text-2xl font-bold text-white">What these projects show</h2>
           <p className="leading-8 text-slate-300">
-            Each project starts with a practical business problem and ends with a clearer website, a
+            Each Syfernetics project starts with a practical business problem and ends with a clearer website, a
             stronger workflow, or a more useful digital system. The focus is solving the right problem,
             not adding complexity for its own sake.
           </p>

@@ -6,17 +6,16 @@ import Footer from '@/components/Footer'
 export const metadata = {
   metadataBase: new URL('https://www.syfernetics.com'),
   title:
-    'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
+    'Syfernetics | Website Design & Small Business IT Support in Central Georgia',
   description:
-    'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, networking support, and practical IT help.',
+    'Syfernetics helps Central Georgia small businesses with practical website design, website refreshes, workflow automation, business email, networking, and IT support.',
   alternates: {
-    canonical: '/',
+    canonical: 'https://www.syfernetics.com/',
   },
   openGraph: {
-    title:
-      'Syfernetics | Small Business Websites, Workflow Automation & IT Help in Central Georgia',
+    title: 'Syfernetics | Website Design & Small Business IT Support in Central Georgia',
     description:
-      'Websites, workflow automation, networking support, business email setup, and practical IT help for Central Georgia small businesses.',
+      'Syfernetics helps Central Georgia small businesses with practical website design, website refreshes, workflow automation, business email, networking, and IT support.',
     url: 'https://www.syfernetics.com/',
     siteName: 'Syfernetics',
     type: 'website',
@@ -24,9 +23,9 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Syfernetics | Small Business Websites & Practical IT Help',
+    title: 'Syfernetics | Website Design & Small Business IT Support in Central Georgia',
     description:
-      'Practical websites, workflow automation, networking, and IT help for Central Georgia small businesses.',
+      'Syfernetics helps Central Georgia small businesses with practical website design, website refreshes, workflow automation, business email, networking, and IT support.',
   },
   verification: {
     google: 'fbeb0a8d990156bc',
@@ -39,8 +38,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className="bg-bg text-fg antialiased">
+    <html lang="en" suppressHydrationWarning>
+      <body className="bg-bg text-fg antialiased" suppressHydrationWarning>
         <StructuredData />
         <Header />
         {children}

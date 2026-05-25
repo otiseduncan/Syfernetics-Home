@@ -516,7 +516,7 @@ export const sitemapRoutes = [
   '/services/care-plans',
   '/pricing',
   '/projects',
-  '/projects/exodus-ai-avatar-console',
+  '/projects/xoduz-ai-avatar-console',
   '/service-area',
   '/faq',
   '/contact',

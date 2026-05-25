@@ -18,16 +18,16 @@
 
 export const projects: Project[] = [
   {
-    slug: 'exodus-ai-avatar-console',
-    title: 'Exodus AI Avatar Console',
+    slug: 'xoduz-ai-avatar-console',
+    title: 'Xoduz AI Avatar Console',
     category: 'Local AI / Web App / Workflow System',
     description:
-      'A local-first AI assistant interface with chat, avatar presentation, knowledge management, runtime checks, and workflow tooling.',
+      'An active local-first AI assistant console prototype with chat, voice/avatar presentation, memory planning, runtime checks, and workflow automation architecture — built as a Syfernetics proof-of-capability project.',
     stack: ['Local AI', 'Web App', 'Workflow Automation', 'UI/UX'],
-    href: '/projects/exodus-ai-avatar-console',
+    href: '/projects/xoduz-ai-avatar-console',
     ctaLabel: 'View project details →',
-    imageSrc: '/images/projects/exodus-ai-avatar-console.png',
-    imageAlt: 'Exodus AI Avatar Console interface preview',
+    imageSrc: '/images/projects/xoduz-ai-avatar-console.png',
+    imageAlt: 'Xoduz AI Avatar Console interface preview',
     imageFit: 'contain',
   },
   {
@@ -97,6 +97,9 @@ export const projects: Project[] = [
     repoUrl: 'https://github.com/otiseduncan/katiebugs-country-kitchen',
     liveLabel: 'Open live site ↗',
     repoLabel: 'Open repo ↗',
+    imageSrc: '/images/projects/katiebugs-country-kitchen.png',
+    imageAlt: "Katie Bug's Country Kitchen website project preview",
+    imageFit: 'contain',
   },
   {
     slug: 'financial-tracker',

@@ -11,6 +11,8 @@ const nextConfig = {
         destination: 'https://www.syfernetics.com/:path*',
         permanent: true,
       },
+      { source: '/projects/exodus-ai-avatar-console', destination: '/projects/xoduz-ai-avatar-console', permanent: true },
+      { source: '/projects/exodus-ai-avatar-console/', destination: '/projects/xoduz-ai-avatar-console', permanent: true },
       { source: '/index.html', destination: '/', permanent: true },
       { source: '/founders', destination: '/about', permanent: true },
       { source: '/founders/', destination: '/about', permanent: true },

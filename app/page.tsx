@@ -80,7 +80,7 @@ export default function HomePage() {
               Based in Milledgeville, GA • Serving Central Georgia
             </p>
             <h1 className="text-balance text-4xl font-black leading-tight tracking-tight text-white md:text-6xl">
-              Websites, workflow automation, networking, and practical IT help for small businesses.
+              Syfernetics builds practical technology solutions for small businesses.
             </h1>
             <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
               Syfernetics helps local service businesses look professional online, clean up broken digital processes,

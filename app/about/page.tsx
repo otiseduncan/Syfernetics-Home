@@ -27,7 +27,7 @@ export default function AboutPage() {
     <PageShell>
       <SectionShell
         eyebrow="About Syfernetics"
-        title="Practical technology support built from real-world problem solving."
+        title="Syfernetics builds practical technology support from real-world problem solving."
         description={
           <>
             <p>

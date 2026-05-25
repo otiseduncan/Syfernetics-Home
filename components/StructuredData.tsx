@@ -8,7 +8,8 @@ export default function StructuredData() {
     telephone: '+1-478-343-5252',
     email: 'otis.duncan@syfernetics.com',
     description:
-      'Syfernetics helps Central Georgia small businesses with website design, website refreshes, workflow automation, business email setup, networking support, and practical IT help.',
+      'Syfernetics provides website design, workflow automation, business email setup, networking help, and practical IT support for Central Georgia small businesses.',
+    keywords: 'Website designer, IT support, technology services, Central Georgia',
     priceRange: 'Cyan',
     address: {
       '@type': 'PostalAddress',
@@ -28,6 +29,7 @@ export default function StructuredData() {
       'Madison GA',
       'Central Georgia',
     ],
+    knowsAbout: ['Website Design', 'IT Support', 'Technology Services'],
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Syfernetics Services',

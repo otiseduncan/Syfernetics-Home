@@ -57,13 +57,13 @@ export default function ContactPage() {
     <PageShell>
       <SectionShell
         eyebrow="Contact"
-        title="Request a website, workflow, networking, or small business IT review."
-        description="Tell me what you need help with and I'll review the request with a clear next step."
+        title="Contact Syfernetics for a website, workflow, networking, or small business IT review."
+        description="Tell Syfernetics what you need help with and I'll review the request with a clear next step."
         headingAs="h1"
       >
         <CardShell className="mb-8 border-teal-300/25 bg-teal-400/10 px-6 py-4">
           <p className="text-sm font-semibold text-teal-200">
-            Start with a practical review. You will get a clear next-step recommendation before
+            Start with a practical Syfernetics review. You will get a clear next-step recommendation before
             committing to a larger project.
           </p>
         </CardShell>
