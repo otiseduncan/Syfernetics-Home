@@ -10,7 +10,7 @@ export const metadata = {
   description:
     'Syfernetics helps Central Georgia small businesses with practical website design, website refreshes, workflow automation, business email, networking, and IT support.',
   alternates: {
-    canonical: 'https://www.syfernetics.com/',
+    canonical: '/',
   },
   openGraph: {
     title: 'Syfernetics | Website Design & Small Business IT Support in Central Georgia',

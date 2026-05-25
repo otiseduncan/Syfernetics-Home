@@ -84,7 +84,7 @@ Found in active redirect config:
 Removed in this phase:
 - `/blog`
 - `/blog/:path*`
-- `/blog/nextjs-tailwind-portfolio`
+- `/blog/<retired-post>`
 - `/blog/penetration-testing-value`
 
 ## 404/410/Removal Candidates

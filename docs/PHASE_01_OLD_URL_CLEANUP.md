@@ -34,7 +34,7 @@ Scope: Remove stale URL exposure from active code paths, align sitemap/canonical
 | /services/care-plans | next.config.js | Kept as explicit permanent redirect to consolidated services listing | /services | App-level redirect (Next.js) |
 | /blog | next.config.js | Kept as explicit permanent redirect to current projects listing | /projects | App-level redirect (Next.js) |
 | /blog/:path* | next.config.js | Kept as explicit permanent redirect to current projects listing | /projects | App-level redirect (Next.js) |
-| /blog/nextjs-tailwind-portfolio | next.config.js | Kept as explicit permanent redirect to current projects listing | /projects | App-level redirect (Next.js) |
+| /blog/<retired-post> | next.config.js | Kept as explicit permanent redirect to current projects listing | /projects | App-level redirect (Next.js) |
 | /blog/penetration-testing-value | next.config.js | Kept as explicit permanent redirect to current services listing | /services | App-level redirect (Next.js) |
 | /founders, /founders/ | next.config.js | Kept as explicit permanent redirect to current about page | /about | App-level redirect (Next.js) |
 | /index.html | next.config.js and retired preview artifact | Kept canonical redirect in app config; removed retired preview artifact that contained saved /index.html source reference | / | App-level redirect plus stale artifact removal |
