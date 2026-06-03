@@ -142,7 +142,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Services"
         title="Practical digital services for small business owners"
-        description="The same service-card system used across the site starts here: clear offer names, clear destinations, and crawlable links to each service page."
+        description="Explore practical services with clear starting points for websites, workflow cleanup, business email, local visibility, networking, and day-to-day technology help."
       >
         <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {homepageServiceCards.map((service) => (
@@ -170,7 +170,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Starting Packages"
         title="Simple pricing that gives small businesses a place to start"
-        description="Packages stay aligned with the same service routes used in navigation, pricing, and the sitemap."
+        description="Choose a starting point that fits the problem you are trying to solve, then refine the scope before committing to a larger project."
       >
         <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {pricingPackages.map((pkg) => (
@@ -204,7 +204,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Projects"
         title="Project proof built around practical business problems"
-        description="Project cards now use the same shared ClickableCard behavior as the rest of the site and open real live or repo links in new tabs."
+        description="See examples of practical website, workflow, dashboard, and local business technology work built to make the next customer step clearer."
       >
         <ProjectGrid limit={6} />
       </SectionShell>
@@ -245,7 +245,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="FAQ"
         title="Common questions about practical business technology support"
-        description="The same answers on the dedicated FAQ page are previewed here in the shared card shell."
+        description="Get quick answers about website projects, pricing, local support, remote help, business email setup, and how a practical review works."
       >
         <div className="grid gap-6 md:grid-cols-2">
           {faqItems.map((item) => (
