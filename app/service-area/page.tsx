@@ -1,5 +1,4 @@
 import type { Metadata } from 'next'
-import ButtonLink from '@/components/ButtonLink'
 import CardShell from '@/components/CardShell'
 import PageShell from '@/components/PageShell'
 import SectionShell from '@/components/SectionShell'
@@ -30,53 +29,13 @@ const areas = [
   'Central Georgia',
 ]
 
-const localServices = [
-  {
-    title: 'Website design in Milledgeville, GA',
-    description:
-      'Syfernetics builds clear, mobile-friendly websites for Milledgeville businesses that need a professional home online, simple service pages, and an easier path for customers to make contact.',
-  },
-  {
-    title: 'Website refreshes for Central Georgia businesses',
-    description:
-      'Older websites can often be improved with cleaner messaging, better mobile layout, stronger calls to action, and local search wording without rebuilding everything from scratch.',
-  },
-  {
-    title: 'Business email and domain setup',
-    description:
-      'Professional email, domain alignment, DNS review, SPF, DKIM, and DMARC guidance help small businesses look more legitimate and reduce avoidable email problems.',
-  },
-  {
-    title: 'Networking and Wi-Fi help',
-    description:
-      'Practical router, Wi-Fi, coverage, and device-connection support helps local offices, service businesses, and small teams reduce day-to-day connectivity problems.',
-  },
-  {
-    title: 'Google Business Profile help',
-    description:
-      'Google Business Profile cleanup can improve how a local business appears in Search and Maps by reviewing categories, services, service areas, contact details, and website links.',
-  },
-  {
-    title: 'Remote support by fit',
-    description:
-      'Many website, workflow, business email, and practical IT tasks can be handled remotely when the project does not require an on-site walkthrough.',
-  },
-]
-
-const projectSteps = [
-  'Start with a quick review of the website, workflow, email setup, network issue, or local visibility gap.',
-  'Identify the real blocker and recommend the most practical first step.',
-  'Define a clear scope so the project stays understandable and right-sized.',
-  'Build, configure, clean up, or document the solution with a focus on practical use.',
-]
-
 export default function ServiceAreaPage() {
   return (
     <PageShell>
       <SectionShell
         eyebrow="Service Area"
         title="Local and remote support across Central Georgia"
-        description="Syfernetics is based in Milledgeville and helps small businesses across Central Georgia with websites, workflows, email setup, networking support, local visibility, and practical IT help."
+        description="Syfernetics is based in Milledgeville and helps small businesses across Central Georgia with practical website work, business technology support, and clear starting steps."
         headingAs="h1"
       >
         <div className="flex flex-wrap gap-3">
@@ -90,47 +49,75 @@ export default function ServiceAreaPage() {
           ))}
         </div>
 
-        <div className="mt-6 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {localServices.map((service) => (
-            <CardShell key={service.title} className="p-6">
-              <h2 className="mb-3 text-2xl font-bold text-white">{service.title}</h2>
-              <p className="leading-8 text-slate-300">{service.description}</p>
-            </CardShell>
-          ))}
-        </div>
-
-        <div className="mt-6 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
           <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Local support</h2>
+            <h2 className="mb-3 text-2xl font-bold text-white">Website design in Milledgeville, GA</h2>
             <p className="leading-8 text-slate-300">
-              In-person work is available where the project benefits from local walkthroughs, on-site setup,
-              device review, Wi-Fi troubleshooting, or direct collaboration with the business owner.
+              Syfernetics helps local businesses build clear, mobile-friendly websites that make services easy to
+              understand and make it easier for customers to contact you.
             </p>
           </CardShell>
-
           <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">How local projects start</h2>
-            <ol className="space-y-3 text-sm leading-6 text-slate-300">
-              {projectSteps.map((step, index) => (
-                <li key={step} className="flex gap-3">
-                  <span className="font-semibold text-teal-300">{index + 1}.</span>
-                  <span>{step}</span>
-                </li>
-              ))}
-            </ol>
+            <h2 className="mb-3 text-2xl font-bold text-white">Website refreshes for Central Georgia businesses</h2>
+            <p className="leading-8 text-slate-300">
+              If your current site feels outdated or confusing, practical refresh work can improve clarity, strengthen
+              customer paths, and improve everyday usability without starting from zero.
+            </p>
+          </CardShell>
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">Business email and domain setup</h2>
+            <p className="leading-8 text-slate-300">
+              Get help setting up professional business email and domain alignment so your team communicates with more
+              trust and fewer technical issues.
+            </p>
+          </CardShell>
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">Networking and Wi-Fi help</h2>
+            <p className="leading-8 text-slate-300">
+              Practical troubleshooting is available for unstable Wi-Fi, weak coverage, and daily connectivity problems
+              that slow down your business.
+            </p>
+          </CardShell>
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">Google Business Profile help</h2>
+            <p className="leading-8 text-slate-300">
+              Improve local visibility with profile cleanup, service detail updates, and better consistency between your
+              listing and website information.
+            </p>
+          </CardShell>
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">Remote support by fit</h2>
+            <p className="leading-8 text-slate-300">
+              Many website, workflow, and support projects can be handled remotely when that format is efficient and
+              fits the work. Local in-person support is available when a project benefits from it.
+            </p>
           </CardShell>
         </div>
 
-        <CardShell className="mt-6 border-teal-300/25 bg-teal-400/10 p-7">
-          <h2 className="mb-3 text-2xl font-bold text-white">
-            Need practical technology help in Central Georgia?
-          </h2>
-          <p className="mb-4 max-w-3xl leading-8 text-slate-300">
-            Start with a simple review of the problem, then decide whether the right next step is a website update,
-            local visibility cleanup, business email support, networking help, or a practical workflow fix.
+        <CardShell className="mt-6 p-6 md:p-7">
+          <h2 className="mb-3 text-2xl font-bold text-white">How local projects start</h2>
+          <p className="leading-8 text-slate-300">
+            Most projects start with a short conversation and a practical review of your current website, systems, or
+            bottlenecks. You get a clear recommendation and a realistic next step before committing to larger work.
           </p>
-          <ButtonLink href="/contact">Contact Syfernetics</ButtonLink>
         </CardShell>
+
+        <div className="mt-6 grid gap-6 md:grid-cols-2">
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">Local support when needed</h2>
+            <p className="leading-8 text-slate-300">
+              In-person work is available for projects that benefit from local walkthroughs, direct collaboration, or
+              on-site setup in Central Georgia.
+            </p>
+          </CardShell>
+          <CardShell className="p-6">
+            <h2 className="mb-3 text-2xl font-bold text-white">One strong Central Georgia service-area page</h2>
+            <p className="leading-8 text-slate-300">
+              Syfernetics keeps service-area information in one clear page so customers can quickly understand coverage,
+              support types, and next steps without thin duplicate city pages.
+            </p>
+          </CardShell>
+        </div>
       </SectionShell>
     </PageShell>
   )

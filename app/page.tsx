@@ -142,7 +142,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Services"
         title="Practical digital services for small business owners"
-        description="Explore practical services with clear starting points for websites, workflow cleanup, business email, local visibility, networking, and day-to-day technology help."
+        description="Explore practical services with clear starting points, from website design and refresh work to business email setup, networking, and ongoing support for Central Georgia small businesses."
       >
         <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {homepageServiceCards.map((service) => (
@@ -170,7 +170,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Starting Packages"
         title="Simple pricing that gives small businesses a place to start"
-        description="Choose a starting point that fits the problem you are trying to solve, then refine the scope before committing to a larger project."
+        description="Each package gives you a straightforward path to begin, with practical scope options that match real business needs and budget realities."
       >
         <div className="grid auto-rows-fr gap-6 md:grid-cols-2 xl:grid-cols-3">
           {pricingPackages.map((pkg) => (
@@ -204,7 +204,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="Projects"
         title="Project proof built around practical business problems"
-        description="See examples of practical website, workflow, dashboard, and local business technology work built to make the next customer step clearer."
+        description="See real project examples that show how practical website and technology improvements help businesses work faster and communicate more clearly."
       >
         <ProjectGrid limit={6} />
       </SectionShell>
@@ -245,7 +245,7 @@ export default function HomePage() {
       <SectionShell
         eyebrow="FAQ"
         title="Common questions about practical business technology support"
-        description="Get quick answers about website projects, pricing, local support, remote help, business email setup, and how a practical review works."
+        description="Get straightforward answers about pricing, timelines, service area, support options, and the easiest way to start."
       >
         <div className="grid gap-6 md:grid-cols-2">
           {faqItems.map((item) => (

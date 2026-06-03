@@ -24,6 +24,28 @@ function getService(slug: string) {
   return serviceDetailsBySlug[slug as ServiceSlug]
 }
 
+const serviceAreaSchema = [
+  'Milledgeville GA',
+  'Eatonton GA',
+  'Macon GA',
+  'Gray GA',
+  'Warner Robins GA',
+  'Perry GA',
+  'Lake Oconee GA',
+  'Greensboro GA',
+  'Madison GA',
+  'Central Georgia',
+]
+
+function getStartingPriceValue(startingPrice: string) {
+  const match = startingPrice.match(/\$([\d,]+(?:\.\d+)?)/)
+  if (!match) {
+    return undefined
+  }
+
+  return Number(match[1].replace(/,/g, ''))
+}
+
 export function generateStaticParams() {
   return serviceDetails.map((service) => ({ slug: service.slug }))
 }
@@ -63,8 +85,35 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     .map((relatedSlug) => serviceDetailsBySlug[relatedSlug])
     .filter(Boolean)
 
+  const startingPriceValue = getStartingPriceValue(service.startingPrice)
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: service.navLabel,
+    description: service.metaDescription,
+    provider: {
+      '@id': 'https://www.syfernetics.com/#business',
+    },
+    areaServed: serviceAreaSchema,
+    url: `https://www.syfernetics.com${service.href}`,
+    ...(startingPriceValue
+      ? {
+          offers: {
+            '@type': 'Offer',
+            price: String(startingPriceValue),
+            priceCurrency: 'USD',
+            url: `https://www.syfernetics.com${service.href}`,
+          },
+        }
+      : {}),
+  }
+
   return (
     <PageShell>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <SectionShell
         eyebrow="Services"
         title={service.h1}
