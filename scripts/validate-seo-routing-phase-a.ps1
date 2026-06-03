@@ -92,11 +92,11 @@ if (Test-Path -LiteralPath $serviceDynamicPath) {
 }
 
 $existingProjectRoutes = @()
-$exodusPath = Join-Path $repoRoot 'app/projects/exodus-ai-avatar-console/page.tsx'
-if (Test-Path -LiteralPath $exodusPath) {
-  $existingProjectRoutes += '/projects/exodus-ai-avatar-console'
+$xoduzPath = Join-Path $repoRoot 'app/projects/xoduz-ai-avatar-console/page.tsx'
+if (Test-Path -LiteralPath $xoduzPath) {
+  $existingProjectRoutes += '/projects/xoduz-ai-avatar-console'
 } else {
-  Add-Blocker 'Project detail route app/projects/exodus-ai-avatar-console/page.tsx is missing; /projects/exodus-ai-avatar-console is not live yet.'
+  Add-Blocker 'Project detail route app/projects/xoduz-ai-avatar-console/page.tsx is missing; /projects/xoduz-ai-avatar-console is not live yet.'
 }
 
 $expectedExistingRoutes = @($requiredTopLevelRoutes + $existingServiceRoutes + $existingProjectRoutes)
@@ -111,6 +111,7 @@ $mustNotAppear = @(
   '/blog',
   '/projects/cyber-dashboard',
   '/projects/secure-remote-work',
+  '/projects/exodus-ai-avatar-console',
   '/index.html',
   'http://syfernetics.com',
   'https://syfernetics.com'
@@ -153,6 +154,7 @@ $scanRoots = @(
 $patterns = @(
   '/projects/cyber-dashboard',
   '/projects/secure-remote-work',
+  '/projects/exodus-ai-avatar-console',
   '/index.html',
   '/founders',
   '/privacy-policy',
@@ -170,7 +172,7 @@ foreach ($file in $filesToScan) {
   $content = [System.IO.File]::ReadAllText($file.FullName)
   foreach ($pattern in $patterns) {
     if ($content -match [regex]::Escape($pattern)) {
-      Add-Issue "Internal reference contains retired URL pattern '$pattern' in $($file.FullName.Replace($repoRoot + '\\', ''))"
+      Add-Issue "Internal reference contains retired URL pattern '$pattern' in $($file.FullName.Replace($repoRoot + '\', ''))"
     }
   }
 }
@@ -180,13 +182,13 @@ $metadataFiles = Get-ChildItem -Path (Join-Path $repoRoot 'app') -Recurse -File 
 foreach ($file in $metadataFiles) {
   $content = [System.IO.File]::ReadAllText($file.FullName)
   if ($content -match "canonical:\s*'https?://") {
-    Add-Issue "Canonical should use route path form in metadata (not absolute URL) in $($file.FullName.Replace($repoRoot + '\\', ''))"
+    Add-Issue "Canonical should use route path form in metadata (not absolute URL) in $($file.FullName.Replace($repoRoot + '\', ''))"
   }
   if ($content -match "url:\s*'http://") {
-    Add-Issue "OpenGraph url contains http in $($file.FullName.Replace($repoRoot + '\\', ''))"
+    Add-Issue "OpenGraph url contains http in $($file.FullName.Replace($repoRoot + '\', ''))"
   }
   if ($content -match "url:\s*'https://syfernetics\.com") {
-    Add-Issue "OpenGraph url contains non-www domain in $($file.FullName.Replace($repoRoot + '\\', ''))"
+    Add-Issue "OpenGraph url contains non-www domain in $($file.FullName.Replace($repoRoot + '\', ''))"
   }
 }
 
