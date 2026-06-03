@@ -10,7 +10,7 @@ export default function StructuredData() {
     description:
       'Syfernetics provides website design, workflow automation, business email setup, networking help, and practical IT support for Central Georgia small businesses.',
     keywords: 'Website designer, IT support, technology services, Central Georgia',
-    priceRange: 'Cyan',
+    priceRange: '$$',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Milledgeville',
