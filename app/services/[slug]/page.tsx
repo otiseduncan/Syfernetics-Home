@@ -161,7 +161,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         <div className="mt-6 grid gap-6 lg:grid-cols-2">
           <CardShell className="p-6">
             <h2 className="mb-3 text-2xl font-bold text-white">Process</h2>
-            <ol className="space-y-2 text-slate-300">
+            <ol className="list-none space-y-2 text-slate-300">
               {standardServiceProcess.map((step, index) => (
                 <li key={step} className="flex gap-3 text-sm">
                   <span className="font-semibold text-teal-300">{index + 1}.</span>
