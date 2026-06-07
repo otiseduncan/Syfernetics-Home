@@ -40,7 +40,7 @@ export default function Header() {
             href="/contact"
             className={`${getButtonClassName('secondary')} px-4 py-2 text-sm`}
           >
-            Send Inquiry
+            Book Free Review
           </Link>
         </div>
       </nav>
@@ -58,6 +58,13 @@ export default function Header() {
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className={`${getButtonClassName('secondary')} justify-center px-4 py-3 text-sm`}
+              onClick={() => setOpen(false)}
+            >
+              Book Free Review
+            </Link>
           </div>
         </div>
       )}
