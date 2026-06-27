@@ -1,123 +1,39 @@
 import type { Metadata } from 'next'
+import ButtonLink from '@/components/ButtonLink'
 import CardShell from '@/components/CardShell'
 import PageShell from '@/components/PageShell'
 import SectionShell from '@/components/SectionShell'
 
 export const metadata: Metadata = {
-  title: 'Syfernetics Service Area | Practical IT Help in Central Georgia',
+  title: 'Central Georgia Website Design & IT Help | Syfernetics',
   description:
-    'Syfernetics serves small businesses in Milledgeville, Eatonton, Macon, Gray, Warner Robins, Perry, Lake Oconee, Greensboro, Madison, and Central Georgia.',
+    'Website design, website refreshes, workflow automation, business email setup, Google profile help, and small business IT support across Central Georgia.',
   openGraph: {
-    title: 'Syfernetics Service Area | Practical IT Help in Central Georgia',
+    title: 'Central Georgia Website Design & IT Help | Syfernetics',
     description:
-      'Syfernetics serves small businesses in Milledgeville, Eatonton, Macon, Gray, Warner Robins, Perry, Lake Oconee, Greensboro, Madison, and Central Georgia.',
+      'Syfernetics supports Central Georgia small businesses with websites, Google visibility, email setup, workflow automation, networking, and practical IT help.',
     type: 'website',
     url: 'https://www.syfernetics.com/service-area',
   },
 }
 
-const areas = [
-  'Milledgeville GA',
-  'Eatonton GA',
-  'Macon GA',
-  'Gray GA',
-  'Warner Robins GA',
-  'Perry GA',
-  'Lake Oconee GA',
-  'Greensboro GA',
-  'Madison GA',
-  'Central Georgia',
+const areas = ['Central Georgia', 'Macon GA', 'Warner Robins GA', 'Milledgeville GA', 'Eatonton GA', 'Gray GA', 'Perry GA', 'Lake Oconee GA', 'Greensboro GA', 'Madison GA']
+const areaCards = [
+  { title: 'Macon and Warner Robins', text: 'Website design, website refreshes, business email setup, and practical IT help for growing small businesses and service providers.' },
+  { title: 'Milledgeville, Eatonton, and Lake Oconee', text: 'Support for local businesses that need clearer websites, better Google visibility, stronger contact flow, and practical technology cleanup.' },
+  { title: 'Gray, Perry, Greensboro, and Madison', text: 'Remote support by fit plus local help when projects benefit from walkthroughs, setup support, or direct collaboration.' },
+  { title: 'Central Georgia service businesses', text: 'Built for contractors, shops, offices, local service providers, and small teams that need simple systems and clearer customer paths.' },
 ]
+const services = ['Website design and website refreshes', 'Google Business Profile cleanup and local visibility support', 'Business email setup and domain alignment', 'Workflow automation and intake forms', 'Networking, Wi-Fi, and small business IT help', 'Ongoing website care and practical support']
 
 export default function ServiceAreaPage() {
   return (
     <PageShell>
-      <SectionShell
-        eyebrow="Service Area"
-        title="Local and remote support across Central Georgia"
-        description="Syfernetics is based in Milledgeville and helps small businesses across Central Georgia with practical website work, business technology support, and clear starting steps."
-        headingAs="h1"
-      >
-        <div className="flex flex-wrap gap-3">
-          {areas.map((area) => (
-            <span
-              key={area}
-              className="rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-sm font-semibold text-slate-200 shadow-soft"
-            >
-              {area}
-            </span>
-          ))}
-        </div>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Website design in Milledgeville, GA</h2>
-            <p className="leading-8 text-slate-300">
-              Syfernetics helps local businesses build clear, mobile-friendly websites that make services easy to
-              understand and make it easier for customers to contact you.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Website refreshes for Central Georgia businesses</h2>
-            <p className="leading-8 text-slate-300">
-              If your current site feels outdated or confusing, practical refresh work can improve clarity, strengthen
-              customer paths, and improve everyday usability without starting from zero.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Business email and domain setup</h2>
-            <p className="leading-8 text-slate-300">
-              Get help setting up professional business email and domain alignment so your team communicates with more
-              trust and fewer technical issues.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Networking and Wi-Fi help</h2>
-            <p className="leading-8 text-slate-300">
-              Practical troubleshooting is available for unstable Wi-Fi, weak coverage, and daily connectivity problems
-              that slow down your business.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Google Business Profile help</h2>
-            <p className="leading-8 text-slate-300">
-              Improve local visibility with profile cleanup, service detail updates, and better consistency between your
-              listing and website information.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Remote support by fit</h2>
-            <p className="leading-8 text-slate-300">
-              Many website, workflow, and support projects can be handled remotely when that format is efficient and
-              fits the work. Local in-person support is available when a project benefits from it.
-            </p>
-          </CardShell>
-        </div>
-
-        <CardShell className="mt-6 p-6 md:p-7">
-          <h2 className="mb-3 text-2xl font-bold text-white">How local projects start</h2>
-          <p className="leading-8 text-slate-300">
-            Most projects start with a short conversation and a practical review of your current website, systems, or
-            bottlenecks. You get a clear recommendation and a realistic next step before committing to larger work.
-          </p>
-        </CardShell>
-
-        <div className="mt-6 grid gap-6 md:grid-cols-2">
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">Local support when needed</h2>
-            <p className="leading-8 text-slate-300">
-              In-person work is available for projects that benefit from local walkthroughs, direct collaboration, or
-              on-site setup in Central Georgia.
-            </p>
-          </CardShell>
-          <CardShell className="p-6">
-            <h2 className="mb-3 text-2xl font-bold text-white">One strong Central Georgia service-area page</h2>
-            <p className="leading-8 text-slate-300">
-              Syfernetics keeps service-area information in one clear page so customers can quickly understand coverage,
-              support types, and next steps without thin duplicate city pages.
-            </p>
-          </CardShell>
-        </div>
+      <SectionShell eyebrow="Service Area" title="Technology Services for Small Businesses Across Central Georgia" description="Syfernetics supports small businesses across Central Georgia, including Macon, Warner Robins, Milledgeville, Eatonton, Gray, Perry, Lake Oconee, Greensboro, Madison, and nearby communities." headingAs="h1">
+        <div className="flex flex-wrap gap-3">{areas.map((area) => <span key={area} className="rounded-full border border-white/10 bg-slate-950/60 px-4 py-2 text-sm font-semibold text-slate-200 shadow-soft">{area}</span>)}</div>
+        <div className="mt-6 grid gap-6 md:grid-cols-2">{areaCards.map((area) => <CardShell key={area.title} className="p-6"><h2 className="mb-3 text-2xl font-bold text-white">{area.title}</h2><p className="leading-8 text-slate-300">{area.text}</p></CardShell>)}</div>
+        <CardShell className="mt-6 p-6 md:p-7"><h2 className="mb-3 text-2xl font-bold text-white">Central Georgia services</h2><ul className="grid gap-3 text-sm text-slate-300 md:grid-cols-2">{services.map((service) => <li key={service} className="flex gap-2"><span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-teal-300" /><span>{service}</span></li>)}</ul></CardShell>
+        <CardShell className="mt-6 border-teal-300/25 bg-teal-400/10 p-6 md:p-7"><h2 className="mb-3 text-2xl font-bold text-white">Start with a free 20-minute review</h2><p className="leading-8 text-slate-300">Most projects start with a short conversation and a practical review of your current website, Google profile, workflow, email setup, or technology blocker. You get a clear recommendation before committing to larger work.</p><div className="mt-6 flex flex-col gap-3 sm:flex-row"><ButtonLink href="/contact">Request the Review</ButtonLink><ButtonLink href="/services" variant="secondary">View Services</ButtonLink></div></CardShell>
       </SectionShell>
     </PageShell>
   )
