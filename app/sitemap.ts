@@ -1,12 +1,17 @@
 ﻿import type { MetadataRoute } from 'next'
-import { localSeoPageSlugs } from '@/lib/localSeoPages'
 import { sitemapRoutes } from '@/lib/siteConfig'
+
+const localSeoRoutes = [
+  '/website-design-central-georgia',
+  '/website-design-macon-ga',
+  '/website-design-warner-robins-ga',
+  '/website-design-milledgeville-ga',
+  '/small-business-it-help-central-georgia',
+]
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = 'https://www.syfernetics.com'
-  const routes = [...sitemapRoutes, ...localSeoPageSlugs, 'gbp-help-central-georgia'].map((route) =>
-    route.startsWith('/') ? route : `/${route}`,
-  )
+  const routes = [...sitemapRoutes, ...localSeoRoutes]
 
   return routes.map((route) => ({
     url: base + route,
